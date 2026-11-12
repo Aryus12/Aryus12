@@ -2948,20 +2948,7 @@
                     </div>
 
                     <div class="card-fields-checkout" id="cardFieldsCheckout">
-                        <label for="ckCard">Numéro de carte</label>
-                        <input type="text" id="ckCard" placeholder="4242 4242 4242 4242" required maxlength="19">
-                        <div class="checkout-row">
-                            <div>
-                                <label for="ckExp">Expiration</label>
-                                <input type="text" id="ckExp" placeholder="MM / AA" required maxlength="5">
-                            </div>
-                            <div>
-                                <label for="ckCvc">CVC</label>
-                                <input type="text" id="ckCvc" placeholder="123" required maxlength="4">
-                            </div>
-                        </div>
-                        <label for="ckCardName" style="margin-top: 12px;">Nom sur la carte</label>
-                        <input type="text" id="ckCardName" placeholder="Nom sur la carte" required>
+                        <p class="checkout-secure"><i class="fas fa-shield-alt"></i> Les informations de carte sont saisies uniquement sur la page sécurisée de GeniusPay.</p>
                     </div>
 
                     <div class="mobile-money-fields-checkout" id="mobileMoneyFieldsCheckout" style="display: none;">
@@ -3200,48 +3187,18 @@
                 const cardFields = document.getElementById('cardFieldsCheckout');
                 const mobileMoneyFields = document.getElementById('mobileMoneyFieldsCheckout');
                 const phoneInput = document.getElementById('ckPhone');
-                const cardInput = document.getElementById('ckCard');
-                const expInput = document.getElementById('ckExp');
-                const cvcInput = document.getElementById('ckCvc');
-                const cardNameInput = document.getElementById('ckCardName');
                 
                 if (this.value === 'mobile_money') {
                     cardFields.style.display = 'none';
                     mobileMoneyFields.style.display = 'block';
                     phoneInput.required = true;
-                    cardInput.required = false;
-                    expInput.required = false;
-                    cvcInput.required = false;
-                    cardNameInput.required = false;
                 } else {
                     cardFields.style.display = 'block';
                     mobileMoneyFields.style.display = 'none';
                     phoneInput.required = false;
                     phoneInput.value = '';
-                    cardInput.required = true;
-                    expInput.required = true;
-                    cvcInput.required = true;
-                    cardNameInput.required = true;
                 }
             });
-        });
-
-        // Card number formatting
-        document.getElementById('ckCard').addEventListener('input', function() {
-            let v = this.value.replace(/\D/g, '').substring(0, 16);
-            this.value = v.replace(/(.{4})/g, '$1 ').trim();
-        });
-
-        // Expiration date formatting
-        document.getElementById('ckExp').addEventListener('input', function() {
-            let v = this.value.replace(/\D/g, '').substring(0, 4);
-            if (v.length > 2) v = v.substring(0, 2) + ' / ' + v.substring(2);
-            this.value = v;
-        });
-
-        // CVC formatting
-        document.getElementById('ckCvc').addEventListener('input', function() {
-            this.value = this.value.replace(/\D/g, '').substring(0, 4);
         });
 
         // Form submit — GeniusPay integration
@@ -3281,7 +3238,7 @@
             };
 
             try {
-                const backendUrl = 'http://localhost:3001/api/payment/create';
+                const backendUrl = '/api/payment/create';
                 const response = await fetch(backendUrl, {
                     method: 'POST',
                     headers: {

@@ -246,8 +246,8 @@
             errorMessage.classList.remove('show');
 
             try {
-                // URL du backend Next.js
-                const backendUrl = 'http://localhost:3001/api/download/template';
+                // Endpoint servi par le même domaine Vercel que la boutique
+                const backendUrl = '/api/download/template';
                 const downloadUrl = `${backendUrl}?paymentId=${paymentId}&templateId=${templateId}&templateName=${encodeURIComponent(templateName)}&clientEmail=${encodeURIComponent(clientEmail)}`;
                 
                 // Ouvrir le téléchargement dans un nouvel onglet
