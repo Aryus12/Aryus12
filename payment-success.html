@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement Réussi - Télécharger votre Template</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .success-container {
+            background: white;
+            border-radius: 20px;
+            padding: 48px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            animation: scaleIn 0.5s ease;
+        }
+
+        .success-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 32px;
+        }
+
+        .template-info {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .template-info h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .template-info p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-bottom: 16px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .download-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .download-btn i {
+            font-size: 1.2rem;
+        }
+
+        .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .download-btn.loading .spinner {
+            display: block;
+        }
+
+        .download-btn.loading i {
+            display: none;
+        }
+
+        .info-text {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+        }
+
+        .back-link {
+            color: #6366f1;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        
+        <h1>Paiement Réussi !</h1>
+        <p class="subtitle">Votre template est prêt à être téléchargé</p>
+        
+        <div class="template-info">
+            <h3 id="template-name">Chargement...</h3>
+            <p><strong>ID Paiement:</strong> <span id="payment-id">-</span></p>
+            <p><strong>Email:</strong> <span id="client-email">-</span></p>
+            <p><strong>Date:</strong> <span id="payment-date">-</span></p>
+        </div>
+        
+        <div class="error-message" id="error-message"></div>
+        
+        <button class="download-btn" id="download-btn" onclick="downloadTemplate()">
+            <i class="fas fa-download"></i>
+            <span>Télécharger le Template (ZIP)</span>
+            <div class="spinner"></div>
+        </button>
+        
+        <p class="info-text">
+            <i class="fas fa-info-circle"></i>
+            Le lien de téléchargement sera disponible pendant 7 jours
+        </p>
+        
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Retour à la boutique
+        </a>
+    </div>
+
+    <script>
+        // Récupérer les paramètres de l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentId = urlParams.get('paymentId');
+        const templateId = urlParams.get('templateId');
+        const templateName = urlParams.get('templateName');
+        const clientEmail = urlParams.get('clientEmail');
+
+        // Afficher les informations
+        if (templateName) {
+            document.getElementById('template-name').textContent = templateName;
+        }
+        if (paymentId) {
+            document.getElementById('payment-id').textContent = paymentId;
+        }
+        if (clientEmail) {
+            document.getElementById('client-email').textContent = clientEmail;
+        }
+        document.getElementById('payment-date').textContent = new Date().toLocaleDateString('fr-FR');
+
+        // Fonction de téléchargement
+        async function downloadTemplate() {
+            const btn = document.getElementById('download-btn');
+            const errorMessage = document.getElementById('error-message');
+
+            if (!paymentId || !templateId || !templateName || !clientEmail) {
+                errorMessage.textContent = 'Paramètres manquants pour le téléchargement';
+                errorMessage.classList.add('show');
+                return;
+            }
+
+            btn.classList.add('loading');
+            btn.disabled = true;
+            errorMessage.classList.remove('show');
+
+            try {
+                // URL du backend Next.js
+                const backendUrl = 'http://localhost:3001/api/download/template';
+                const downloadUrl = `${backendUrl}?paymentId=${paymentId}&templateId=${templateId}&templateName=${encodeURIComponent(templateName)}&clientEmail=${encodeURIComponent(clientEmail)}`;
+                
+                // Ouvrir le téléchargement dans un nouvel onglet
+                window.open(downloadUrl, '_blank');
+                
+                btn.classList.remove('loading');
+                btn.disabled = false;
+                
+            } catch (error) {
+                console.error('Download error:', error);
+                errorMessage.textContent = 'Erreur lors du téléchargement. Veuillez réessayer.';
+                errorMessage.classList.add('show');
+                btn.classList.remove('loading');
+                btn.disabled = false;
+            }
+        }
+
+        // Vérifier si les paramètres sont présents
+        if (!paymentId || !templateId || !templateName || !clientEmail) {
+            document.getElementById('error-message').textContent = 'Informations de paiement manquantes. Veuillez contacter le support.';
+            document.getElementById('error-message').classList.add('show');
+            document.getElementById('download-btn').disabled = true;
+        }
+    </script>
+</body>
+</html>

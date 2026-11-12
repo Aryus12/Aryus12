@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronForge — Salle de Sport & Fitness Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                    <line x1="5" y1="20" x2="20" y2="20"/>
+                    <rect x="20" y="12" width="8" height="16" rx="2"/>
+                    <rect x="28" y="8" width="6" height="24" rx="1"/>
+                    <line x1="34" y1="20" x2="46" y2="20"/>
+                    <rect x="46" y="8" width="6" height="24" rx="1"/>
+                    <rect x="52" y="12" width="8" height="16" rx="2"/>
+                    <line x1="60" y1="20" x2="75" y2="20"/>
+                </svg>
+            </div>
+            <div class="preloader-text">IRONFORGE</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <span class="logo-mark">IF</span>
+                <span class="logo-text">IRONFORGE</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#programmes" class="nav-link">Programmes</a></li>
+                <li><a href="#horaires" class="nav-link">Horaires</a></li>
+                <li><a href="#coachs" class="nav-link">Coachs</a></li>
+                <li><a href="#tarifs" class="nav-link">Tarifs</a></li>
+                <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#tarifs" class="btn btn-accent">Essai gratuit</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    🔥 Nouveau : Programme HIIT Extreme disponible
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-word" style="--delay:0">FORGE</span>
+                    <span class="title-word" style="--delay:1">TON</span>
+                    <span class="title-word accent" style="--delay:2">CORPS</span>
+                    <span class="title-word" style="--delay:3">D'ACIER.</span>
+                </h1>
+                <p class="hero-subtitle">Entraînements personnalisés, équipements de pointe et coachs certifiés. Rejoins la communauté IronForge et dépasse tes limites.</p>
+                <div class="hero-actions">
+                    <a href="#tarifs" class="btn btn-accent btn-large">
+                        Commencer maintenant
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#programmes" class="btn btn-ghost btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Voir les programmes
+                    </a>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <span class="metric-number" data-count="2500">0</span><span class="metric-suffix">+</span>
+                        <span class="metric-label">Membres actifs</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number" data-count="50">0</span><span class="metric-suffix">+</span>
+                        <span class="metric-label">Cours par semaine</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number" data-count="15">0</span>
+                        <span class="metric-label">Coachs certifiés</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number" data-count="3000">0</span><span class="metric-suffix">m²</span>
+                        <span class="metric-label">D'espace fitness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <div>
+                        <strong>Ouvert 7j/7</strong>
+                        <span>6h — 23h non-stop</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                    <div>
+                        <strong>Coaching perso</strong>
+                        <span>Programmes sur mesure</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                        <strong>Équipements premium</strong>
+                        <span>Technogym & Hammer Strength</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div>
+                        <strong>Communauté</strong>
+                        <span>Événements & challenges</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="section programs-section" id="programmes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Programmes</span>
+                <h2 class="section-title">TROUVE LE PROGRAMME<br><span class="text-accent">QUI TE CORRESPOND</span></h2>
+                <p class="section-subtitle">Que tu sois débutant ou athlète confirmé, nous avons le programme parfait pour atteindre tes objectifs.</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card" data-reveal>
+                    <div class="program-image">
+                        <div class="program-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="48" fill="#ff4d4d" font-family="Bebas Neue">💪</text><text x="200" y="200" text-anchor="middle" font-size="14" fill="#666">Musculation</text></svg>
+                        </div>
+                        <div class="program-badge">Populaire</div>
+                        <div class="program-difficulty">
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot"></span>
+                            <span class="diff-dot"></span>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Musculation & Force</h3>
+                        <p>Programme complet de renforcement musculaire avec plan personnalisé, suivi de progression et nutrition adaptée.</p>
+                        <div class="program-details">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 60-90 min</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Max 12 pers.</span>
+                        </div>
+                        <a href="#" class="program-link">Découvrir →</a>
+                    </div>
+                </div>
+                <div class="program-card" data-reveal>
+                    <div class="program-image">
+                        <div class="program-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="48" fill="#ff4d4d">🔥</text><text x="200" y="200" text-anchor="middle" font-size="14" fill="#666">HIIT</text></svg>
+                        </div>
+                        <div class="program-badge hot">Nouveau</div>
+                        <div class="program-difficulty">
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>HIIT Extreme</h3>
+                        <p>Entraînement haute intensité par intervalles pour brûler un maximum de calories et booster ton métabolisme.</p>
+                        <div class="program-details">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 45 min</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Max 20 pers.</span>
+                        </div>
+                        <a href="#" class="program-link">Découvrir →</a>
+                    </div>
+                </div>
+                <div class="program-card" data-reveal>
+                    <div class="program-image">
+                        <div class="program-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="48" fill="#ff4d4d">🧘</text><text x="200" y="200" text-anchor="middle" font-size="14" fill="#666">Yoga</text></svg>
+                        </div>
+                        <div class="program-difficulty">
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot"></span>
+                            <span class="diff-dot"></span>
+                            <span class="diff-dot"></span>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Yoga & Mobilité</h3>
+                        <p>Souplesse, équilibre et sérénité. Séances de yoga dynamique et récupération pour corps et esprit.</p>
+                        <div class="program-details">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 60 min</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Max 15 pers.</span>
+                        </div>
+                        <a href="#" class="program-link">Découvrir →</a>
+                    </div>
+                </div>
+                <div class="program-card" data-reveal>
+                    <div class="program-image">
+                        <div class="program-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="48" fill="#ff4d4d">🥊</text><text x="200" y="200" text-anchor="middle" font-size="14" fill="#666">Boxe</text></svg>
+                        </div>
+                        <div class="program-difficulty">
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot"></span>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Boxe & Combat</h3>
+                        <p>Boxe anglaise, kickboxing et MMA. Apprends les techniques de combat tout en sculptant ta silhouette.</p>
+                        <div class="program-details">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 60 min</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Max 16 pers.</span>
+                        </div>
+                        <a href="#" class="program-link">Découvrir →</a>
+                    </div>
+                </div>
+                <div class="program-card" data-reveal>
+                    <div class="program-image">
+                        <div class="program-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="48" fill="#ff4d4d">🏃</text><text x="200" y="200" text-anchor="middle" font-size="14" fill="#666">Cardio</text></svg>
+                        </div>
+                        <div class="program-difficulty">
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot"></span>
+                            <span class="diff-dot"></span>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Cardio & Endurance</h3>
+                        <p>Tapis, vélo, rameur et cours collectifs cardio pour améliorer ton endurance et ta santé cardiovasculaire.</p>
+                        <div class="program-details">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 45-60 min</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Max 25 pers.</span>
+                        </div>
+                        <a href="#" class="program-link">Découvrir →</a>
+                    </div>
+                </div>
+                <div class="program-card" data-reveal>
+                    <div class="program-image">
+                        <div class="program-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="48" fill="#ff4d4d">🏋️</text><text x="200" y="200" text-anchor="middle" font-size="14" fill="#666">CrossFit</text></svg>
+                        </div>
+                        <div class="program-badge">Top</div>
+                        <div class="program-difficulty">
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                            <span class="diff-dot active"></span>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>CrossFit & Functional</h3>
+                        <p>WODs variés combinant haltérophilie, gymnastique et cardio pour une forme physique complète.</p>
+                        <div class="program-details">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 60 min</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Max 14 pers.</span>
+                        </div>
+                        <a href="#" class="program-link">Découvrir →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section schedule-section" id="horaires">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Planning</span>
+                <h2 class="section-title">PLANNING DE LA <span class="text-accent">SEMAINE</span></h2>
+            </div>
+            <div class="schedule-tabs">
+                <button class="schedule-tab active" data-day="lundi">Lundi</button>
+                <button class="schedule-tab" data-day="mardi">Mardi</button>
+                <button class="schedule-tab" data-day="mercredi">Mercredi</button>
+                <button class="schedule-tab" data-day="jeudi">Jeudi</button>
+                <button class="schedule-tab" data-day="vendredi">Vendredi</button>
+                <button class="schedule-tab" data-day="samedi">Samedi</button>
+                <button class="schedule-tab" data-day="dimanche">Dimanche</button>
+            </div>
+            <div class="schedule-content">
+                <div class="schedule-day active" id="day-lundi">
+                    <div class="schedule-slot"><span class="slot-time">7h00</span><span class="slot-name">CrossFit Foundations</span><span class="slot-coach">Coach Alex</span><span class="slot-duration">60 min</span></div>
+                    <div class="schedule-slot"><span class="slot-time">9h00</span><span class="slot-name">Yoga Flow</span><span class="slot-coach">Coach Léa</span><span class="slot-duration">60 min</span></div>
+                    <div class="schedule-slot highlight"><span class="slot-time">12h15</span><span class="slot-name">HIIT Express</span><span class="slot-coach">Coach Max</span><span class="slot-duration">45 min</span></div>
+                    <div class="schedule-slot"><span class="slot-time">17h30</span><span class="slot-name">Boxe Anglaise</span><span class="slot-coach">Coach Karim</span><span class="slot-duration">60 min</span></div>
+                    <div class="schedule-slot"><span class="slot-time">18h30</span><span class="slot-name">Musculation Guidée</span><span class="slot-coach">Coach Thomas</span><span class="slot-duration">90 min</span></div>
+                    <div class="schedule-slot"><span class="slot-time">19h30</span><span class="slot-name">Cardio Blast</span><span class="slot-coach">Coach Julie</span><span class="slot-duration">45 min</span></div>
+                    <div class="schedule-slot"><span class="slot-time">20h30</span><span class="slot-name">Stretching & Recovery</span><span class="slot-coach">Coach Léa</span><span class="slot-duration">30 min</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section class="section coaches-section" id="coachs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">L'Équipe</span>
+                <h2 class="section-title">NOS COACHS <span class="text-accent">D'ÉLITE</span></h2>
+                <p class="section-subtitle">Des experts certifiés, passionnés et dévoués à ta réussite. Chacun apporte une expertise unique pour te guider vers tes objectifs.</p>
+            </div>
+            <div class="coaches-grid">
+                <div class="coach-card" data-reveal>
+                    <div class="coach-image">
+                        <div class="coach-placeholder" style="background: linear-gradient(135deg, #ff4d4d, #ff6b6b)">
+                            <span>AM</span>
+                        </div>
+                        <div class="coach-overlay">
+                            <div class="coach-socials">
+                                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+                                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Alexandre Martin</h3>
+                    <span class="coach-specialty">CrossFit & Force</span>
+                    <p class="coach-bio">10 ans d'expérience. Champion régional de CrossFit. Certifié CrossFit L3 & NSCA-CSCS.</p>
+                    <div class="coach-stats">
+                        <span>⭐ 4.9/5</span>
+                        <span>🏋️ 350+ élèves</span>
+                    </div>
+                </div>
+                <div class="coach-card" data-reveal>
+                    <div class="coach-image">
+                        <div class="coach-placeholder" style="background: linear-gradient(135deg, #7c3aed, #a855f7)">
+                            <span>LD</span>
+                        </div>
+                        <div class="coach-overlay">
+                            <div class="coach-socials">
+                                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Léa Dubois</h3>
+                    <span class="coach-specialty">Yoga & Pilates</span>
+                    <p class="coach-bio">Certifiée Yoga Alliance RYT-500. Spécialiste en yoga thérapeutique et méditation.</p>
+                    <div class="coach-stats">
+                        <span>⭐ 4.8/5</span>
+                        <span>🧘 500+ élèves</span>
+                    </div>
+                </div>
+                <div class="coach-card" data-reveal>
+                    <div class="coach-image">
+                        <div class="coach-placeholder" style="background: linear-gradient(135deg, #059669, #34d399)">
+                            <span>KB</span>
+                        </div>
+                        <div class="coach-overlay">
+                            <div class="coach-socials">
+                                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Karim Benali</h3>
+                    <span class="coach-specialty">Boxe & MMA</span>
+                    <p class="coach-bio">Ex-champion de France amateur. 15 ans de pratique. Spécialiste boxe anglaise et kickboxing.</p>
+                    <div class="coach-stats">
+                        <span>⭐ 4.9/5</span>
+                        <span>🥊 280+ élèves</span>
+                    </div>
+                </div>
+                <div class="coach-card" data-reveal>
+                    <div class="coach-image">
+                        <div class="coach-placeholder" style="background: linear-gradient(135deg, #2563eb, #60a5fa)">
+                            <span>TR</span>
+                        </div>
+                        <div class="coach-overlay">
+                            <div class="coach-socials">
+                                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Thomas Roux</h3>
+                    <span class="coach-specialty">Musculation & Nutrition</span>
+                    <p class="coach-bio">BPJEPS spécialité musculation. Diététicien diplômé. Expert en transformation physique.</p>
+                    <div class="coach-stats">
+                        <span>⭐ 4.7/5</span>
+                        <span>💪 400+ transformations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="tarifs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tarifs</span>
+                <h2 class="section-title">CHOISIS TON <span class="text-accent">ABONNEMENT</span></h2>
+                <p class="section-subtitle">Sans engagement. Premier cours d'essai gratuit. Annulation à tout moment.</p>
+            </div>
+            <div class="pricing-toggle">
+                <span class="toggle-label active" id="monthlyLabel">Mensuel</span>
+                <button class="toggle-switch" id="pricingToggle" aria-label="Basculer annuel/mensuel">
+                    <span class="toggle-thumb"></span>
+                </button>
+                <span class="toggle-label" id="annualLabel">Annuel <span class="toggle-save">-20%</span></span>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-reveal>
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p>Accès libre à la salle</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount monthly">29</span>
+                        <span class="price-amount annual" style="display:none">23</span>
+                        <span class="price-currency">€</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Accès salle musculation</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Accès cardio</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Vestiaires & douches</li>
+                        <li class="excluded"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Cours collectifs</li>
+                        <li class="excluded"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Coaching personnel</li>
+                        <li class="excluded"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Espace sauna & spa</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-dark btn-full">Choisir Starter</a>
+                </div>
+                <div class="pricing-card featured" data-reveal>
+                    <div class="pricing-popular">Le + populaire</div>
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <p>L'expérience complète</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount monthly">49</span>
+                        <span class="price-amount annual" style="display:none">39</span>
+                        <span class="price-currency">€</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Tout le plan Starter</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Tous les cours collectifs</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Espace sauna & hammam</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> 1 séance coaching / mois</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> App mobile & suivi</li>
+                        <li class="excluded"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Plan nutrition personnalisé</li>
+                    </ul>
+                    <a href="#" class="btn btn-accent btn-full">Choisir Premium</a>
+                </div>
+                <div class="pricing-card" data-reveal>
+                    <div class="pricing-header">
+                        <h3>Elite</h3>
+                        <p>Transformation totale</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount monthly">89</span>
+                        <span class="price-amount annual" style="display:none">71</span>
+                        <span class="price-currency">€</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Tout le plan Premium</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> 4 séances coaching / mois</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Plan nutrition personnalisé</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Accès invité (2/mois)</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Bilan corporel mensuel</li>
+                        <li class="included"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Accès prioritaire cours</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-dark btn-full">Choisir Elite</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section" id="galerie">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Galerie</span>
+                <h2 class="section-title">DÉCOUVRE <span class="text-accent">NOS ESPACES</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gi-1" data-reveal>
+                    <div class="gallery-placeholder"><svg viewBox="0 0 600 400" fill="none"><rect width="600" height="400" fill="#1a1a2e"/><text x="300" y="200" text-anchor="middle" font-size="16" fill="#555">Salle Musculation</text></svg></div>
+                    <div class="gallery-overlay"><span>Salle Musculation</span></div>
+                </div>
+                <div class="gallery-item gi-2" data-reveal>
+                    <div class="gallery-placeholder"><svg viewBox="0 0 400 400" fill="none"><rect width="400" height="400" fill="#1a1a2e"/><text x="200" y="200" text-anchor="middle" font-size="14" fill="#555">Zone Cardio</text></svg></div>
+                    <div class="gallery-overlay"><span>Zone Cardio</span></div>
+                </div>
+                <div class="gallery-item gi-3" data-reveal>
+                    <div class="gallery-placeholder"><svg viewBox="0 0 400 400" fill="none"><rect width="400" height="400" fill="#1a1a2e"/><text x="200" y="200" text-anchor="middle" font-size="14" fill="#555">Studio Cours</text></svg></div>
+                    <div class="gallery-overlay"><span>Studio Cours Collectifs</span></div>
+                </div>
+                <div class="gallery-item gi-4" data-reveal>
+                    <div class="gallery-placeholder"><svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="14" fill="#555">Zone CrossFit</text></svg></div>
+                    <div class="gallery-overlay"><span>Zone CrossFit</span></div>
+                </div>
+                <div class="gallery-item gi-5" data-reveal>
+                    <div class="gallery-placeholder"><svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="14" fill="#555">Ring de Boxe</text></svg></div>
+                    <div class="gallery-overlay"><span>Ring de Boxe</span></div>
+                </div>
+                <div class="gallery-item gi-6" data-reveal>
+                    <div class="gallery-placeholder"><svg viewBox="0 0 400 300" fill="none"><rect width="400" height="300" fill="#1a1a2e"/><text x="200" y="150" text-anchor="middle" font-size="14" fill="#555">Espace Sauna</text></svg></div>
+                    <div class="gallery-overlay"><span>Spa & Sauna</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformations / Testimonials -->
+    <section class="section testimonials-section" id="temoignages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Transformations</span>
+                <h2 class="section-title">ILS ONT TRANSFORMÉ <span class="text-accent">LEUR VIE</span></h2>
+            </div>
+            <div class="transformations-grid">
+                <div class="transformation-card" data-reveal>
+                    <div class="transformation-visual">
+                        <div class="before-after">
+                            <div class="ba-placeholder ba-before"><span>AVANT</span></div>
+                            <div class="ba-placeholder ba-after"><span>APRÈS</span></div>
+                        </div>
+                    </div>
+                    <div class="transformation-content">
+                        <div class="transformation-result">
+                            <span class="result-badge">-18 kg en 6 mois</span>
+                        </div>
+                        <p>« IronForge a changé ma vie. Grâce au programme Premium et au coaching de Thomas, j'ai perdu 18 kg et gagné une confiance en moi incroyable. »</p>
+                        <div class="transformation-author">
+                            <strong>Marc L.</strong>
+                            <span>Membre depuis 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="transformation-card" data-reveal>
+                    <div class="transformation-visual">
+                        <div class="before-after">
+                            <div class="ba-placeholder ba-before"><span>AVANT</span></div>
+                            <div class="ba-placeholder ba-after"><span>APRÈS</span></div>
+                        </div>
+                    </div>
+                    <div class="transformation-content">
+                        <div class="transformation-result">
+                            <span class="result-badge">+8 kg muscle en 8 mois</span>
+                        </div>
+                        <p>« J'ai testé beaucoup de salles mais IronForge est incomparable. Les coachs sont passionnés et le matériel est top. Résultat : ma meilleure forme physique. »</p>
+                        <div class="transformation-author">
+                            <strong>Sarah B.</strong>
+                            <span>Membre depuis 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="transformation-card" data-reveal>
+                    <div class="transformation-visual">
+                        <div class="before-after">
+                            <div class="ba-placeholder ba-before"><span>AVANT</span></div>
+                            <div class="ba-placeholder ba-after"><span>APRÈS</span></div>
+                        </div>
+                    </div>
+                    <div class="transformation-content">
+                        <div class="transformation-result">
+                            <span class="result-badge">Marathon finisher</span>
+                        </div>
+                        <p>« En partant de zéro, le programme Cardio + coaching m'a permis de finir mon premier marathon en moins de 4h. Merci Coach Julie ! »</p>
+                        <div class="transformation-author">
+                            <strong>Nicolas D.</strong>
+                            <span>Membre depuis 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>PRÊT À COMMENCER<br><span class="text-accent">TA TRANSFORMATION ?</span></h2>
+                <p>Premier cours d'essai 100% gratuit, sans engagement. Viens découvrir IronForge et rencontrer nos coachs.</p>
+                <div class="cta-actions">
+                    <a href="#contact" class="btn btn-accent btn-large">Réserver mon essai gratuit</a>
+                    <a href="tel:+33142000000" class="btn btn-ghost btn-large">📞 01 42 00 00 00</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title" style="text-align:left">VIENS NOUS <span class="text-accent">RENCONTRER</span></h2>
+                    <p>Pas besoin d'inscription en ligne. Passe directement à la salle pour un essai gratuit ou appelle-nous pour plus d'infos.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="detail-icon">📍</div>
+                            <div>
+                                <strong>Adresse</strong>
+                                <p>45 Rue de la République<br>69002 Lyon</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="detail-icon">📞</div>
+                            <div>
+                                <strong>Téléphone</strong>
+                                <p>01 42 00 00 00</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="detail-icon">✉️</div>
+                            <div>
+                                <strong>Email</strong>
+                                <p>contact@ironforge.fr</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="detail-icon">⏰</div>
+                            <div>
+                                <strong>Horaires</strong>
+                                <p>Lun-Ven : 6h-23h<br>Sam-Dim : 8h-21h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Réserver un essai gratuit</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Prénom *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Nom *" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Téléphone">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Programme qui t'intéresse *</option>
+                                <option>Musculation & Force</option>
+                                <option>HIIT Extreme</option>
+                                <option>Yoga & Mobilité</option>
+                                <option>Boxe & Combat</option>
+                                <option>CrossFit</option>
+                                <option>Cardio & Endurance</option>
+                                <option>Je ne sais pas encore</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="Un message ? (objectifs, questions...)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-accent btn-full btn-large">
+                            Réserver mon essai gratuit 💪
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-mark">IF</span>
+                        <span class="logo-text">IRONFORGE</span>
+                    </div>
+                    <p>La salle de sport premium qui forge les champions depuis 2015. Équipements de pointe, coachs d'élite, communauté motivante.</p>
+                    <div class="footer-socials">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">YouTube</a>
+                        <a href="#">TikTok</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Programmes</h4>
+                    <ul>
+                        <li><a href="#">Musculation</a></li>
+                        <li><a href="#">HIIT</a></li>
+                        <li><a href="#">Yoga</a></li>
+                        <li><a href="#">Boxe</a></li>
+                        <li><a href="#">CrossFit</a></li>
+                        <li><a href="#">Cardio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Infos</h4>
+                    <ul>
+                        <li><a href="#">Tarifs</a></li>
+                        <li><a href="#">Planning</a></li>
+                        <li><a href="#">Coachs</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IronForge. Tous droits réservés. Forgé avec passion à Lyon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+
+    <script>
+    // Preloader
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('preloader').classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 1200);
+    });
+    document.body.style.overflow = 'hidden';
+
+    // Navbar
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const y = window.pageYOffset;
+        navbar.classList.toggle('scrolled', y > 80);
+        navbar.classList.toggle('hidden', y > lastScroll && y > 300);
+        lastScroll = y;
+        document.getElementById('backToTop').classList.toggle('visible', y > 500);
+    });
+
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        menu.classList.toggle('open');
+    });
+
+    // Counter animation
+    function animateCounters() {
+        document.querySelectorAll('[data-count]').forEach(c => {
+            if (c.dataset.animated) return;
+            c.dataset.animated = 'true';
+            const target = parseInt(c.dataset.count);
+            const start = performance.now();
+            function update(now) {
+                const p = Math.min((now - start) / 2000, 1);
+                const e = 1 - Math.pow(1 - p, 3);
+                c.textContent = Math.floor(target * e).toLocaleString('fr-FR');
+                if (p < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        });
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('revealed');
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+    // Hero metrics observer
+    const metrics = document.querySelector('.hero-metrics');
+    if (metrics) {
+        new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) animateCounters();
+        }, { threshold: 0.5 }).observe(metrics);
+    }
+
+    // Schedule tabs
+    document.querySelectorAll('.schedule-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        });
+    });
+
+    // Pricing toggle
+    const pricingToggle = document.getElementById('pricingToggle');
+    let isAnnual = false;
+    pricingToggle.addEventListener('click', () => {
+        isAnnual = !isAnnual;
+        pricingToggle.classList.toggle('active', isAnnual);
+        document.getElementById('monthlyLabel').classList.toggle('active', !isAnnual);
+        document.getElementById('annualLabel').classList.toggle('active', isAnnual);
+        document.querySelectorAll('.price-amount.monthly').forEach(el => el.style.display = isAnnual ? 'none' : '');
+        document.querySelectorAll('.price-amount.annual').forEach(el => el.style.display = isAnnual ? '' : 'none');
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const t = document.querySelector(link.getAttribute('href'));
+            if (t) t.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Back to top
+    document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Form
+    document.getElementById('contactForm')?.addEventListener('submit', e => {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.textContent = 'Envoi en cours...';
+        btn.disabled = true;
+        setTimeout(() => {
+            btn.textContent = '✅ Essai réservé ! On te contacte bientôt.';
+            btn.style.background = '#059669';
+            setTimeout(() => { btn.textContent = 'Réserver mon essai gratuit 💪'; btn.style.background = ''; btn.disabled = false; e.target.reset(); }, 3000);
+        }, 1500);
+    });
+    </script>
+</body>
+</html>

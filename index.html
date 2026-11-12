@@ -1,0 +1,3397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TemplatePro — 20 Templates HTML/CSS Premium | Collection 2026</title>
+    <meta name="description" content="Collection de 20 templates HTML/CSS professionnels. Design moderne, responsive, prêts à l'emploi. Business, Portfolio, Restaurant, SaaS et plus.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ==========================================
+           PAGE DE VENTE — TEMPLATES PRO
+           ========================================== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary: #06b6d4;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --danger: #ef4444;
+            --dark: #09090b;
+            --dark-800: #18181b;
+            --gray: #71717a;
+            --gray-light: #a1a1aa;
+            --gray-200: #e4e4e7;
+            --gray-100: #f4f4f5;
+            --white: #ffffff;
+            --font: 'Inter', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        a { text-decoration: none; color: inherit; transition: all 0.25s ease; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* =========== NAV =========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 14px 0;
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .nav-logo span { color: var(--primary); }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--gray);
+            border-radius: 8px;
+        }
+
+        .nav-links a:hover { color: var(--dark); background: var(--gray-100); }
+
+        .nav-cta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-family: var(--font);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 2px 12px rgba(99, 102, 241, 0.3);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            box-shadow: 0 6px 24px rgba(99, 102, 241, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border-color: var(--gray-200);
+            color: var(--dark);
+            background: var(--white);
+        }
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-xl { padding: 16px 36px; font-size: 1rem; }
+        .btn-ghost { color: var(--gray); background: none; border: none; }
+        .btn-ghost:hover { color: var(--dark); }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--gray-200);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        /* =========== HERO =========== */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(99,102,241,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99,102,241,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.12;
+            top: -300px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+        }
+
+        .hero-content { position: relative; z-index: 2; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 28px;
+        }
+
+        .hero-badge i { color: var(--accent); }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            letter-spacing: -2.5px;
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 650px;
+            margin: 0 auto 36px;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .hero-note {
+            font-size: 0.82rem;
+            color: var(--gray-light);
+            margin-bottom: 60px;
+        }
+
+        .hero-note i { color: var(--success); margin-right: 4px; }
+
+        /* Hero Stats */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 40px 0;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .hero-stat span {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* =========== TEMPLATES GRID =========== */
+        .templates-section {
+            padding: 120px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--gray-100);
+            color: var(--primary);
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: 1px solid var(--gray-200);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            font-size: 1.05rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+            background: var(--white);
+            font-family: var(--font);
+            font-weight: 500;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            color: var(--gray);
+        }
+
+        .filter-tab:hover, .filter-tab.active {
+            background: var(--dark);
+            color: var(--white);
+            border-color: var(--dark);
+        }
+
+        /* Template Cards */
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .template-card {
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .template-card:hover {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transform: translateY(-6px);
+            border-color: transparent;
+        }
+
+        .template-card.new::before {
+            content: 'NOUVEAU';
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--success);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            z-index: 5;
+        }
+
+        .card-preview {
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card-preview-bg {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .template-card:hover .card-preview-bg {
+            transform: scale(1.05);
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(9, 9, 11, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .template-card:hover .card-overlay { opacity: 1; }
+
+        .overlay-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+            font-family: var(--font);
+            transition: all 0.2s ease;
+        }
+
+        .overlay-btn.preview {
+            background: var(--white);
+            color: var(--dark);
+        }
+
+        .overlay-btn.preview:hover { transform: scale(1.05); }
+
+        .overlay-btn.buy {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .overlay-btn.buy:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .card-info { padding: 20px; }
+
+        .card-tags {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .card-tag {
+            background: var(--gray-100);
+            color: var(--gray);
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .card-info h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card-info .card-desc {
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .card-price {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .card-price .old {
+            color: var(--gray-light);
+            text-decoration: line-through;
+            font-size: 0.85rem;
+        }
+
+        .card-price .current {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .card-stats-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .card-stat {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.75rem;
+            color: var(--gray-light);
+        }
+
+        .card-stat i { font-size: 0.7rem; }
+
+        /* =========== BUNDLE SECTION =========== */
+        .bundle-section {
+            padding: 100px 0;
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bundle-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(99,102,241,0.15), transparent 70%);
+        }
+
+        .bundle-card {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .bundle-info { color: var(--white); }
+
+        .bundle-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .bundle-info h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .bundle-info > p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .bundle-features {
+            list-style: none;
+            margin-bottom: 36px;
+        }
+
+        .bundle-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+
+        .bundle-features li i {
+            color: var(--success);
+            width: 20px;
+            text-align: center;
+        }
+
+        .bundle-pricing-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .bundle-pricing-box h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .bundle-pricing-box .bundle-subtitle {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .bundle-price-display {
+            margin-bottom: 24px;
+        }
+
+        .bundle-old-price {
+            color: rgba(255,255,255,0.35);
+            text-decoration: line-through;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .bundle-new-price {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .bundle-new-price small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .bundle-save {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        /* =========== CUSTOMIZATION SECTION =========== */
+        .customization-section {
+            padding: 100px 0;
+            background: var(--gray-100);
+        }
+
+        .customization-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .custom-option-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .custom-option-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 16px 50px rgba(99,102,241,0.15);
+            transform: translateY(-4px);
+        }
+
+        .custom-option-card.selected {
+            border-color: var(--primary);
+            background: rgba(99,102,241,0.02);
+        }
+
+        .custom-option-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .custom-option-icon.self {
+            background: linear-gradient(135deg, var(--success), #34d399);
+            color: white;
+        }
+
+        .custom-option-icon.pro {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .custom-option-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .custom-option-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .custom-option-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .custom-option-price small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        .custom-option-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .custom-option-features li {
+            padding: 8px 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .custom-option-features li i {
+            color: var(--success);
+        }
+
+        .custom-option-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            font-family: var(--font);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .custom-option-btn.self {
+            background: var(--success);
+            color: white;
+        }
+
+        .custom-option-btn.self:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+        }
+
+        .custom-option-btn.pro {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .custom-option-btn.pro:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99,102,241,0.4);
+        }
+
+        /* =========== CUSTOM REQUEST FORM =========== */
+        .custom-request-section {
+            padding: 100px 0;
+        }
+
+        .custom-request-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--gray-200);
+        }
+
+        .custom-request-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .custom-request-header h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .custom-request-header p {
+            color: var(--gray);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .custom-form-group {
+            margin-bottom: 20px;
+        }
+
+        .custom-form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .custom-form-group input,
+        .custom-form-group select,
+        .custom-form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            font-family: var(--font);
+            font-size: 0.95rem;
+            transition: all 0.25s ease;
+        }
+
+        .custom-form-group input:focus,
+        .custom-form-group select:focus,
+        .custom-form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
+        }
+
+        .custom-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .custom-form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .custom-submit-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            font-family: var(--font);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .custom-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99,102,241,0.4);
+        }
+
+        .custom-submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        @media (max-width: 768px) {
+            .customization-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .custom-form-row {
+                grid-template-columns: 1fr;
+            }
+            .custom-request-container {
+                padding: 30px;
+            }
+        }
+
+        .bundle-new-price small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .bundle-save {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        .bundle-btn {
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            font-family: var(--font);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 24px;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .bundle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+        }
+
+        .bundle-guarantee {
+            color: rgba(255,255,255,0.35);
+            font-size: 0.78rem;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* =========== FEATURES =========== */
+        .why-section {
+            padding: 120px 0;
+            background: var(--gray-100);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            padding: 30px 24px;
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            box-shadow: 0 16px 50px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            border-color: transparent;
+        }
+
+        .why-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+        }
+
+        .why-icon.purple { background: rgba(99,102,241,0.1); color: var(--primary); }
+        .why-icon.cyan { background: rgba(6,182,212,0.1); color: var(--secondary); }
+        .why-icon.green { background: rgba(16,185,129,0.1); color: var(--success); }
+        .why-icon.orange { background: rgba(245,158,11,0.1); color: var(--accent); }
+
+        .why-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: var(--gray);
+            font-size: 0.87rem;
+            line-height: 1.6;
+        }
+
+        /* =========== TESTIMONIALS =========== */
+        .reviews-section {
+            padding: 120px 0;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .review-card {
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+            transform: translateY(-3px);
+        }
+
+        .review-stars { margin-bottom: 14px; }
+        .review-stars i { color: var(--accent); font-size: 0.85rem; }
+
+        .review-card > p {
+            color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .review-author strong { display: block; font-size: 0.9rem; }
+        .review-author span { font-size: 0.8rem; color: var(--gray-light); }
+
+        /* =========== FAQ =========== */
+        .faq-section {
+            padding: 120px 0;
+            background: var(--gray-100);
+        }
+
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            background: var(--white);
+            transition: all 0.25s ease;
+        }
+
+        .faq-item:hover { border-color: var(--primary); }
+        .faq-item.active { border-color: var(--primary); }
+
+        .faq-q {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+            background: none;
+            border: none;
+            font-family: var(--font);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--dark);
+            text-align: left;
+        }
+
+        .faq-q i { color: var(--primary); transition: transform 0.25s ease; }
+        .faq-item.active .faq-q i { transform: rotate(45deg); }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-a { max-height: 200px; }
+
+        .faq-a p {
+            padding: 0 24px 18px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* =========== CTA FINAL =========== */
+        .final-cta {
+            padding: 120px 0;
+        }
+
+        .cta-box {
+            background: var(--dark);
+            border-radius: 24px;
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99,102,241,0.2), transparent 70%);
+        }
+
+        .cta-box h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            position: relative;
+        }
+
+        .cta-box > p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1.05rem;
+            max-width: 550px;
+            margin: 0 auto 32px;
+            position: relative;
+        }
+
+        .cta-box .cta-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .cta-box .cta-note {
+            color: rgba(255,255,255,0.35);
+            font-size: 0.8rem;
+            position: relative;
+        }
+
+        /* =========== FOOTER =========== */
+        .footer {
+            padding: 60px 0 0;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .footer-logo .fl-icon {
+            width: 26px; height: 26px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 0.75rem;
+        }
+
+        .footer-logo span { color: var(--primary); }
+
+        .footer-col > p {
+            color: var(--gray);
+            font-size: 0.87rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 8px;
+        }
+
+        .footer-social a {
+            width: 34px; height: 34px;
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .footer-col h4 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col ul a { color: var(--gray); font-size: 0.87rem; }
+        .footer-col ul a:hover { color: var(--primary); }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-bottom p {
+            color: var(--gray-light);
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: var(--gray-light);
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom-links a:hover { color: var(--dark); }
+
+        /* =========== RESPONSIVE =========== */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 3.5rem; }
+            .templates-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .bundle-card { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 16px;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+                border-top: 1px solid var(--gray-200);
+            }
+            .menu-toggle { display: block; }
+
+            .hero { padding: 120px 0 60px; }
+            .hero h1 { font-size: 2.5rem; letter-spacing: -1px; }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
+            .hero-stat strong { font-size: 1.8rem; }
+
+            .templates-grid,
+            .reviews-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+
+            .section-header h2 { font-size: 2rem; }
+            .bundle-info h2 { font-size: 2rem; }
+
+            .cta-box { padding: 50px 24px; }
+            .cta-box h2 { font-size: 2rem; }
+            .cta-box .cta-actions { flex-direction: column; align-items: center; }
+
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .section-header h2 { font-size: 1.6rem; }
+        }
+
+        /* =========== CARD ACTIONS =========== */
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            padding: 0 20px 20px;
+        }
+
+        .card-actions button,
+        .card-actions a {
+            flex: 1;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-family: var(--font);
+            font-weight: 600;
+            font-size: 0.82rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-decoration: none;
+        }
+
+        .btn-demo {
+            background: var(--gray-100);
+            color: var(--dark);
+            border: 1px solid var(--gray-200) !important;
+        }
+
+        .btn-demo:hover {
+            border-color: var(--primary) !important;
+            color: var(--primary);
+        }
+
+        .btn-buy-card {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-buy-card:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-download-card {
+            background: var(--success);
+            color: var(--white);
+        }
+
+        .btn-download-card:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+        }
+
+        /* =========== MODAL OVERLAY =========== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* =========== DEMO MODAL =========== */
+        .demo-modal .modal-content {
+            width: 95vw;
+            height: 92vh;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.92);
+            transition: transform 0.3s ease;
+        }
+
+        .demo-modal.active .modal-content { transform: scale(1); }
+
+        .demo-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: var(--dark);
+            color: white;
+            min-height: 50px;
+            gap: 10px;
+        }
+
+        .demo-topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .demo-topbar h3 { font-size: 0.9rem; font-weight: 600; white-space: nowrap; }
+
+        .demo-url-bar {
+            background: rgba(255,255,255,0.1);
+            padding: 5px 14px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.45);
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .demo-url-bar i { font-size: 0.65rem; }
+
+        .demo-device-bar {
+            display: flex;
+            gap: 4px;
+        }
+
+        .demo-device-btn {
+            padding: 6px 10px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.08);
+            border: none;
+            color: rgba(255,255,255,0.45);
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .demo-device-btn:hover, .demo-device-btn.active {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .demo-topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-buy-demo {
+            padding: 8px 20px;
+            border-radius: 8px;
+            background: var(--success);
+            color: white;
+            border: none;
+            font-family: var(--font);
+            font-weight: 700;
+            font-size: 0.82rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-buy-demo:hover { filter: brightness(1.1); transform: scale(1.03); }
+
+        .demo-link-newtab {
+            text-decoration: none;
+            color: rgba(255,255,255,0.45);
+            font-size: 0.85rem;
+        }
+
+        .demo-link-newtab:hover { color: white; }
+
+        .demo-close {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.5);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 4px 6px;
+            transition: color 0.2s;
+        }
+
+        .demo-close:hover { color: white; }
+
+        .demo-iframe-wrap {
+            flex: 1;
+            position: relative;
+            background: var(--gray-100);
+            display: flex;
+            justify-content: center;
+        }
+
+        .demo-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: max-width 0.4s ease;
+            background: white;
+        }
+
+        /* =========== CHECKOUT MODAL =========== */
+        .checkout-modal .modal-box {
+            background: var(--white);
+            border-radius: 20px;
+            width: 500px;
+            max-width: 95vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .checkout-modal.active .modal-box { transform: translateY(0); }
+
+        .checkout-header {
+            padding: 24px 28px;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .checkout-header h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkout-header h3 i { color: var(--success); }
+
+        .checkout-close {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--gray);
+            padding: 4px;
+        }
+
+        .checkout-close:hover { color: var(--dark); }
+
+        .checkout-body { padding: 24px 28px; }
+
+        .checkout-product {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px;
+            background: var(--gray-100);
+            border-radius: 12px;
+            margin-bottom: 22px;
+        }
+
+        .checkout-product-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            flex-shrink: 0;
+        }
+
+        .checkout-product-info { flex: 1; }
+        .checkout-product-info h4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 2px; }
+        .checkout-product-info span { font-size: 0.78rem; color: var(--gray); }
+
+        .checkout-product-price {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--dark);
+            flex-shrink: 0;
+        }
+
+        .checkout-form label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .checkout-form input {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            font-family: var(--font);
+            font-size: 0.88rem;
+            margin-bottom: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .checkout-form input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+        }
+
+        .checkout-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .checkout-submit {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            font-family: var(--font);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(99,102,241,0.3);
+        }
+
+        .checkout-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99,102,241,0.4);
+        }
+
+        .checkout-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .checkout-secure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 12px;
+            font-size: 0.75rem;
+            color: var(--gray-light);
+        }
+
+        /* Payment Methods in Checkout Modal */
+        .payment-methods-checkout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .payment-method-option-checkout {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .payment-method-option-checkout input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .payment-method-card-checkout {
+            padding: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .payment-method-card-checkout:hover {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .payment-method-card-checkout i {
+            font-size: 1.5rem;
+            color: #64748b;
+        }
+
+        .payment-method-card-checkout span {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .payment-method-option-checkout input:checked + .payment-method-card-checkout {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .payment-method-option-checkout input:checked + .payment-method-card-checkout i {
+            color: var(--primary);
+        }
+
+        .payment-method-option-checkout input:checked + .payment-method-card-checkout span {
+            color: var(--primary);
+        }
+
+        .mobile-money-fields-checkout {
+            margin-top: 16px;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 10px;
+        }
+
+        .mobile-money-fields-checkout label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #475569;
+        }
+
+        .mobile-money-fields-checkout input,
+        .mobile-money-fields-checkout select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .card-fields-checkout {
+            margin-top: 16px;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 10px;
+        }
+
+        .card-fields-checkout label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #475569;
+        }
+
+        .card-fields-checkout input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .checkout-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        /* =========== SUCCESS MODAL =========== */
+        .success-modal .modal-box {
+            background: var(--white);
+            border-radius: 20px;
+            width: 460px;
+            max-width: 95vw;
+            padding: 44px 32px;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .success-modal.active .modal-box { transform: scale(1); }
+
+        .success-icon {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: rgba(16,185,129,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.8rem;
+            color: var(--success);
+        }
+
+        .success-modal h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .success-modal .success-desc {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            background: var(--success);
+            color: white;
+            font-family: var(--font);
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(16,185,129,0.3);
+            margin-bottom: 14px;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(16,185,129,0.4);
+            color: white;
+        }
+
+        .success-close-link {
+            display: block;
+            color: var(--gray);
+            font-size: 0.83rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: var(--font);
+            margin: 0 auto;
+        }
+
+        .success-close-link:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .demo-modal .modal-content { width: 100vw; height: 100vh; border-radius: 0; }
+            .demo-topbar { flex-wrap: wrap; }
+            .demo-device-bar { display: none; }
+            .demo-url-bar { display: none; }
+            .checkout-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-layer-group"></i></div>
+                Template<span>Pro</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#templates">Templates</a></li>
+                <li><a href="#bundle">Bundle</a></li>
+                <li><a href="#features">Avantages</a></li>
+                <li><a href="#reviews">Avis</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#bundle" class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Acheter le Bundle
+                </a>
+            </div>
+            <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-content container">
+            <span class="hero-badge">
+                <i class="fas fa-fire"></i> Collection 2026 — 20 Templates Premium
+            </span>
+            <h1>Templates HTML/CSS <br><span class="gradient-text">Professionnels</span></h1>
+            <p class="hero-subtitle">
+                20 templates modernes, entièrement responsive et prêts à l'emploi. Du business au SaaS, chaque design est optimisé pour convertir.
+            </p>
+            <div class="hero-cta">
+                <a href="#templates" class="btn btn-primary btn-xl">
+                    <i class="fas fa-eye"></i> Voir les templates
+                </a>
+                <a href="#bundle" class="btn btn-outline btn-xl">
+                    <i class="fas fa-box-open"></i> Acheter le Bundle -60%
+                </a>
+            </div>
+            <p class="hero-note">
+                <i class="fas fa-check-circle"></i> Téléchargement immédiat • Licence commerciale • Support inclus
+            </p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong>20</strong>
+                    <span>Templates</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>100%</strong>
+                    <span>Responsive</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>40+</strong>
+                    <span>Fichiers</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>4.9/5</strong>
+                    <span>Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Grid -->
+    <section id="templates" class="templates-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Collection</span>
+                <h2>Découvrez Nos <span class="gradient-text">20 Templates</span></h2>
+                <p>Chaque template est un produit fini, prêt à être personnalisé et déployé</p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">Tous (20)</button>
+                <button class="filter-tab" data-filter="business">Business</button>
+                <button class="filter-tab" data-filter="creative">Créatif</button>
+                <button class="filter-tab" data-filter="services">Services</button>
+                <button class="filter-tab" data-filter="tech">Tech & SaaS</button>
+                <button class="filter-tab" data-filter="new">Nouveaux</button>
+            </div>
+
+            <div class="templates-grid" id="templatesGrid">
+                <!-- Template 01 -->
+                <div class="template-card" data-category="business">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="01-business-corporate/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Business</span>
+                            <span class="card-tag">Corporate</span>
+                        </div>
+                        <h3>01 — Business Corporate</h3>
+                        <p class="card-desc">Template professionnel pour entreprises et sociétés. Design élégant et sobre.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">2€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 02 -->
+                <div class="template-card" data-category="creative">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="02-portfolio-creatif/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Portfolio</span>
+                            <span class="card-tag">Créatif</span>
+                        </div>
+                        <h3>02 — Portfolio Créatif</h3>
+                        <p class="card-desc">Mettez en valeur vos créations avec ce portfolio moderne et dynamique.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">2€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 03 -->
+                <div class="template-card" data-category="creative">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="03-cv-professionnel/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">CV</span>
+                            <span class="card-tag">Professionnel</span>
+                        </div>
+                        <h3>03 — CV Professionnel</h3>
+                        <p class="card-desc">CV en ligne interactif avec animations et design professionnel percutant.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">1€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 04 -->
+                <div class="template-card" data-category="tech">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="04-landing-startup/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Landing Page</span>
+                            <span class="card-tag">Startup</span>
+                        </div>
+                        <h3>04 — Landing Startup</h3>
+                        <p class="card-desc">Landing page optimisée pour la conversion. Parfaite pour lancer votre startup.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 05 -->
+                <div class="template-card" data-category="services">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="05-restaurant/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Restaurant</span>
+                            <span class="card-tag">Gastronomie</span>
+                        </div>
+                        <h3>05 — Restaurant</h3>
+                        <p class="card-desc">Design raffiné pour restaurants haut de gamme avec menu et réservation.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">2€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 06 -->
+                <div class="template-card" data-category="business">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="06-agence-digitale/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Agence</span>
+                            <span class="card-tag">Digital</span>
+                        </div>
+                        <h3>06 — Agence Digitale</h3>
+                        <p class="card-desc">Site vitrine moderne pour agences web, marketing et communication.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">2€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 07 -->
+                <div class="template-card" data-category="creative">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="07-blog-personnel/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Blog</span>
+                            <span class="card-tag">Personnel</span>
+                        </div>
+                        <h3>07 — Blog Personnel</h3>
+                        <p class="card-desc">Blog minimaliste et élégant pour écrivains, journalistes et créateurs.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">1€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 08 -->
+                <div class="template-card" data-category="creative">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="08-photographe/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Photographe</span>
+                            <span class="card-tag">Portfolio</span>
+                        </div>
+                        <h3>08 — Photographe</h3>
+                        <p class="card-desc">Portfolio photographe avec galerie plein écran et effets visuels saisissants.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">2€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 09 -->
+                <div class="template-card" data-category="business">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="09-ecommerce/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">E-commerce</span>
+                            <span class="card-tag">Boutique</span>
+                        </div>
+                        <h3>09 — E-commerce</h3>
+                        <p class="card-desc">Boutique en ligne moderne avec catalogue produits, panier et checkout.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 10 -->
+                <div class="template-card" data-category="creative">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-color: #f5f5f5;"></div>
+                        <div class="card-overlay">
+                            <a href="10-cv-minimaliste/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">CV</span>
+                            <span class="card-tag">Minimaliste</span>
+                        </div>
+                        <h3>10 — CV Minimaliste</h3>
+                        <p class="card-desc">CV épuré et minimaliste axé sur la lisibilité et l'impact visuel.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">1€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 11 -->
+                <div class="template-card" data-category="services">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="11-immobilier/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Immobilier</span>
+                            <span class="card-tag">Agence</span>
+                        </div>
+                        <h3>11 — Immobilier</h3>
+                        <p class="card-desc">Agence immobilière avec recherche de biens, fiches détaillées et contact.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 12 - NEW -->
+                <div class="template-card new" data-category="services new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="12-cabinet-avocats/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Cabinet</span>
+                            <span class="card-tag">Juridique</span>
+                        </div>
+                        <h3>12 — Cabinet d'Avocats</h3>
+                        <p class="card-desc">Design prestigieux pour cabinets d'avocats et professions juridiques.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 13 - NEW -->
+                <div class="template-card new" data-category="services new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="13-fitness-gym/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Fitness</span>
+                            <span class="card-tag">Sport</span>
+                        </div>
+                        <h3>13 — Fitness & Gym</h3>
+                        <p class="card-desc">Template énergique pour salles de sport, coachs et centres de fitness.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 14 - NEW -->
+                <div class="template-card new" data-category="services new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="14-agence-voyage/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Voyage</span>
+                            <span class="card-tag">Tourisme</span>
+                        </div>
+                        <h3>14 — Agence de Voyage</h3>
+                        <p class="card-desc">Agence de voyage premium avec recherche, destinations et réservation.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS/JS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 15 - NEW -->
+                <div class="template-card new" data-category="tech new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="15-education-en-ligne/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Éducation</span>
+                            <span class="card-tag">E-learning</span>
+                        </div>
+                        <h3>15 — Éducation en Ligne</h3>
+                        <p class="card-desc">Plateforme e-learning complète avec cours, formateurs, pricing et FAQ.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS/JS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 16 - NEW -->
+                <div class="template-card new" data-category="tech new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="16-saas-app/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">SaaS</span>
+                            <span class="card-tag">Application</span>
+                        </div>
+                        <h3>16 — SaaS Application</h3>
+                        <p class="card-desc">Landing page SaaS haut de gamme avec app preview, pricing et intégrations.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS/JS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 17 - NEW -->
+                <div class="template-card new" data-category="services new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="17-salon-beaute/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Salon</span>
+                            <span class="card-tag">Beauté</span>
+                        </div>
+                        <h3>17 — Salon de Beauté</h3>
+                        <p class="card-desc">Template luxueux pour salons de beauté et barber shops avec services et réservation.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">2€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 18 - NEW -->
+                <div class="template-card new" data-category="services new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="18-hotel-residence/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">Hôtel</span>
+                            <span class="card-tag">Résidence</span>
+                        </div>
+                        <h3>18 — Hôtel & Résidence</h3>
+                        <p class="card-desc">Hôtel 5 étoiles et résidence touristique avec chambres, spa et réservation.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">3€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 19 - NEW -->
+                <div class="template-card new" data-category="services new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="19-btp-construction/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">BTP</span>
+                            <span class="card-tag">Construction</span>
+                        </div>
+                        <h3>19 — BTP & Construction</h3>
+                        <p class="card-desc">Entreprise de BTP avec services, projets, méthodologie et formulaire de devis.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">2€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 20 - NEW -->
+                <div class="template-card new" data-category="tech new">
+                    <div class="card-preview">
+                        <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div class="card-overlay">
+                            <a href="20-saas-landing/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
+                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tags">
+                            <span class="card-tag">SaaS</span>
+                            <span class="card-tag">Landing</span>
+                        </div>
+                        <h3>20 — SaaS Landing Page</h3>
+                        <p class="card-desc">Landing page SaaS moderne avec mockup, features, pricing et FAQ.</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="current">2€</span>
+                            </div>
+                            <div class="card-stats-row">
+                                <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
+                                <span class="card-stat"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bundle Section -->
+    <section id="bundle" class="bundle-section">
+        <div class="container">
+            <div class="bundle-card">
+                <div class="bundle-info">
+                    <span class="bundle-tag"><i class="fas fa-fire"></i> Offre limitée</span>
+                    <h2>Bundle Complet <br><span class="gradient-text">20 Templates</span></h2>
+                    <p>Obtenez l'intégralité de la collection à un prix imbattable. Tous les templates actuels + les futures mises à jour gratuites.</p>
+                    <ul class="bundle-features">
+                        <li><i class="fas fa-check"></i> 20 templates HTML/CSS premium</li>
+                        <li><i class="fas fa-check"></i> 100% responsive (mobile, tablette, desktop)</li>
+                        <li><i class="fas fa-check"></i> Code propre, commenté et facilement modifiable</li>
+                        <li><i class="fas fa-check"></i> Licence commerciale incluse</li>
+                        <li><i class="fas fa-check"></i> Mises à jour gratuites à vie</li>
+                        <li><i class="fas fa-check"></i> Support technique par email</li>
+                        <li><i class="fas fa-check"></i> Fichiers source Figma (bonus)</li>
+                    </ul>
+                </div>
+                <div class="bundle-pricing-box">
+                    <h3>Bundle Complet</h3>
+                    <p class="bundle-subtitle">Tous les 20 templates en un seul achat</p>
+                    <div class="bundle-price-display">
+                        <span class="bundle-old-price">45€ (valeur totale)</span>
+                        <span class="bundle-new-price">29€ <small>TTC</small></span>
+                        <span class="bundle-save"><i class="fas fa-tag"></i> Économisez 16€ (-36%)</span>
+                    </div>
+                    <button class="bundle-btn">
+                        <i class="fas fa-shopping-cart"></i> Acheter le Bundle — 29€
+                    </button>
+                    <p class="bundle-guarantee"><i class="fas fa-shield-alt"></i> Garantie satisfait ou remboursé 30 jours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section id="customization" class="customization-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Personnalisation</span>
+                <h2>Choisissez Votre <span class="gradient-text">Mode de Personnalisation</span></h2>
+                <p>Deux options pour adapter votre template à vos besoins</p>
+            </div>
+
+            <div class="customization-grid">
+                <div class="custom-option-card self" onclick="selectCustomOption('self')">
+                    <div class="custom-option-icon self">
+                        <i class="fas fa-user-edit"></i>
+                    </div>
+                    <h3>Personnalisation Soi-même</h3>
+                    <p>Téléchargez le template et personnalisez-le vous-même grâce au code commenté et aux variables CSS. Idéal si vous avez des connaissances en HTML/CSS.</p>
+                    <div class="custom-option-price">
+                        Gratuit
+                        <small>(avec achat du template)</small>
+                    </div>
+                    <ul class="custom-option-features">
+                        <li><i class="fas fa-check"></i> Code commenté et documenté</li>
+                        <li><i class="fas fa-check"></i> Variables CSS pour les couleurs</li>
+                        <li><i class="fas fa-check"></i> Structure HTML sémantique</li>
+                        <li><i class="fas fa-check"></i> README détaillé inclus</li>
+                    </ul>
+                    <button class="custom-option-btn self">
+                        <i class="fas fa-download"></i> Télécharger & Personnaliser
+                    </button>
+                </div>
+
+                <div class="custom-option-card pro" onclick="selectCustomOption('pro')">
+                    <div class="custom-option-icon pro">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Personnalisation Pro</h3>
+                    <p>Laissez nos experts personnaliser votre template selon vos besoins. Nous modifions couleurs, images, textes et ajoutons vos fonctionnalités.</p>
+                    <div class="custom-option-price">
+                        À partir de 20€
+                        <small>selon la complexité</small>
+                    </div>
+                    <ul class="custom-option-features">
+                        <li><i class="fas fa-check"></i> Personnalisation complète</li>
+                        <li><i class="fas fa-check"></i> Changement de couleurs/images</li>
+                        <li><i class="fas fa-check"></i> Modification des textes</li>
+                        <li><i class="fas fa-check"></i> 3 révisions incluses</li>
+                        <li><i class="fas fa-check"></i> Livraison en 48-72h</li>
+                    </ul>
+                    <button class="custom-option-btn pro">
+                        <i class="fas fa-arrow-right"></i> Demander un Devis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Request Form Section -->
+    <section id="custom-request" class="custom-request-section" style="display: none;">
+        <div class="container">
+            <div class="custom-request-container">
+                <div class="custom-request-header">
+                    <h2>Demande de Personnalisation</h2>
+                    <p>Décrivez vos besoins et notre équipe vous contactera sous 24h</p>
+                </div>
+                <form id="customRequestForm">
+                    <div class="custom-form-row">
+                        <div class="custom-form-group">
+                            <label for="custom-name">Nom complet *</label>
+                            <input type="text" id="custom-name" name="name" required>
+                        </div>
+                        <div class="custom-form-group">
+                            <label for="custom-email">Email *</label>
+                            <input type="email" id="custom-email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="custom-form-row">
+                        <div class="custom-form-group">
+                            <label for="custom-template">Template à personnaliser *</label>
+                            <select id="custom-template" name="template" required>
+                                <option value="">Sélectionner un template</option>
+                                <option value="01">01 — Business Corporate</option>
+                                <option value="02">02 — Portfolio Créatif</option>
+                                <option value="03">03 — CV Professionnel</option>
+                                <option value="04">04 — Landing Startup</option>
+                                <option value="05">05 — Restaurant</option>
+                                <option value="06">06 — Agence Digitale</option>
+                                <option value="07">07 — Blog Personnel</option>
+                                <option value="08">08 — Photographe</option>
+                                <option value="09">09 — E-commerce</option>
+                                <option value="10">10 — CV Minimaliste</option>
+                                <option value="11">11 — Immobilier</option>
+                                <option value="12">12 — Cabinet d'Avocats</option>
+                                <option value="13">13 — Fitness & Gym</option>
+                                <option value="14">14 — Agence de Voyage</option>
+                                <option value="15">15 — Éducation en Ligne</option>
+                                <option value="16">16 — SaaS Application</option>
+                                <option value="17">17 — Salon de Beauté</option>
+                                <option value="18">18 — Hôtel & Résidence</option>
+                                <option value="19">19 — BTP & Construction</option>
+                                <option value="20">20 — SaaS Landing Page</option>
+                            </select>
+                        </div>
+                        <div class="custom-form-group">
+                            <label for="custom-budget">Budget estimé</label>
+                            <select id="custom-budget" name="budget">
+                                <option value="">Sélectionner</option>
+                                <option value="50-100">50€ - 100€</option>
+                                <option value="100-200">100€ - 200€</option>
+                                <option value="200-500">200€ - 500€</option>
+                                <option value="500+">Plus de 500€</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="custom-requirements">Vos besoins de personnalisation *</label>
+                        <textarea id="custom-requirements" name="requirements" placeholder="Décrivez les modifications souhaitées : couleurs, images, textes, sections à ajouter/supprimer, fonctionnalités spécifiques..." required></textarea>
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="custom-deadline">Date limite souhaitée</label>
+                        <input type="date" id="custom-deadline" name="deadline">
+                    </div>
+                    <button type="submit" class="custom-submit-btn">
+                        <i class="fas fa-paper-plane"></i> Envoyer ma demande
+                    </button>
+                    <p style="text-align: center; font-size: 0.85rem; color: var(--gray-light); margin-top: 16px;">
+                        <i class="fas fa-lock"></i> Vos informations sont sécurisées et ne seront partagées qu'avec notre équipe.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section id="features" class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Avantages</span>
+                <h2>Pourquoi Choisir <span class="gradient-text">TemplatePro</span> ?</h2>
+                <p>Des templates conçus par des professionnels pour des professionnels</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon purple"><i class="fas fa-code"></i></div>
+                    <h3>Code propre & sémantique</h3>
+                    <p>HTML5 valide, CSS moderne avec Flexbox/Grid. Facile à comprendre, modifier et déployer.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon cyan"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>100% Responsive</h3>
+                    <p>Testé sur tous les appareils. Mobile-first, tablette et desktop parfaitement optimisés.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon green"><i class="fas fa-bolt"></i></div>
+                    <h3>Performance optimisée</h3>
+                    <p>Score PageSpeed 95+. CSS minifié, pas de dépendances lourdes, chargement ultra-rapide.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon orange"><i class="fas fa-palette"></i></div>
+                    <h3>Design premium</h3>
+                    <p>Créés par des designers UI/UX experts. Animations fluides, typographies soignées, couleurs harmonieuses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Avis clients</span>
+                <h2>Ce Qu'en Disent <span class="gradient-text">Nos Clients</span></h2>
+                <p>Plus de 500 clients satisfaits dans le monde</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"J'ai acheté le bundle complet et je ne regrette absolument pas. La qualité du code est impeccable et les designs sont magnifiques. J'ai déjà livré 3 projets clients avec !"</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">KD</div>
+                        <div>
+                            <strong>Karim Dubois</strong>
+                            <span>Développeur Freelance — Paris</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Exactement ce qu'il me fallait pour ma micro-agence. Les templates sont professionnels, le code est clean et les clients adorent le résultat. ROI en 1 semaine !"</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">MR</div>
+                        <div>
+                            <strong>Marie Renard</strong>
+                            <span>Fondatrice — Agence Web, Lyon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Le template SaaS et celui pour l'éducation en ligne sont incroyables. Le niveau de détail dans le design et le code est vraiment pro. Meilleur achat de l'année."</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background: linear-gradient(135deg, #10b981, #34d399);">AL</div>
+                        <div>
+                            <strong>Antoine Laurent</strong>
+                            <span>CTO — Startup EdTech, Bordeaux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2>Questions <span class="gradient-text">Fréquentes</span></h2>
+                <p>Tout ce que vous devez savoir avant d'acheter</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q"><span>Qu'est-ce qui est inclus dans le bundle ?</span><i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Le bundle inclut les 16 templates HTML/CSS complets, tous les fichiers source (HTML, CSS, JS), la licence commerciale, les mises à jour gratuites à vie, le support technique et en bonus les fichiers Figma.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span>Puis-je utiliser les templates pour des projets clients ?</span><i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Oui ! La licence commerciale vous permet d'utiliser les templates pour vos propres projets et ceux de vos clients. Vous pouvez les modifier librement. La seule restriction est la revente du template lui-même.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span>Les templates nécessitent-ils des connaissances en programmation ?</span><i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Des connaissances basiques en HTML/CSS suffisent pour personnaliser les templates (textes, couleurs, images). Le code est propre, commenté et organisé de manière logique pour faciliter les modifications.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span>Y a-t-il une garantie de remboursement ?</span><i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Oui, nous offrons une garantie satisfait ou remboursé de 30 jours. Si les templates ne correspondent pas à vos attentes, vous serez intégralement remboursé, sans questions posées.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span>Les templates sont-ils compatibles avec tous les navigateurs ?</span><i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Oui ! Tous nos templates sont testés sur Chrome, Firefox, Safari, Edge et Opera. Ils sont également optimisés pour les appareils mobiles iOS et Android.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span>Comment recevoir les fichiers après achat ?</span><i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Après le paiement, vous recevez immédiatement un lien de téléchargement par email. Vous pouvez aussi accéder à vos fichiers depuis votre compte client à tout moment.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Prêt à Créer des Sites <span class="gradient-text">Exceptionnels</span> ?</h2>
+                <p>Rejoignez 500+ développeurs et designers qui utilisent nos templates pour livrer des projets professionnels en un temps record.</p>
+                <div class="cta-actions">
+                    <a href="#bundle" class="btn btn-primary btn-xl">
+                        <i class="fas fa-shopping-cart"></i> Acheter le Bundle — 129€
+                    </a>
+                    <a href="#templates" class="btn btn-outline btn-xl" style="border-color: rgba(255,255,255,0.2); color: white;">
+                        <i class="fas fa-eye"></i> Voir les templates
+                    </a>
+                </div>
+                <p class="cta-note"><i class="fas fa-shield-alt"></i> Paiement sécurisé • Téléchargement immédiat • Garantie 30 jours</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <div class="fl-icon"><i class="fas fa-layer-group"></i></div>
+                        Template<span>Pro</span>
+                    </a>
+                    <p>Collection de templates HTML/CSS premium pour développeurs et designers exigeants.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#bundle">Bundle</a></li>
+                        <li><a href="#">Licence</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutoriels</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TemplatePro. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGV</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== DEMO PREVIEW MODAL ===== -->
+    <div class="modal-overlay demo-modal" id="demoModal">
+        <div class="modal-content">
+            <div class="demo-topbar">
+                <div class="demo-topbar-left">
+                    <div class="demo-device-bar">
+                        <button class="demo-device-btn active" data-width="100%" title="Desktop"><i class="fas fa-desktop"></i></button>
+                        <button class="demo-device-btn" data-width="768px" title="Tablette"><i class="fas fa-tablet-alt"></i></button>
+                        <button class="demo-device-btn" data-width="375px" title="Mobile"><i class="fas fa-mobile-alt"></i></button>
+                    </div>
+                    <h3 id="demoTitle">Aperçu du template</h3>
+                    <span class="demo-url-bar"><i class="fas fa-lock"></i> <span id="demoUrl"></span></span>
+                </div>
+                <div class="demo-topbar-right">
+                    <button class="btn-buy-demo" id="demoBuyBtn"><i class="fas fa-shopping-cart"></i> Acheter</button>
+                    <a id="demoNewTab" href="#" target="_blank" class="demo-link-newtab" title="Ouvrir dans un nouvel onglet"><i class="fas fa-external-link-alt"></i></a>
+                    <button class="demo-close" id="demoCloseBtn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="demo-iframe-wrap">
+                <iframe id="demoIframe" src="about:blank"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CHECKOUT MODAL ===== -->
+    <div class="modal-overlay checkout-modal" id="checkoutModal">
+        <div class="modal-box">
+            <div class="checkout-header">
+                <h3><i class="fas fa-lock"></i> Paiement sécurisé</h3>
+                <button class="checkout-close" id="checkoutCloseBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="checkout-body">
+                <div class="checkout-product">
+                    <div class="checkout-product-icon"><i class="fas fa-layer-group"></i></div>
+                    <div class="checkout-product-info">
+                        <h4 id="checkoutName">Template</h4>
+                        <span>HTML / CSS / JS &bull; Téléchargement immédiat</span>
+                    </div>
+                    <span class="checkout-product-price" id="checkoutPrice">19€</span>
+                </div>
+                <form class="checkout-form" id="checkoutForm">
+                    <label for="ckName">Nom complet</label>
+                    <input type="text" id="ckName" placeholder="Votre nom" required>
+                    <label for="ckEmail">Adresse email</label>
+                    <input type="email" id="ckEmail" placeholder="votre@email.com" required>
+                    
+                    <label>Méthode de paiement</label>
+                    <div class="payment-methods-checkout">
+                        <label class="payment-method-option-checkout">
+                            <input type="radio" name="paymentMethod" value="card" checked>
+                            <div class="payment-method-card-checkout">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Carte bancaire</span>
+                            </div>
+                        </label>
+                        <label class="payment-method-option-checkout">
+                            <input type="radio" name="paymentMethod" value="mobile_money">
+                            <div class="payment-method-card-checkout">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile Money</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="card-fields-checkout" id="cardFieldsCheckout">
+                        <label for="ckCard">Numéro de carte</label>
+                        <input type="text" id="ckCard" placeholder="4242 4242 4242 4242" required maxlength="19">
+                        <div class="checkout-row">
+                            <div>
+                                <label for="ckExp">Expiration</label>
+                                <input type="text" id="ckExp" placeholder="MM / AA" required maxlength="5">
+                            </div>
+                            <div>
+                                <label for="ckCvc">CVC</label>
+                                <input type="text" id="ckCvc" placeholder="123" required maxlength="4">
+                            </div>
+                        </div>
+                        <label for="ckCardName" style="margin-top: 12px;">Nom sur la carte</label>
+                        <input type="text" id="ckCardName" placeholder="Nom sur la carte" required>
+                    </div>
+
+                    <div class="mobile-money-fields-checkout" id="mobileMoneyFieldsCheckout" style="display: none;">
+                        <label for="ckPhone">Numéro de téléphone</label>
+                        <input type="tel" id="ckPhone" placeholder="+225 07 00 00 00 00">
+                        <small style="color: #64748b; font-size: 0.8rem;">Format: +225 07 XX XX XX XX</small>
+                        
+                        <label for="ckProvider" style="margin-top: 12px;">Fournisseur Mobile Money</label>
+                        <select id="ckProvider">
+                            <option value="orange">Orange Money</option>
+                            <option value="mtn">MTN Mobile Money</option>
+                            <option value="moov">Moov Money</option>
+                            <option value="wave">Wave</option>
+                            <option value="free">Free Money</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="checkout-submit" id="checkoutSubmit">
+                        <i class="fas fa-lock"></i> Payer <span id="checkoutBtnPrice">19€</span>
+                    </button>
+                    <p class="checkout-secure"><i class="fas fa-info-circle"></i> Vous serez redirigé vers GeniusPay pour effectuer le paiement sécurisé.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SUCCESS / DOWNLOAD MODAL ===== -->
+    <div class="modal-overlay success-modal" id="successModal">
+        <div class="modal-box">
+            <div class="success-icon"><i class="fas fa-check"></i></div>
+            <h3>Paiement réussi !</h3>
+            <p class="success-desc">Votre template est prêt. Cliquez ci-dessous pour le télécharger.</p>
+            <a id="downloadLink" href="#" target="_blank" class="download-btn">
+                <i class="fas fa-download"></i> Télécharger le template
+            </a>
+            <button class="success-close-link" id="successCloseBtn">Continuer les achats</button>
+        </div>
+    </div>
+
+    <script>
+        // ===================================================
+        //  STORE — persistent purchased templates
+        // ===================================================
+        const purchased = new Set(JSON.parse(localStorage.getItem('tp_purchased') || '[]'));
+        let currentCk = {};                 // current checkout info
+
+        function savePurchased() {
+            localStorage.setItem('tp_purchased', JSON.stringify([...purchased]));
+        }
+
+        // ===================================================
+        //  NAVBAR SCROLL
+        // ===================================================
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ===================================================
+        //  FILTER TABS
+        // ===================================================
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const f = tab.dataset.filter;
+                document.querySelectorAll('.template-card').forEach(c => {
+                    c.style.display = (f === 'all' || (c.dataset.category || '').includes(f)) ? '' : 'none';
+                });
+            });
+        });
+
+        // ===================================================
+        //  FAQ ACCORDION
+        // ===================================================
+        document.querySelectorAll('.faq-q').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const open = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!open) item.classList.add('active');
+            });
+        });
+
+        // ===================================================
+        //  SMOOTH SCROLL
+        // ===================================================
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const t = document.querySelector(href);
+                if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // ===================================================
+        //  INTERSECTION OBSERVER ANIMATIONS
+        // ===================================================
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(en => {
+                if (en.isIntersecting) {
+                    en.target.style.opacity = '1';
+                    en.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.template-card, .why-card, .review-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.5s ease';
+            obs.observe(el);
+        });
+
+        // ===================================================
+        //  INJECT ACTION BUTTONS INTO CARDS
+        // ===================================================
+        document.querySelectorAll('.template-card').forEach(card => {
+            const link   = card.querySelector('.overlay-btn.preview');
+            const demoUrl = link ? link.getAttribute('href') : '#';
+            const name    = card.querySelector('h3')?.textContent || 'Template';
+            const price   = card.querySelector('.card-price .current')?.textContent || '19€';
+            const folder  = demoUrl.split('/')[0];
+
+            card.dataset.demo   = demoUrl;
+            card.dataset.folder = folder;
+            card.dataset.tname  = name;
+            card.dataset.tprice = price;
+
+            const isPurchased = purchased.has(folder);
+
+            // Action buttons row
+            const actions = document.createElement('div');
+            actions.className = 'card-actions';
+            actions.innerHTML =
+                '<button class="btn-demo"><i class="fas fa-eye"></i> Démo live</button>' +
+                (isPurchased
+                    ? '<a class="btn-download-card" href="' + demoUrl + '" target="_blank"><i class="fas fa-download"></i> Télécharger</a>'
+                    : '<button class="btn-buy-card"><i class="fas fa-shopping-cart"></i> Acheter</button>'
+                );
+            card.querySelector('.card-info').appendChild(actions);
+
+            // Demo button
+            actions.querySelector('.btn-demo').addEventListener('click', () => openDemo(demoUrl, name, price, folder));
+
+            // Buy button
+            const buyBtn = actions.querySelector('.btn-buy-card');
+            if (buyBtn) buyBtn.addEventListener('click', () => openCheckout(name, price, folder));
+
+            // Overlay "Prévisualiser" → open iframe demo instead of navigating away
+            link.addEventListener('click', e => { e.preventDefault(); openDemo(demoUrl, name, price, folder); });
+
+            // Overlay "Acheter" button
+            const overlayBuy = card.querySelector('.overlay-btn.buy');
+            if (overlayBuy) {
+                overlayBuy.addEventListener('click', () => {
+                    if (isPurchased) window.open(demoUrl, '_blank');
+                    else openCheckout(name, price, folder);
+                });
+            }
+        });
+
+        // ===================================================
+        //  DEMO MODAL
+        // ===================================================
+        function openDemo(url, name, price, folder) {
+            const modal = document.getElementById('demoModal');
+            document.getElementById('demoIframe').src = url;
+            document.getElementById('demoIframe').style.maxWidth = '100%';
+            document.getElementById('demoTitle').textContent = name;
+            document.getElementById('demoUrl').textContent = url;
+            document.getElementById('demoNewTab').href = url;
+
+            // Reset device buttons
+            document.querySelectorAll('.demo-device-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('.demo-device-btn[data-width="100%"]').classList.add('active');
+
+            // Buy / Download button in demo bar
+            const btn = document.getElementById('demoBuyBtn');
+            if (purchased.has(folder)) {
+                btn.innerHTML = '<i class="fas fa-download"></i> Télécharger';
+                btn.onclick = () => window.open(url, '_blank');
+            } else {
+                btn.innerHTML = '<i class="fas fa-shopping-cart"></i> Acheter ' + price;
+                btn.onclick = () => { closeDemo(); setTimeout(() => openCheckout(name, price, folder), 300); };
+            }
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDemo() {
+            document.getElementById('demoModal').classList.remove('active');
+            document.getElementById('demoIframe').src = 'about:blank';
+            document.body.style.overflow = '';
+        }
+
+        // Device switcher
+        document.querySelectorAll('.demo-device-btn').forEach(b => {
+            b.addEventListener('click', () => {
+                const w = b.dataset.width;
+                if (!w) return;
+                const iframe = document.getElementById('demoIframe');
+                iframe.style.maxWidth = w;
+                iframe.style.margin = w === '100%' ? '0' : '0 auto';
+                document.querySelectorAll('.demo-device-btn').forEach(x => x.classList.remove('active'));
+                b.classList.add('active');
+            });
+        });
+
+        document.getElementById('demoCloseBtn').addEventListener('click', closeDemo);
+
+        // ===================================================
+        //  CHECKOUT MODAL
+        // ===================================================
+        function openCheckout(name, price, folder) {
+            currentCk = { name, price, folder };
+            document.getElementById('checkoutName').textContent = name;
+            document.getElementById('checkoutPrice').textContent = price;
+            document.getElementById('checkoutBtnPrice').textContent = price;
+            document.getElementById('checkoutModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkoutModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('checkoutCloseBtn').addEventListener('click', closeCheckout);
+
+        // Payment method toggle in checkout
+        document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const cardFields = document.getElementById('cardFieldsCheckout');
+                const mobileMoneyFields = document.getElementById('mobileMoneyFieldsCheckout');
+                const phoneInput = document.getElementById('ckPhone');
+                const cardInput = document.getElementById('ckCard');
+                const expInput = document.getElementById('ckExp');
+                const cvcInput = document.getElementById('ckCvc');
+                const cardNameInput = document.getElementById('ckCardName');
+                
+                if (this.value === 'mobile_money') {
+                    cardFields.style.display = 'none';
+                    mobileMoneyFields.style.display = 'block';
+                    phoneInput.required = true;
+                    cardInput.required = false;
+                    expInput.required = false;
+                    cvcInput.required = false;
+                    cardNameInput.required = false;
+                } else {
+                    cardFields.style.display = 'block';
+                    mobileMoneyFields.style.display = 'none';
+                    phoneInput.required = false;
+                    phoneInput.value = '';
+                    cardInput.required = true;
+                    expInput.required = true;
+                    cvcInput.required = true;
+                    cardNameInput.required = true;
+                }
+            });
+        });
+
+        // Card number formatting
+        document.getElementById('ckCard').addEventListener('input', function() {
+            let v = this.value.replace(/\D/g, '').substring(0, 16);
+            this.value = v.replace(/(.{4})/g, '$1 ').trim();
+        });
+
+        // Expiration date formatting
+        document.getElementById('ckExp').addEventListener('input', function() {
+            let v = this.value.replace(/\D/g, '').substring(0, 4);
+            if (v.length > 2) v = v.substring(0, 2) + ' / ' + v.substring(2);
+            this.value = v;
+        });
+
+        // CVC formatting
+        document.getElementById('ckCvc').addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').substring(0, 4);
+        });
+
+        // Form submit — GeniusPay integration
+        document.getElementById('checkoutForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('checkoutSubmit');
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+            const clientName = document.getElementById('ckName').value;
+            const clientEmail = document.getElementById('ckEmail').value;
+            const clientPhone = document.getElementById('ckPhone').value;
+            const mobileMoneyProvider = document.getElementById('ckProvider').value;
+            
+            // Validation pour Mobile Money
+            if (paymentMethod === 'mobile_money' && !clientPhone) {
+                alert('Le numéro de téléphone est requis pour Mobile Money');
+                return;
+            }
+
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Traitement en cours…';
+            btn.disabled = true;
+
+            // Get template ID from folder name
+            const templateId = parseInt(currentCk.folder) || 1;
+            const priceValue = parseInt(currentCk.price.replace('€', '')) || 1;
+
+            const paymentData = {
+                amount: priceValue,
+                description: `Achat template: ${currentCk.name}`,
+                clientEmail: clientEmail,
+                clientName: clientName,
+                clientPhone: clientPhone,
+                templateId: templateId,
+                templateName: currentCk.name,
+                paymentMethod: paymentMethod,
+                mobileMoneyProvider: mobileMoneyProvider
+            };
+
+            try {
+                const backendUrl = 'http://localhost:3001/api/payment/create';
+                const response = await fetch(backendUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(paymentData),
+                });
+
+                const result = await response.json();
+
+                if (result.success && result.paymentUrl) {
+                    // Rediriger vers la page de paiement GeniusPay
+                    window.location.href = result.paymentUrl;
+                } else {
+                    alert('Erreur lors de la création du paiement: ' + (result.error || 'Erreur inconnue'));
+                    btn.innerHTML = '<i class="fas fa-lock"></i> Payer <span id="checkoutBtnPrice">' + currentCk.price + '</span>';
+                    btn.disabled = false;
+                }
+            } catch (error) {
+                console.error('Payment error:', error);
+                alert('Erreur de connexion au serveur de paiement. Veuillez réessayer.');
+                btn.innerHTML = '<i class="fas fa-lock"></i> Payer <span id="checkoutBtnPrice">' + currentCk.price + '</span>';
+                btn.disabled = false;
+            }
+        });
+
+        // ===================================================
+        //  SUCCESS MODAL
+        // ===================================================
+        function closeSuccess() {
+            document.getElementById('successModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('successCloseBtn').addEventListener('click', closeSuccess);
+
+        // ===================================================
+        //  CLOSE MODALS — overlay click + Escape key
+        // ===================================================
+        document.querySelectorAll('.modal-overlay').forEach(m => {
+            m.addEventListener('click', e => {
+                if (e.target === m) {
+                    if (m.id === 'demoModal') closeDemo();
+                    else if (m.id === 'checkoutModal') closeCheckout();
+                    else if (m.id === 'successModal') closeSuccess();
+                }
+            });
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { closeDemo(); closeCheckout(); closeSuccess(); }
+        });
+
+        // ===================================================
+        //  CUSTOMIZATION OPTIONS
+        // ===================================================
+        function selectCustomOption(option) {
+            if (option === 'self') {
+                // Self-customization - just scroll to templates
+                document.getElementById('templates').scrollIntoView({ behavior: 'smooth' });
+            } else if (option === 'pro') {
+                // Pro customization - show form
+                const formSection = document.getElementById('custom-request');
+                formSection.style.display = 'block';
+                formSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // ===================================================
+        //  CUSTOM REQUEST FORM SUBMIT
+        // ===================================================
+        document.getElementById('customRequestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = this.querySelector('.custom-submit-btn');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours…';
+            btn.disabled = true;
+
+            // Collect form data
+            const formData = {
+                name: document.getElementById('custom-name').value,
+                email: document.getElementById('custom-email').value,
+                template: document.getElementById('custom-template').value,
+                budget: document.getElementById('custom-budget').value,
+                requirements: document.getElementById('custom-requirements').value,
+                deadline: document.getElementById('custom-deadline').value,
+                timestamp: new Date().toISOString(),
+                status: 'pending'
+            };
+
+            // Store in localStorage (simulating sending to admin dashboard)
+            const requests = JSON.parse(localStorage.getItem('tp_custom_requests') || '[]');
+            requests.push(formData);
+            localStorage.setItem('tp_custom_requests', JSON.stringify(requests));
+
+            // Simulate API call delay
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Demande envoyée !';
+                btn.style.background = 'var(--success)';
+                
+                setTimeout(() => {
+                    alert('Votre demande de personnalisation a été envoyée avec succès !\n\nNotre équipe vous contactera sous 24h.\n\nRéférence: ' + Date.now());
+                    this.reset();
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer ma demande';
+                    btn.style.background = '';
+                    btn.disabled = false;
+                    document.getElementById('custom-request').style.display = 'none';
+                }, 1000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

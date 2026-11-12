@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSync — SaaS de Gestion de Projet Simplifiée</title>
+    <meta name="description" content="FlowSync, logiciel SaaS de gestion de projet. Organisez vos tâches, collaborez en équipe et boostez votre productivité.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== PRELOADER ========== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <svg class="preloader-icon" viewBox="0 0 60 60" width="60" height="60">
+                <circle cx="30" cy="30" r="25" fill="none" stroke="#6366f1" stroke-width="3"/>
+                <path d="M30 10 L30 50 M10 30 L50 30" stroke="#6366f1" stroke-width="3"/>
+            </svg>
+            <p class="preloader-text">FlowSync</p>
+        </div>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <div class="logo-mark">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <span>FlowSync</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#fonctionnalites" class="nav-link">Fonctionnalités</a></li>
+                <li><a href="#avantages" class="nav-link">Avantages</a></li>
+                <li><a href="#tarifs" class="nav-link">Tarifs</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#" class="btn btn-ghost">Connexion</a></li>
+                <li><a href="#" class="btn btn-primary">Essai gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-grid"></div>
+            <div class="hero-glow glow-1"></div>
+            <div class="hero-glow glow-2"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text reveal">
+                <div class="hero-badges">
+                    <span class="badge">🚀 Nouveau : Intégration IA</span>
+                    <span class="badge">⭐ 4.9/5 sur Product Hunt</span>
+                </div>
+                <h1>Gérez vos projets <br><span class="gradient-text">10x plus vite</span></h1>
+                <p class="hero-subtitle">La plateforme tout-en-un pour organiser vos tâches, collaborer avec votre équipe et atteindre vos objectifs. Simple, puissant, efficace.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary btn-large">Commencer gratuitement</a>
+                    <a href="#demo" class="btn btn-outline btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Voir la démo
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <p>Recommandé par +5000 équipes</p>
+                    <div class="trust-logos">
+                        <div class="trust-logo">Stripe</div>
+                        <div class="trust-logo">Airbnb</div>
+                        <div class="trust-logo">Spotify</div>
+                        <div class="trust-logo">Slack</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="dashboard-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="mockup-title">FlowSync Dashboard</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-sidebar">
+                            <div class="sidebar-item active">Tableau de bord</div>
+                            <div class="sidebar-item">Projets</div>
+                            <div class="sidebar-item">Tâches</div>
+                            <div class="sidebar-item">Équipe</div>
+                            <div class="sidebar-item">Rapports</div>
+                        </div>
+                        <div class="mockup-main">
+                            <div class="mockup-stats">
+                                <div class="stat-card">
+                                    <span class="stat-label">Tâches terminées</span>
+                                    <span class="stat-value">247</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-label">En cours</span>
+                                    <span class="stat-value">18</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-label">Équipe active</span>
+                                    <span class="stat-value">12</span>
+                                </div>
+                            </div>
+                            <div class="mockup-chart">
+                                <div class="chart-bar" style="height: 60%"></div>
+                                <div class="chart-bar" style="height: 80%"></div>
+                                <div class="chart-bar" style="height: 45%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                                <div class="chart-bar" style="height: 85%"></div>
+                                <div class="chart-bar" style="height: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PARTNERS ========== -->
+    <section class="section-padding partners">
+        <div class="container">
+            <p class="partners-label">Ils nous font confiance</p>
+            <div class="partners-grid">
+                <div class="partner-logo">TechCorp</div>
+                <div class="partner-logo">InnovateLab</div>
+                <div class="partner-logo">StartupX</div>
+                <div class="partner-logo">DigitalFirst</div>
+                <div class="partner-logo">CloudNine</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FONCTIONNALITÉS ========== -->
+    <section class="section-padding features" id="fonctionnalites">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tagline">Fonctionnalités</span>
+                <h2>Tout ce dont vous avez besoin</h2>
+                <div class="divider center"></div>
+                <p class="section-description">Des outils puissants pour gérer vos projets sans complexité</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="8" y="8" width="32" height="32" rx="4"/>
+                            <path d="M16 20h16M16 28h10"/>
+                        </svg>
+                    </div>
+                    <h3>Gestion de tâches</h3>
+                    <p>Créez, organisez et suivez vos tâches avec des tableaux Kanban, calendriers et listes personnalisées.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="24" cy="24" r="16"/>
+                            <path d="M24 16v16M16 24h16"/>
+                        </svg>
+                    </div>
+                    <h3>Collaboration temps réel</h3>
+                    <p>Travaillez ensemble sur vos projets avec des mises à jour instantanées et des notifications intelligentes.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M8 20c0-8 8-12 16-12s16 4 16 12v24H8V20z"/>
+                            <circle cx="24" cy="20" r="8"/>
+                        </svg>
+                    </div>
+                    <h3>Automatisation</h3>
+                    <p>Automatisez vos workflows et gagnez du temps avec des règles personnalisées et des intégrations.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="8" y="8" width="32" height="32" rx="4"/>
+                            <path d="M16 16l16 16M32 16l-16 16"/>
+                        </svg>
+                    </div>
+                    <h3>Intégrations</h3>
+                    <p>Connectez vos outils préférés : Slack, Google Drive, GitHub, Figma et plus de 50+ intégrations.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M24 4c0 0-16 8-16 20s16 20 16 20 16-8 16-20-16-20-16-20z"/>
+                        </svg>
+                    </div>
+                    <h3>Analytics avancés</h3>
+                    <p>Visualisez la progression de vos projets avec des tableaux de bord personnalisables et des rapports détaillés.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22c0-4 4-8 12-8s12 4 12 8v20H12V22z"/>
+                            <circle cx="24" cy="14" r="6"/>
+                        </svg>
+                    </div>
+                    <h3>Sécurité entreprise</h3>
+                    <p>Chiffrement de bout en bout, authentification 2FA et conformité RGPD pour vos données sensibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AVANTAGES ========== -->
+    <section class="section-padding benefits" id="avantages">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefits-content reveal">
+                    <div class="section-header">
+                        <span class="section-tagline">Pourquoi FlowSync ?</span>
+                        <h2>Des résultats prouvés</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <p class="benefits-text">FlowSync a été conçu pour les équipes qui veulent accomplir plus, avec moins de friction. Notre approche centrée sur l'utilisateur garantit une adoption rapide et des résultats tangibles.</p>
+                    
+                    <div class="benefit-stats">
+                        <div class="benefit-stat">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label">De gain de productivité</span>
+                        </div>
+                        <div class="benefit-stat">
+                            <span class="stat-number">25%</span>
+                            <span class="stat-label">Moins de réunions</span>
+                        </div>
+                        <div class="benefit-stat">
+                            <span class="stat-number">2x</span>
+                            <span class="stat-label">Livraison plus rapide</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="check-icon">✓</div>
+                            <span>Interface intuitive, zéro formation requise</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="check-icon">✓</div>
+                            <span>Déploiement en moins de 5 minutes</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="check-icon">✓</div>
+                            <span>Support client 24/7 inclus</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="check-icon">✓</div>
+                            <span>Mises à jour automatiques gratuites</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits-visual reveal">
+                    <div class="benefit-card">
+                        <div class="benefit-icon-large">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="32" cy="32" r="28"/>
+                                <path d="M32 16v32M16 32h32"/>
+                            </svg>
+                        </div>
+                        <h3>Démarrez gratuitement</h3>
+                        <p>Pas de carte de crédit requise. Essai de 14 jours sans engagement.</p>
+                        <a href="#" class="btn btn-primary btn-full">Essayer maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TARIFS ========== -->
+    <section class="section-padding pricing" id="tarifs">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tagline">Tarification</span>
+                <h2>Des prix simples et transparents</h2>
+                <div class="divider center"></div>
+                <p class="section-description">Choisissez le plan adapté à votre équipe. Annulez à tout moment.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p class="pricing-subtitle">Pour les petites équipes</p>
+                        <div class="pricing-price">
+                            <span class="price">0€</span>
+                            <span class="price-period">/mois</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included">✓ Jusqu'à 5 utilisateurs</li>
+                        <li class="included">✓ 5 projets actifs</li>
+                        <li class="included">✓ 1 Go de stockage</li>
+                        <li class="included">✓ Support email</li>
+                        <li class="excluded">✗ Automatisations avancées</li>
+                        <li class="excluded">✗ Intégrations premium</li>
+                        <li class="excluded">✗ Analytics détaillés</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-full">Commencer gratuitement</a>
+                </div>
+
+                <div class="pricing-card featured reveal">
+                    <div class="popular-badge">Populaire</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <p class="pricing-subtitle">Pour les équipes en croissance</p>
+                        <div class="pricing-price">
+                            <span class="price">29€</span>
+                            <span class="price-period">/utilisateur/mois</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included">✓ Utilisateurs illimités</li>
+                        <li class="included">✓ Projets illimités</li>
+                        <li class="included">✓ 100 Go de stockage</li>
+                        <li class="included">✓ Support prioritaire</li>
+                        <li class="included">✓ Automatisations avancées</li>
+                        <li class="included">✓ Intégrations premium</li>
+                        <li class="included">✓ Analytics détaillés</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-full">Essayer 14 jours gratuit</a>
+                </div>
+
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="pricing-subtitle">Pour les grandes organisations</p>
+                        <div class="pricing-price">
+                            <span class="price">Sur devis</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included">✓ Tout le plan Pro</li>
+                        <li class="included">✓ SSO & SAML</li>
+                        <li class="included">✓ Stockage illimité</li>
+                        <li class="included">✓ Support dédié 24/7</li>
+                        <li class="included">✓ SLA garanti</li>
+                        <li class="included">✓ Formation sur mesure</li>
+                        <li class="included">✓ API avancée</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-full">Contacter les ventes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section-padding faq" id="faq">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tagline">FAQ</span>
+                <h2>Questions fréquentes</h2>
+                <div class="divider center"></div>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Comment fonctionne l'essai gratuit ?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>L'essai gratuit dure 14 jours avec accès complet à toutes les fonctionnalités du plan Pro. Aucune carte de crédit n'est requise. À la fin de l'essai, vous pouvez choisir un plan ou continuer avec la version gratuite.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Puis-je annuler mon abonnement à tout moment ?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, vous pouvez annuler votre abonnement à tout moment sans frais cachés. Votre accès continue jusqu'à la fin de votre période de facturation en cours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Mes données sont-elles sécurisées ?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolument. Nous utilisons un chiffrement AES-256 pour toutes vos données, hébergées sur des serveurs certifiés SOC2. Nous sommes également conformes au RGPD.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Quelles intégrations sont disponibles ?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous intégrons plus de 50 outils populaires dont Slack, Google Workspace, Microsoft 365, GitHub, Figma, Zapier et bien d'autres. De nouvelles intégrations sont ajoutées régulièrement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Offrez-vous un support pour les équipes ?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons des sessions de formation personnalisées pour les équipes Enterprise. Notre équipe d'experts vous accompagne pour une adoption réussie.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Puis-je importer mes données depuis un autre outil ?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons des outils d'importation depuis Trello, Asana, Monday.com et Jira. Notre équipe peut également vous aider avec la migration personnalisée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="section-padding cta">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Prêt à transformer votre productivité ?</h2>
+                <p>Rejoignez +5000 équipes qui utilisent FlowSync pour accomplir plus, ensemble.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn btn-primary btn-large">Commencer gratuitement</a>
+                    <a href="#" class="btn btn-outline btn-large">Demander une démo</a>
+                </div>
+                <p class="cta-note">Essai gratuit 14 jours • Pas de carte de crédit requise</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-mark">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <span>FlowSync</span>
+                    </div>
+                    <p class="footer-description">La plateforme de gestion de projet qui simplifie le travail d'équipe et booste la productivité.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+                        <li><a href="#tarifs">Tarifs</a></li>
+                        <li><a href="#">Intégrations</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Communauté</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Presse</a></li>
+                        <li><a href="#">Partenaires</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="#">Conditions</a></li>
+                        <li><a href="#">Sécurité</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 FlowSync. Tous droits réservés.</p>
+                <div class="footer-language">
+                    <span>🌍 Français</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('loaded');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+
+        // Navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close nav when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('.faq-icon');
+                
+                // Close other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    answer.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('revealed');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+</body>
+</html>

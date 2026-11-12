@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Art de la Beauté — Salon & Barber Shop Premium</title>
+    <meta name="description" content="L'Art de la Beauté, salon de coiffure et barber shop premium. Soins capillaires, barbier, soins du visage et bien-être.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== PRELOADER ========== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <svg class="preloader-icon" viewBox="0 0 100 100" width="60" height="60">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+                <circle cx="50" cy="50" r="30" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+                <circle cx="50" cy="50" r="20" fill="none" stroke="#c9a962" stroke-width="1.5"/>
+            </svg>
+            <p class="preloader-text">L'Art de la Beauté</p>
+        </div>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">L'Art de la Beauté</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#contact" class="btn-reservation">Réserver</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text reveal">
+                <p class="hero-tagline">Depuis 2010 • Excellence & Tradition</p>
+                <h1>Révélez votre <span class="accent">beauté</span> naturelle</h1>
+                <p class="hero-subtitle">Un espace dédié à votre bien-être, où expertise et passion se rencontrent pour sublimer votre style unique.</p>
+                <div class="hero-actions">
+                    <a href="#reservation" class="btn btn-primary">Prendre rendez-vous</a>
+                    <a href="#services" class="btn btn-outline">Découvrir nos services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">14</span>
+                        <span class="stat-label">Années d'expérience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Clients satisfaits</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Experts dédiés</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Découvrir</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== À PROPOS ========== -->
+    <section class="section-padding about" id="apropos">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 500" fill="none">
+                                <rect width="400" height="500" fill="#f5f0e8"/>
+                                <circle cx="200" cy="180" r="80" fill="#e8dcc8"/>
+                                <rect x="100" y="280" width="200" height="220" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="badge-number">14</span>
+                            <span class="badge-text">ans<br>d'expertise</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal">
+                    <div class="section-header">
+                        <span class="section-tagline">Notre Histoire</span>
+                        <h2>L'excellence au service de votre beauté</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <p class="about-text">
+                        Fondé en 2010, L'Art de la Beauté est bien plus qu'un simple salon. C'est un sanctuaire où chaque détail compte, où chaque visite devient une expérience de détente et de transformation.
+                    </p>
+                    <p class="about-text">
+                        Notre équipe de passionnés combine techniques traditionnelles et innovations modernes pour vous offrir des prestations d'exception. Coiffure, barbier, soins du visage, manucure — chaque service est personnalisé selon vos besoins et vos envies.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h3>Produits Premium</h3>
+                            <p>Marques sélectionnées pour leur qualité et leur respect de l'environnement</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                                </svg>
+                            </div>
+                            <h3>Passion & Écoute</h3>
+                            <p>Chaque visite est unique, adaptée à vos attentes et votre personnalité</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <h3>Horaires Flexibles</h3>
+                            <p>Ouvert 7j/7 avec réservation en ligne pour votre confort</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="section-padding services" id="services">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tagline">Nos Prestations</span>
+                <h2>Nos Services</h2>
+                <div class="divider center"></div>
+                <p class="section-description">Découvrez notre gamme complète de soins pour hommes et femmes</p>
+            </div>
+
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="coiffure">Coiffure</button>
+                <button class="tab-btn" data-tab="barber">Barber Shop</button>
+                <button class="tab-btn" data-tab="soins">Soins & Bien-être</button>
+                <button class="tab-btn" data-tab="ongles">Ongles & Maquillage</button>
+            </div>
+
+            <div class="services-content">
+                <div class="tab-content active" id="coiffure">
+                    <div class="services-grid">
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="24" cy="16" r="10"/>
+                                    <path d="M8 44v-8c0-6 6-10 16-10s16 4 16 10v8"/>
+                                </svg>
+                            </div>
+                            <h3>Coupe & Styling</h3>
+                            <p>Coupe personnalisée adaptée à votre morphologie et votre style de vie</p>
+                            <div class="service-price">dès 35€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M24 4c0 0-12 8-12 20s12 20 12 20 12-8 12-20-12-20-12-20z"/>
+                                    <path d="M24 44V20"/>
+                                </svg>
+                            </div>
+                            <h3>Coloration Expert</h3>
+                            <p>Coloration, balayage, ombré — des techniques maîtrisées pour un résultat naturel</p>
+                            <div class="service-price">dès 65€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M8 8l32 32M8 40l32-32"/>
+                                </svg>
+                            </div>
+                            <h3>Soin Deep Repair</h3>
+                            <p>Traitement intensif pour cheveux abîmés, kératine et botox capillaire</p>
+                            <div class="service-price">dès 85€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="24" cy="24" r="16"/>
+                                    <path d="M24 12v24M12 24h24"/>
+                                </svg>
+                            </div>
+                            <h3>Brushing & Coiffage</h3>
+                            <p>Mise en forme élégante pour vos événements ou au quotidien</p>
+                            <div class="service-price">dès 25€</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="barber">
+                    <div class="services-grid">
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="8" y="8" width="32" height="32" rx="4"/>
+                                    <line x1="16" y1="16" x2="32" y2="16"/>
+                                    <line x1="16" y1="24" x2="32" y2="24"/>
+                                    <line x1="16" y1="32" x2="24" y2="32"/>
+                                </svg>
+                            </div>
+                            <h3>Coupe Traditionnelle</h3>
+                            <p>Coupe précise avec ciseaux et tondeuse, finition au rasoir</p>
+                            <div class="service-price">dès 28€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M24 4c0 0-8 12-8 20s8 20 8 20 8-12 8-20-8-20-8-20z"/>
+                                </svg>
+                            </div>
+                            <h3>Barbe & Rasage</h3>
+                            <p>Taille de barbe, rasage traditionnel à la serviette chaude</p>
+                            <div class="service-price">dès 22€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="24" cy="24" r="12"/>
+                                    <path d="M24 12v24M12 24h24"/>
+                                </svg>
+                            </div>
+                            <h3>Soin du Visage</h3>
+                            <p>Nettoyage, exfoliation et massage pour une peau revitalisée</p>
+                            <div class="service-price">dès 35€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M8 24l8 8 24-24"/>
+                                </svg>
+                            </div>
+                            <h3>Complet Gentleman</h3>
+                            <p>Coupe + barbe + soin visage — l'expérience complète</p>
+                            <div class="service-price">dès 65€</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="soins">
+                    <div class="services-grid">
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="24" cy="24" r="16"/>
+                                    <circle cx="32" cy="20" r="3"/>
+                                    <circle cx="16" cy="20" r="3"/>
+                                    <path d="M18 32c2 2 10 2 12 0"/>
+                                </svg>
+                            </div>
+                            <h3>Soin du Visage</h3>
+                            <p>Nettoyage, hydratation et anti-âge pour un teint éclatant</p>
+                            <div class="service-price">dès 55€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M24 4c0 0-16 8-16 24s16 16 16 16 16-8 16-16-16-24-16-24z"/>
+                                </svg>
+                            </div>
+                            <h3>Massage Relaxant</h3>
+                            <p>Massage visage, cou et épaules pour détente absolue</p>
+                            <div class="service-price">dès 45€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M8 20c0-8 8-12 16-12s16 4 16 12v24H8V20z"/>
+                                </svg>
+                            </div>
+                            <h3>Soin Capillaire</h3>
+                            <p>Masque profond, massage crânien et soin des longueurs</p>
+                            <div class="service-price">dès 40€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="8" y="8" width="32" height="32" rx="4"/>
+                                    <circle cx="24" cy="24" r="8"/>
+                                </svg>
+                            </div>
+                            <h3>Épilation Professionnelle</h3>
+                            <p>Cire chaude ou froide, précision et douceur garantie</p>
+                            <div class="service-price">dès 15€</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="ongles">
+                    <div class="services-grid">
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M8 40V16c0-4 4-8 12-8s12 4 12 8v24"/>
+                                    <path d="M8 24h24"/>
+                                </svg>
+                            </div>
+                            <h3>Manucure</h3>
+                            <p>Soins des mains, cuticules et vernis semi-permanent</p>
+                            <div class="service-price">dès 30€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M8 40V20c0-4 4-8 12-8s12 4 12 8v20"/>
+                                    <path d="M8 28h24"/>
+                                </svg>
+                            </div>
+                            <h3>Pédicure</h3>
+                            <p>Soins des pieds, gommage et massage relaxant</p>
+                            <div class="service-price">dès 40€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="24" cy="24" r="16"/>
+                                    <circle cx="24" cy="24" r="8"/>
+                                </svg>
+                            </div>
+                            <h3>Extension Ongles</h3>
+                            <p>Gel ou résine, pour des ongles longs et résistants</p>
+                            <div class="service-price">dès 55€</div>
+                        </div>
+                        <div class="service-card reveal">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <ellipse cx="24" cy="24" rx="16" ry="12"/>
+                                    <path d="M16 24c0-4 8-4 8 0s8 4 8 0"/>
+                                </svg>
+                            </div>
+                            <h3>Maquillage Pro</h3>
+                            <p>Maquillage jour, soirée ou événementiel</p>
+                            <div class="service-price">dès 45€</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TARIFS ========== -->
+    <section class="section-padding pricing" id="tarifs">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tagline">Nos Tarifs</span>
+                <h2>Grille Tarifaire</h2>
+                <div class="divider center"></div>
+                <p class="section-description">Des prix transparents pour une qualité sans compromis</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Femme</h3>
+                        <div class="pricing-subtitle">Coiffure & Coloration</div>
+                    </div>
+                    <ul class="pricing-list">
+                        <li>
+                            <span>Coupe courte</span>
+                            <span>35€</span>
+                        </li>
+                        <li>
+                            <span>Coupe mi-longue</span>
+                            <span>42€</span>
+                        </li>
+                        <li>
+                            <span>Coupe longue</span>
+                            <span>48€</span>
+                        </li>
+                        <li>
+                            <span>Coloration racine</span>
+                            <span>45€</span>
+                        </li>
+                        <li>
+                            <span>Balayage complet</span>
+                            <span>95€</span>
+                        </li>
+                        <li>
+                            <span>Ombré hair</span>
+                            <span>120€</span>
+                        </li>
+                        <li>
+                            <span>Brushing</span>
+                            <span>25€</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card featured reveal">
+                    <div class="pricing-badge">Populaire</div>
+                    <div class="pricing-header">
+                        <h3>Homme</h3>
+                        <div class="pricing-subtitle">Barber Shop</div>
+                    </div>
+                    <ul class="pricing-list">
+                        <li>
+                            <span>Coupe classique</span>
+                            <span>28€</span>
+                        </li>
+                        <li>
+                            <span>Coupe + barbe</span>
+                            <span>45€</span>
+                        </li>
+                        <li>
+                            <span>Rasage traditionnel</span>
+                            <span>22€</span>
+                        </li>
+                        <li>
+                            <span>Taille barbe</span>
+                            <span>15€</span>
+                        </li>
+                        <li>
+                            <span>Soin visage complet</span>
+                            <span>35€</span>
+                        </li>
+                        <li>
+                            <span>Complet Gentleman</span>
+                            <span>65€</span>
+                        </li>
+                        <li>
+                            <span>Coloration barbe</span>
+                            <span>18€</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Soins</h3>
+                        <div class="pricing-subtitle">Bien-être & Beauté</div>
+                    </div>
+                    <ul class="pricing-list">
+                        <li>
+                            <span>Soin visage express</span>
+                            <span>35€</span>
+                        </li>
+                        <li>
+                            <span>Soin visage complet</span>
+                            <span>65€</span>
+                        </li>
+                        <li>
+                            <span>Massage visage</span>
+                            <span>45€</span>
+                        </li>
+                        <li>
+                            <span>Manucure simple</span>
+                            <span>25€</span>
+                        </li>
+                        <li>
+                            <span>Manucure semi-permanent</span>
+                            <span>40€</span>
+                        </li>
+                        <li>
+                            <span>Pédicure spa</span>
+                            <span>55€</span>
+                        </li>
+                        <li>
+                            <span>Maquillage événement</span>
+                            <span>55€</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ÉQUIPE ========== -->
+    <section class="section-padding team" id="equipe">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tagline">Nos Experts</span>
+                <h2>L'Équipe</h2>
+                <div class="divider center"></div>
+                <p class="section-description">Des passionnés à votre service</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="team-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 300 350" fill="none">
+                                <rect width="300" height="350" fill="#f5f0e8"/>
+                                <circle cx="150" cy="130" r="60" fill="#e8dcc8"/>
+                                <rect x="70" y="200" width="160" height="150" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Marie Laurent</h3>
+                        <p class="team-role">Directrice & Coiffeuse Expert</p>
+                        <p class="team-bio">14 ans d'expérience, spécialiste coloration et balayage</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card reveal">
+                    <div class="team-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 300 350" fill="none">
+                                <rect width="300" height="350" fill="#f5f0e8"/>
+                                <circle cx="150" cy="130" r="60" fill="#e8dcc8"/>
+                                <rect x="70" y="200" width="160" height="150" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Thomas Dubois</h3>
+                        <p class="team-role">Master Barber</p>
+                        <p class="team-bio">Expert en coupe traditionnelle et rasage à l'ancienne</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card reveal">
+                    <div class="team-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 300 350" fill="none">
+                                <rect width="300" height="350" fill="#f5f0e8"/>
+                                <circle cx="150" cy="130" r="60" fill="#e8dcc8"/>
+                                <rect x="70" y="200" width="160" height="150" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Sophie Martin</h3>
+                        <p class="team-role">Esthéticienne</p>
+                        <p class="team-bio">Spécialiste soins visage et maquillage professionnel</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card reveal">
+                    <div class="team-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 300 350" fill="none">
+                                <rect width="300" height="350" fill="#f5f0e8"/>
+                                <circle cx="150" cy="130" r="60" fill="#e8dcc8"/>
+                                <rect x="70" y="200" width="160" height="150" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Lucas Bernard</h3>
+                        <p class="team-role">Coiffeur Styliste</p>
+                        <p class="team-bio">Créatif et passionné, expert en tendances actuelles</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALERIE ========== -->
+    <section class="section-padding gallery" id="galerie">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tagline">Nos Réalisations</span>
+                <h2>Galerie</h2>
+                <div class="divider center"></div>
+                <p class="section-description">Découvrez nos créations</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none">
+                                <rect width="400" height="300" fill="#f5f0e8"/>
+                                <circle cx="200" cy="150" r="80" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span>Balayage blond</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none">
+                                <rect width="400" height="300" fill="#f5f0e8"/>
+                                <circle cx="200" cy="150" r="80" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span>Coupe homme</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none">
+                                <rect width="400" height="300" fill="#f5f0e8"/>
+                                <circle cx="200" cy="150" r="80" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span>Coloration</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none">
+                                <rect width="400" height="300" fill="#f5f0e8"/>
+                                <circle cx="200" cy="150" r="80" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span>Barbe soignée</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none">
+                                <rect width="400" height="300" fill="#f5f0e8"/>
+                                <circle cx="200" cy="150" r="80" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span>Manucure</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none">
+                                <rect width="400" height="300" fill="#f5f0e8"/>
+                                <circle cx="200" cy="150" r="80" fill="#e8dcc8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span>Coiffage soirée</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TÉMOIGNAGES ========== -->
+    <section class="section-padding testimonials" id="temoignages">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tagline">Avis Clients</span>
+                <h2>Témoignages</h2>
+                <div class="divider center"></div>
+                <p class="section-description">Ce que nos clients disent de nous</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"Incroyable ! Marie a su exactement ce que je voulais. Mon balayage est parfait et naturel. Je recommande à 100%."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <span class="author-name">Camille D.</span>
+                            <span class="author-date">Il y a 2 semaines</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"Le rasage traditionnel chez Thomas est une expérience unique. Professionnel, précis et très agréable. Mon barber de référence."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <span class="author-name">Marc L.</span>
+                            <span class="author-date">Il y a 1 mois</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">"Soin visage exceptionnel avec Sophie. Je suis ressortie rayonnante. L'ambiance du salon est très relaxante."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <span class="author-name">Julie M.</span>
+                            <span class="author-date">Il y a 3 semaines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RÉSERVATION ========== -->
+    <section class="section-padding booking" id="reservation">
+        <div class="container">
+            <div class="booking-grid">
+                <div class="booking-info reveal">
+                    <div class="section-header">
+                        <span class="section-tagline">Réservation</span>
+                        <h2>Prenez rendez-vous</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <p class="booking-text">Réservez votre créneau en ligne ou contactez-nous directement. Nous vous répondrons dans les plus brefs délais.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-2.12-8.63 2 2 0 011.99-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Téléphone</span>
+                                <a href="tel:+33123456789" class="contact-value">01 23 45 67 89</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:contact@lartdelabeaute.fr" class="contact-value">contact@lartdelabeaute.fr</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Adresse</span>
+                                <span class="contact-value">25 Rue de la Beauté, 75001 Paris</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Horaires</span>
+                                <span class="contact-value">Lun-Sam: 9h-19h • Dim: 10h-17h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form reveal">
+                    <form id="reservationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service souhaité *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Choisir un service</option>
+                                    <option value="coiffure">Coiffure</option>
+                                    <option value="barber">Barber Shop</option>
+                                    <option value="soins">Soins & Bien-être</option>
+                                    <option value="ongles">Ongles & Maquillage</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date souhaitée *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Heure souhaitée *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Choisir une heure</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (optionnel)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Précisez vos préférences ou demandes particulières..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Envoyer ma demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT / FOOTER ========== -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">✦</span>
+                        <span class="logo-text">L'Art de la Beauté</span>
+                    </div>
+                    <p class="footer-description">Salon de coiffure et barber shop premium depuis 2010. Excellence, passion et bien-être au service de votre beauté.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#apropos">À Propos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tarifs">Tarifs</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Coiffure</a></li>
+                        <li><a href="#services">Barber Shop</a></li>
+                        <li><a href="#services">Soins Visage</a></li>
+                        <li><a href="#services">Manucure</a></li>
+                        <li><a href="#services">Maquillage</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            25 Rue de la Beauté, 75001 Paris
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-2.12-8.63 2 2 0 011.99-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            01 23 45 67 89
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            contact@lartdelabeaute.fr
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 L'Art de la Beauté. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('loaded');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+
+        // Navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close nav when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Services tabs
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.dataset.tab;
+                
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('revealed');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Form submission
+        const form = document.getElementById('reservationForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Merci pour votre demande de réservation ! Nous vous contacterons prochainement pour confirmer votre rendez-vous.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>

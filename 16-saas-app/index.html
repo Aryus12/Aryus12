@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudFlow - Tous vos outils numériques. Un seul point de départ.</title>
+    <meta name="description" content="CloudFlow centralise plus de 200 outils numériques dans un catalogue unique. Accédez à tous vos logiciels préférés depuis un seul portail. 1€ d'activation, 5€/mois.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/tools-data.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                Cloud<span>Flow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#catalogue">Catalogue</a></li>
+                <li><a href="#categories">Catégories</a></li>
+                <li><a href="#how-it-works">Comment ça marche</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-ghost">Se connecter</a>
+                <a href="signup.html" class="btn btn-primary">S'inscrire</a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Tous vos outils numériques.<br><span class="gradient-text">Un seul point de départ.</span></h1>
+            <p class="hero-subtitle">CloudFlow centralise plus de 200 outils et logiciels dans un catalogue unique. <strong>1€ de frais d'activation, puis 5€ par mois</strong> pour accéder à tous vos outils préférés depuis un seul portail.</p>
+            <div class="hero-cta">
+                <a href="signup.html" class="btn btn-primary btn-xl">
+                    Découvrir le catalogue <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#how-it-works" class="btn btn-outline btn-xl">
+                    <i class="fas fa-play-circle"></i> Comment ça marche
+                </a>
+            </div>
+            <p class="hero-note">Accès direct aux sites officiels • Pas de remplacement de vos logiciels • Annulation à tout moment</p>
+        </div>
+    </section>
+
+    <!-- Popular Tools Preview -->
+    <section id="catalogue" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Catalogue</span>
+                <h2>Plus de <span class="gradient-text">200 outils</span> au même endroit</h2>
+                <p>Découvrez une sélection des outils les plus populaires de notre catalogue</p>
+            </div>
+            <div class="features-grid" id="popular-tools-grid">
+                <!-- Les outils populaires seront chargés dynamiquement via JS -->
+            </div>
+            <div class="integrations-cta">
+                <a href="catalog.html" class="btn btn-primary">Explorer tout le catalogue <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Catégories</span>
+                <h2>Des outils pour <span class="gradient-text">tous vos besoins</span></h2>
+                <p>Organisés par fonction pour vous faire gagner du temps</p>
+            </div>
+            <div class="steps-grid" id="categories-grid">
+                <!-- Les catégories seront chargées dynamiquement via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Comment ça marche</span>
+                <h2>Accédez à vos outils <span class="gradient-text">en 3 étapes</span></h2>
+                <p>Simple, rapide et efficace</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Inscrivez-vous</h3>
+                        <p>Créez votre compte CloudFlow en quelques secondes. 1€ de frais d'activation unique.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Explorez le catalogue</h3>
+                        <p>Découvrez plus de 200 outils organisés par catégories : IA, Productivité, Design, Développement, etc.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Accédez instantanément</h3>
+                        <p>Cliquez sur un outil pour être redirigé vers son site officiel. CloudFlow ne remplace pas vos logiciels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Tarifs</span>
+                <h2>Un accès illimité pour <span class="gradient-text">5€/mois</span></h2>
+                <p>1€ de frais d'activation unique, puis 5€ par mois pour accéder à tout le catalogue</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card popular">
+                    <span class="popular-tag">Offre unique</span>
+                    <div class="pricing-header">
+                        <h3>CloudFlow Premium</h3>
+                        <p>Accès complet au catalogue</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-currency">€</span>
+                        <span class="price-amount">5</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <p class="pricing-desc">Après 1€ de frais d'activation unique</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Accès à 200+ outils</li>
+                        <li><i class="fas fa-check"></i> Toutes les catégories</li>
+                        <li><i class="fas fa-check"></i> Recherche instantanée</li>
+                        <li><i class="fas fa-check"></i> Favoris personnalisés</li>
+                        <li><i class="fas fa-check"></i> Historique d'accès</li>
+                        <li><i class="fas fa-check"></i> Nouveaux outils ajoutés régulièrement</li>
+                        <li><i class="fas fa-check"></i> Support email</li>
+                        <li><i class="fas fa-check"></i> Annulation à tout moment</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-primary btn-full">Commencer maintenant</a>
+                </div>
+            </div>
+            <div class="pricing-note" style="text-align: center; margin-top: 32px; color: var(--gray); font-size: 0.9rem;">
+                <p><strong>Important :</strong> CloudFlow est un portail d'accès. Les abonnements aux outils tiers restent à votre charge. Nous ne fournissons pas les licences des logiciels référencés.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2>Questions <span class="gradient-text">fréquentes</span></h2>
+                <p>Tout ce que vous devez savoir sur CloudFlow</p>
+            </div>
+            <div class="faq-grid" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <h3>CloudFlow remplace-t-il mes logiciels ?</h3>
+                    <p>Non. CloudFlow est un portail d'accès centralisé. Lorsque vous cliquez sur un outil, vous êtes redirigé vers son site officiel. Vous continuez d'utiliser vos licences et comptes existants.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Les abonnements aux outils sont-ils inclus ?</h3>
+                    <p>Non. L'abonnement CloudFlow (5€/mois) donne accès au catalogue et à la plateforme. Les abonnements aux outils tiers (ChatGPT, Figma, etc.) restent à votre charge.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Comment fonctionne le frais d'activation de 1€ ?</h3>
+                    <p>Le frais d'activation de 1€ est payé une seule fois lors de votre inscription. Ensuite, vous payez 5€ par mois pour maintenir votre accès au catalogue.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Puis-je annuler mon abonnement ?</h3>
+                    <p>Oui, vous pouvez annuler votre abonnement à tout moment depuis votre espace utilisateur. L'accès au catalogue reste actif jusqu'à la fin de la période facturée.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Les liens vers les outils sont-ils vérifiés ?</h3>
+                    <p>Oui, notre équipe vérifie régulièrement tous les liens pour vous assurer d'accéder aux sites officiels et sécurisés de chaque outil.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Comment sont ajoutés les nouveaux outils ?</h3>
+                    <p>Nous ajoutons régulièrement de nouveaux outils au catalogue après vérification de leur pertinence et de leur qualité. Les nouveautés sont signalées par un badge "Nouveau".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Prêt à centraliser <span class="gradient-text">vos outils</span> ?</h2>
+                <p>Rejoignez des milliers d'utilisateurs qui gagnent du temps chaque jour avec CloudFlow. 1€ d'activation, puis 5€/mois pour un accès illimité.</p>
+                <div class="cta-actions">
+                    <a href="signup.html" class="btn btn-primary btn-xl">
+                        Commencer maintenant <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <p class="cta-note">Accès direct aux sites officiels • Annulation à tout moment • Support email inclus</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-mark small">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        Cloud<span>Flow</span>
+                    </a>
+                    <p>Le portail qui centralise plus de 200 outils numériques. Un seul point de départ pour tous vos logiciels préférés.</p>
+                    <div class="footer-social">
+                        <a href="https://twitter.com/cloudflow" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/cloudflow" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/company/cloudflow" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="#catalogue">Catalogue</a></li>
+                        <li><a href="#categories">Catégories</a></li>
+                        <li><a href="#pricing">Tarifs</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="terms.html">Conditions générales</a></li>
+                        <li><a href="privacy.html">Confidentialité</a></li>
+                        <li><a href="cookies.html">Cookies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Compte</h4>
+                    <ul>
+                        <li><a href="login.html">Se connecter</a></li>
+                        <li><a href="signup.html">S'inscrire</a></li>
+                        <li><a href="forgot-password.html">Mot de passe oublié</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CloudFlow. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Confidentialité</a>
+                    <a href="terms.html">CGU</a>
+                    <a href="cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .faq-item {
+            padding: 24px;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 16px;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        .faq-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+    </style>
+
+    <script>
+        // Charger les outils populaires et les catégories
+        document.addEventListener('DOMContentLoaded', function() {
+            // Charger les outils populaires
+            const popularToolsGrid = document.getElementById('popular-tools-grid');
+            if (popularToolsGrid && typeof CatalogUtils !== 'undefined') {
+                const popularTools = CatalogUtils.getPopular().slice(0, 6);
+                popularToolsGrid.innerHTML = popularTools.map(tool => `
+                    <div class="feature-card" style="cursor: pointer;" onclick="window.open('${tool.url}', '_blank')">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                            <img src="${tool.logo}" alt="${tool.name}" style="width: 48px; height: 48px; object-fit: contain; border-radius: 8px;" onerror="this.style.display='none'">
+                            <div>
+                                <h3 style="margin-bottom: 4px;">${tool.name}</h3>
+                                <span style="font-size: 0.8rem; color: var(--gray);">${TOOLS_CATALOG.pricing[tool.pricing]}</span>
+                            </div>
+                        </div>
+                        <p style="margin-bottom: 16px;">${tool.description}</p>
+                        <div style="display: flex; gap: 8px;">
+                            ${tool.popular ? '<span class="badge" style="background: var(--primary); color: white; border: none;">Populaire</span>' : ''}
+                            ${tool.new ? '<span class="badge" style="background: var(--success); color: white; border: none;">Nouveau</span>' : ''}
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Charger les catégories
+            const categoriesGrid = document.getElementById('categories-grid');
+            if (categoriesGrid && typeof TOOLS_CATALOG !== 'undefined') {
+                categoriesGrid.innerHTML = TOOLS_CATALOG.categories.map(cat => `
+                    <div class="step-card" style="cursor: pointer;" onclick="window.location.href='catalog.html?category=${cat.id}'">
+                        <div style="width: 60px; height: 60px; border-radius: var(--radius-md); background: rgba(10, 37, 64, 0.05); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                            <i class="fas ${cat.icon}" style="font-size: 1.5rem; color: var(--primary);"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>${cat.name}</h3>
+                            <p>${CatalogUtils.getByCategory(cat.id).length} outils disponibles</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Navbar scroll
+            window.addEventListener('scroll', () => {
+                const navbar = document.querySelector('.navbar');
+                if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.feature-card, .step-card, .pricing-card, .faq-item').forEach(el => observer.observe(el));
+
+            // Mobile menu
+            document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

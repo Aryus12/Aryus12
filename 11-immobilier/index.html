@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Immobilier — Biens d'Exception</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ========== PRELOADER ========== -->
+<div id="preloader">
+    <div class="preloader-inner">
+        <svg class="preloader-house" viewBox="0 0 100 100" width="80" height="80">
+            <path class="house-draw" d="M50 10 L90 45 L90 90 L60 90 L60 60 L40 60 L40 90 L10 90 L10 45 Z" fill="none" stroke="#c9956b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="house-draw delay" d="M35 45 L65 45 L65 55 L35 55 Z" fill="none" stroke="#c9956b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="preloader-text">Prestige Immobilier</p>
+    </div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="#" class="nav-logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 3L2 15h4v13h8v-8h4v8h8V15h4L16 3z" fill="#c9956b"/>
+                <path d="M16 3L2 15h4v13h8v-8h4v8h8V15h4L16 3z" fill="none" stroke="#1a1a2e" stroke-width="0.5"/>
+            </svg>
+            <span>Prestige Immobilier</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#biens">Nos Biens</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#agents">Agents</a></li>
+            <li><a href="#estimation">Estimation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="tel:+33145678900" class="nav-phone">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                01 45 67 89 00
+            </a>
+            <a href="#publier" class="btn btn-primary btn-nav">Publier une annonce</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="accueil">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1 class="hero-title reveal">Trouvez le bien de vos reves</h1>
+        <p class="hero-subtitle reveal">Plus de 500 biens d'exception en France</p>
+
+        <div class="search-bar reveal">
+            <div class="search-group">
+                <label>Type</label>
+                <select id="searchType">
+                    <option value="acheter">Acheter</option>
+                    <option value="louer">Louer</option>
+                </select>
+            </div>
+            <div class="search-group">
+                <label>Bien</label>
+                <select id="searchBien">
+                    <option value="">Tous les types</option>
+                    <option value="appartement">Appartement</option>
+                    <option value="maison">Maison</option>
+                    <option value="villa">Villa</option>
+                    <option value="loft">Loft</option>
+                </select>
+            </div>
+            <div class="search-group">
+                <label>Ville</label>
+                <input type="text" id="searchVille" placeholder="Paris, Lyon, Marseille...">
+            </div>
+            <div class="search-group search-group-range">
+                <label>Budget max : <span id="budgetValue">500 000</span> EUR</label>
+                <input type="range" id="searchBudget" min="50000" max="2000000" step="10000" value="500000">
+            </div>
+            <div class="search-group">
+                <label>Surface min (m2)</label>
+                <input type="number" id="searchSurface" placeholder="50" min="10" max="1000">
+            </div>
+            <div class="search-group search-group-btn">
+                <button class="btn btn-primary btn-search" id="btnSearch">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== STATS BAR ========== -->
+<section class="stats-bar">
+    <div class="container stats-grid">
+        <div class="stat-item reveal">
+            <span class="stat-number" data-target="500">0</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">Biens</span>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-number" data-target="12">0</span>
+            <span class="stat-label">Agences</span>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-number" data-target="95">0</span>
+            <span class="stat-plus">%</span>
+            <span class="stat-label">Satisfaction</span>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-number" data-target="15">0</span>
+            <span class="stat-label">Ans d'exp.</span>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FEATURED PROPERTIES ========== -->
+<section class="section properties" id="biens">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Notre selection</span>
+            <h2 class="section-title">Biens a la une</h2>
+            <p class="section-desc">Decouvrez notre selection de biens d'exception, soigneusement choisis pour vous.</p>
+        </div>
+
+        <div class="property-filters reveal">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="appartement">Appartement</button>
+            <button class="filter-btn" data-filter="maison">Maison</button>
+            <button class="filter-btn" data-filter="villa">Villa</button>
+        </div>
+
+        <div class="properties-grid" id="propertiesGrid">
+
+            <!-- Property 1 -->
+            <div class="property-card reveal" data-type="villa">
+                <div class="property-image gradient-1">
+                    <span class="property-badge badge-exclusive">Exclusivite</span>
+                    <button class="wishlist-btn" aria-label="Ajouter aux favoris">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </button>
+                    <div class="property-image-label">Villa</div>
+                </div>
+                <div class="property-body">
+                    <div class="property-price">485 000 EUR</div>
+                    <h3 class="property-title">Villa contemporaine</h3>
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Aix-en-Provence
+                    </div>
+                    <div class="property-features">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2v8H2zM20 12h2v8h-2zM4 16h16M4 12c0-2 1.5-4 4-4h8c2.5 0 4 2 4 4"/></svg>
+                            4
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4zM6 12V6a2 2 0 012-2h1a2 2 0 012 2v6"/><circle cx="18" cy="8" r="2"/></svg>
+                            2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l20 20M5.5 5.5L2 22l16.5-3.5"/><path d="M14 4l6 6-4 4"/></svg>
+                            180 m2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M7 10V7a5 5 0 0110 0v3M3 17a2 2 0 002 2h14a2 2 0 002-2"/></svg>
+                            2
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-outline btn-card">Voir le bien</a>
+                </div>
+            </div>
+
+            <!-- Property 2 -->
+            <div class="property-card reveal" data-type="appartement">
+                <div class="property-image gradient-2">
+                    <span class="property-badge badge-new">Nouveau</span>
+                    <button class="wishlist-btn" aria-label="Ajouter aux favoris">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </button>
+                    <div class="property-image-label">Appartement</div>
+                </div>
+                <div class="property-body">
+                    <div class="property-price">320 000 EUR</div>
+                    <h3 class="property-title">Appartement Haussmannien</h3>
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Paris 16e
+                    </div>
+                    <div class="property-features">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2v8H2zM20 12h2v8h-2zM4 16h16M4 12c0-2 1.5-4 4-4h8c2.5 0 4 2 4 4"/></svg>
+                            3
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4zM6 12V6a2 2 0 012-2h1a2 2 0 012 2v6"/><circle cx="18" cy="8" r="2"/></svg>
+                            1
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l20 20M5.5 5.5L2 22l16.5-3.5"/><path d="M14 4l6 6-4 4"/></svg>
+                            95 m2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M7 10V7a5 5 0 0110 0v3M3 17a2 2 0 002 2h14a2 2 0 002-2"/></svg>
+                            1
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-outline btn-card">Voir le bien</a>
+                </div>
+            </div>
+
+            <!-- Property 3 -->
+            <div class="property-card reveal" data-type="maison">
+                <div class="property-image gradient-3">
+                    <span class="property-badge badge-exclusive">Exclusivite</span>
+                    <button class="wishlist-btn" aria-label="Ajouter aux favoris">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </button>
+                    <div class="property-image-label">Maison</div>
+                </div>
+                <div class="property-body">
+                    <div class="property-price">675 000 EUR</div>
+                    <h3 class="property-title">Maison de maitre</h3>
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Bordeaux
+                    </div>
+                    <div class="property-features">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2v8H2zM20 12h2v8h-2zM4 16h16M4 12c0-2 1.5-4 4-4h8c2.5 0 4 2 4 4"/></svg>
+                            5
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4zM6 12V6a2 2 0 012-2h1a2 2 0 012 2v6"/><circle cx="18" cy="8" r="2"/></svg>
+                            3
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l20 20M5.5 5.5L2 22l16.5-3.5"/><path d="M14 4l6 6-4 4"/></svg>
+                            240 m2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M7 10V7a5 5 0 0110 0v3M3 17a2 2 0 002 2h14a2 2 0 002-2"/></svg>
+                            2
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-outline btn-card">Voir le bien</a>
+                </div>
+            </div>
+
+            <!-- Property 4 -->
+            <div class="property-card reveal" data-type="villa">
+                <div class="property-image gradient-4">
+                    <span class="property-badge badge-new">Nouveau</span>
+                    <button class="wishlist-btn" aria-label="Ajouter aux favoris">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </button>
+                    <div class="property-image-label">Villa</div>
+                </div>
+                <div class="property-body">
+                    <div class="property-price">1 250 000 EUR</div>
+                    <h3 class="property-title">Villa vue mer panoramique</h3>
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Cannes
+                    </div>
+                    <div class="property-features">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2v8H2zM20 12h2v8h-2zM4 16h16M4 12c0-2 1.5-4 4-4h8c2.5 0 4 2 4 4"/></svg>
+                            6
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4zM6 12V6a2 2 0 012-2h1a2 2 0 012 2v6"/><circle cx="18" cy="8" r="2"/></svg>
+                            4
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l20 20M5.5 5.5L2 22l16.5-3.5"/><path d="M14 4l6 6-4 4"/></svg>
+                            350 m2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M7 10V7a5 5 0 0110 0v3M3 17a2 2 0 002 2h14a2 2 0 002-2"/></svg>
+                            3
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-outline btn-card">Voir le bien</a>
+                </div>
+            </div>
+
+            <!-- Property 5 -->
+            <div class="property-card reveal" data-type="appartement">
+                <div class="property-image gradient-5">
+                    <span class="property-badge badge-exclusive">Exclusivite</span>
+                    <button class="wishlist-btn" aria-label="Ajouter aux favoris">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </button>
+                    <div class="property-image-label">Appartement</div>
+                </div>
+                <div class="property-body">
+                    <div class="property-price">210 000 EUR</div>
+                    <h3 class="property-title">Loft industriel renove</h3>
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Lyon 7e
+                    </div>
+                    <div class="property-features">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2v8H2zM20 12h2v8h-2zM4 16h16M4 12c0-2 1.5-4 4-4h8c2.5 0 4 2 4 4"/></svg>
+                            2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4zM6 12V6a2 2 0 012-2h1a2 2 0 012 2v6"/><circle cx="18" cy="8" r="2"/></svg>
+                            1
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l20 20M5.5 5.5L2 22l16.5-3.5"/><path d="M14 4l6 6-4 4"/></svg>
+                            110 m2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M7 10V7a5 5 0 0110 0v3M3 17a2 2 0 002 2h14a2 2 0 002-2"/></svg>
+                            1
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-outline btn-card">Voir le bien</a>
+                </div>
+            </div>
+
+            <!-- Property 6 -->
+            <div class="property-card reveal" data-type="maison">
+                <div class="property-image gradient-6">
+                    <span class="property-badge badge-new">Nouveau</span>
+                    <button class="wishlist-btn" aria-label="Ajouter aux favoris">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </button>
+                    <div class="property-image-label">Maison</div>
+                </div>
+                <div class="property-body">
+                    <div class="property-price">890 000 EUR</div>
+                    <h3 class="property-title">Mas provencal authentique</h3>
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Saint-Remy-de-Provence
+                    </div>
+                    <div class="property-features">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2v8H2zM20 12h2v8h-2zM4 16h16M4 12c0-2 1.5-4 4-4h8c2.5 0 4 2 4 4"/></svg>
+                            4
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4zM6 12V6a2 2 0 012-2h1a2 2 0 012 2v6"/><circle cx="18" cy="8" r="2"/></svg>
+                            2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l20 20M5.5 5.5L2 22l16.5-3.5"/><path d="M14 4l6 6-4 4"/></svg>
+                            280 m2
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14M7 10V7a5 5 0 0110 0v3M3 17a2 2 0 002 2h14a2 2 0 002-2"/></svg>
+                            3
+                        </span>
+                    </div>
+                    <a href="#" class="btn btn-outline btn-card">Voir le bien</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="section services" id="services">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Ce que nous offrons</span>
+            <h2 class="section-title">Nos services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+                    </svg>
+                </div>
+                <h3>Achat immobilier</h3>
+                <p>Nous vous accompagnons dans la recherche et l'acquisition du bien ideal, adapte a vos criteres et votre budget.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+                        <line x1="7" y1="7" x2="7.01" y2="7"/>
+                    </svg>
+                </div>
+                <h3>Vente de bien</h3>
+                <p>Valorisez votre patrimoine avec notre expertise. Strategie de vente personnalisee et accompagnement complet.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                        <path d="M9 22v-4h6v4"/>
+                        <line x1="8" y1="6" x2="10" y2="6"/>
+                        <line x1="14" y1="6" x2="16" y2="6"/>
+                        <line x1="8" y1="10" x2="10" y2="10"/>
+                        <line x1="14" y1="10" x2="16" y2="10"/>
+                        <line x1="8" y1="14" x2="10" y2="14"/>
+                        <line x1="14" y1="14" x2="16" y2="14"/>
+                    </svg>
+                </div>
+                <h3>Gestion locative</h3>
+                <p>Confiez-nous la gestion de vos biens en location. Recherche de locataires, suivi et optimisation de vos revenus.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"/>
+                        <line x1="12" y1="20" x2="12" y2="4"/>
+                        <line x1="6" y1="20" x2="6" y2="14"/>
+                        <line x1="2" y1="20" x2="22" y2="20"/>
+                    </svg>
+                </div>
+                <h3>Estimation gratuite</h3>
+                <p>Obtenez une estimation precise et gratuite de votre bien basee sur les donnees du marche et notre expertise locale.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PROPERTY SPOTLIGHT ========== -->
+<section class="section spotlight">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Bien d'exception</span>
+            <h2 class="section-title">Notre coup de coeur</h2>
+        </div>
+        <div class="spotlight-content reveal">
+            <div class="spotlight-gallery">
+                <div class="spotlight-main gradient-spotlight" id="spotlightMain">
+                    <div class="spotlight-main-label">Facade</div>
+                </div>
+                <div class="spotlight-thumbs">
+                    <div class="spotlight-thumb active" data-view="Facade" onclick="changeSpotlight(this, 'Facade')">
+                        <span>Facade</span>
+                    </div>
+                    <div class="spotlight-thumb" data-view="Salon" onclick="changeSpotlight(this, 'Salon')">
+                        <span>Salon</span>
+                    </div>
+                    <div class="spotlight-thumb" data-view="Cuisine" onclick="changeSpotlight(this, 'Cuisine')">
+                        <span>Cuisine</span>
+                    </div>
+                    <div class="spotlight-thumb" data-view="Jardin" onclick="changeSpotlight(this, 'Jardin')">
+                        <span>Jardin</span>
+                    </div>
+                </div>
+            </div>
+            <div class="spotlight-details">
+                <span class="spotlight-badge">Exclusivite</span>
+                <h3 class="spotlight-title">Domaine d'exception - Luberon</h3>
+                <p class="spotlight-desc">Magnifique propriete au coeur du Luberon, offrant des vues imprenables sur la vallee. Renovee avec des materiaux nobles, cette demeure allie charme authentique et confort contemporain. Piscine a debordement, oliveraie et dependances.</p>
+                <table class="spotlight-table">
+                    <tr><td>Surface habitable</td><td>420 m2</td></tr>
+                    <tr><td>Chambres</td><td>6</td></tr>
+                    <tr><td>Salles de bain</td><td>4</td></tr>
+                    <tr><td>Garage</td><td>3 places</td></tr>
+                    <tr><td>Terrain</td><td>2 500 m2</td></tr>
+                    <tr><td>Annee de construction</td><td>1890 (renove 2021)</td></tr>
+                    <tr><td>DPE</td><td>C</td></tr>
+                </table>
+                <div class="spotlight-price">2 890 000 EUR</div>
+                <button class="btn btn-primary btn-lg">Demander une visite</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== AGENTS ========== -->
+<section class="section agents" id="agents">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Notre equipe</span>
+            <h2 class="section-title">Nos agents</h2>
+            <p class="section-desc">Des professionnels passionnes a votre service pour concretiser vos projets immobiliers.</p>
+        </div>
+        <div class="agents-grid">
+
+            <div class="agent-card reveal">
+                <div class="agent-photo agent-gradient-1">
+                    <div class="agent-initials">JD</div>
+                </div>
+                <div class="agent-info">
+                    <h3>Jean Dupont</h3>
+                    <span class="agent-title">Agent Senior</span>
+                    <div class="agent-contact">
+                        <a href="tel:+33612345678">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            06 12 34 56 78
+                        </a>
+                        <a href="mailto:j.dupont@prestige.fr">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            j.dupont@prestige.fr
+                        </a>
+                    </div>
+                    <div class="agent-social">
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    </div>
+                    <div class="agent-props">42 biens vendus</div>
+                </div>
+            </div>
+
+            <div class="agent-card reveal">
+                <div class="agent-photo agent-gradient-2">
+                    <div class="agent-initials">SM</div>
+                </div>
+                <div class="agent-info">
+                    <h3>Sophie Martin</h3>
+                    <span class="agent-title">Agent Senior</span>
+                    <div class="agent-contact">
+                        <a href="tel:+33698765432">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            06 98 76 54 32
+                        </a>
+                        <a href="mailto:s.martin@prestige.fr">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            s.martin@prestige.fr
+                        </a>
+                    </div>
+                    <div class="agent-social">
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    </div>
+                    <div class="agent-props">38 biens vendus</div>
+                </div>
+            </div>
+
+            <div class="agent-card reveal">
+                <div class="agent-photo agent-gradient-3">
+                    <div class="agent-initials">PL</div>
+                </div>
+                <div class="agent-info">
+                    <h3>Pierre Laurent</h3>
+                    <span class="agent-title">Agent Senior</span>
+                    <div class="agent-contact">
+                        <a href="tel:+33645678901">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            06 45 67 89 01
+                        </a>
+                        <a href="mailto:p.laurent@prestige.fr">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            p.laurent@prestige.fr
+                        </a>
+                    </div>
+                    <div class="agent-social">
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    </div>
+                    <div class="agent-props">55 biens vendus</div>
+                </div>
+            </div>
+
+            <div class="agent-card reveal">
+                <div class="agent-photo agent-gradient-4">
+                    <div class="agent-initials">MB</div>
+                </div>
+                <div class="agent-info">
+                    <h3>Marie Bernard</h3>
+                    <span class="agent-title">Agent Senior</span>
+                    <div class="agent-contact">
+                        <a href="tel:+33678901234">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            06 78 90 12 34
+                        </a>
+                        <a href="mailto:m.bernard@prestige.fr">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            m.bernard@prestige.fr
+                        </a>
+                    </div>
+                    <div class="agent-social">
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    </div>
+                    <div class="agent-props">31 biens vendus</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== ESTIMATION ========== -->
+<section class="section estimation" id="estimation">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Service gratuit</span>
+            <h2 class="section-title">Estimez votre bien en 3 minutes</h2>
+            <p class="section-desc">Recevez une estimation precise basee sur les donnees du marche et notre expertise locale.</p>
+        </div>
+
+        <div class="wizard-container reveal">
+            <div class="wizard-progress">
+                <div class="wizard-progress-bar" id="wizardBar" style="width:33.33%"></div>
+                <div class="wizard-steps-indicators">
+                    <div class="wizard-step-dot active" data-step="1">1</div>
+                    <div class="wizard-step-dot" data-step="2">2</div>
+                    <div class="wizard-step-dot" data-step="3">3</div>
+                </div>
+            </div>
+
+            <form id="estimationForm" class="wizard-form">
+                <!-- Step 1 -->
+                <div class="wizard-step active" id="wizardStep1">
+                    <h3>Type de bien</h3>
+                    <p>Selectionnez le type de bien que vous souhaitez estimer.</p>
+                    <div class="radio-cards">
+                        <label class="radio-card">
+                            <input type="radio" name="typeBien" value="appartement" required>
+                            <div class="radio-card-inner">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="10" y2="6"/><line x1="14" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><path d="M9 22v-4h6v4"/></svg>
+                                <span>Appartement</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="typeBien" value="maison">
+                            <div class="radio-card-inner">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                <span>Maison</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="typeBien" value="terrain">
+                            <div class="radio-card-inner">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="1.5"><path d="M2 20h20"/><path d="M5 20v-6l4-4 3 3 4-4 4 4v7"/></svg>
+                                <span>Terrain</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="wizard-step" id="wizardStep2">
+                    <h3>Caracteristiques</h3>
+                    <p>Precisez les details de votre bien.</p>
+                    <div class="wizard-fields">
+                        <div class="field-group">
+                            <label for="estSurface">Surface (m2)</label>
+                            <input type="number" id="estSurface" placeholder="ex: 85" required min="10">
+                        </div>
+                        <div class="field-group">
+                            <label for="estPieces">Nombre de pieces</label>
+                            <input type="number" id="estPieces" placeholder="ex: 4" required min="1">
+                        </div>
+                        <div class="field-group field-group-full">
+                            <label for="estVille">Ville</label>
+                            <input type="text" id="estVille" placeholder="ex: Paris, Lyon..." required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="wizard-step" id="wizardStep3">
+                    <h3>Vos coordonnees</h3>
+                    <p>Pour recevoir votre estimation personnalisee.</p>
+                    <div class="wizard-fields">
+                        <div class="field-group field-group-full">
+                            <label for="estNom">Nom complet</label>
+                            <input type="text" id="estNom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="estEmail">Email</label>
+                            <input type="email" id="estEmail" placeholder="votre@email.com" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="estTel">Telephone</label>
+                            <input type="tel" id="estTel" placeholder="06 00 00 00 00" required>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="wizard-nav">
+                <button class="btn btn-outline" id="wizardPrev" style="visibility:hidden" type="button">Precedent</button>
+                <button class="btn btn-primary" id="wizardNext" type="button">Suivant</button>
+            </div>
+
+            <div class="wizard-success" id="wizardSuccess" style="display:none">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#c9956b" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <h3>Demande envoyee</h3>
+                <p>Nous vous recontacterons sous 24h avec une estimation detaillee de votre bien.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== MORTGAGE CALCULATOR ========== -->
+<section class="section calculator">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Outil pratique</span>
+            <h2 class="section-title">Simulateur de pret</h2>
+        </div>
+        <div class="calc-container reveal">
+            <div class="calc-inputs">
+                <div class="field-group">
+                    <label for="calcPrix">Prix du bien (EUR)</label>
+                    <input type="number" id="calcPrix" value="300000" min="10000" step="5000">
+                </div>
+                <div class="field-group">
+                    <label for="calcApport">Apport personnel (EUR)</label>
+                    <input type="number" id="calcApport" value="30000" min="0" step="1000">
+                </div>
+                <div class="field-group">
+                    <label for="calcTaux">Taux annuel (%)</label>
+                    <input type="number" id="calcTaux" value="3.5" min="0.1" max="15" step="0.1">
+                </div>
+                <div class="field-group">
+                    <label for="calcDuree">Duree (annees)</label>
+                    <input type="number" id="calcDuree" value="20" min="1" max="30">
+                </div>
+                <button class="btn btn-primary" id="calcBtn" onclick="calculateMortgage()">Calculer</button>
+            </div>
+            <div class="calc-result" id="calcResult">
+                <div class="calc-monthly">
+                    <span class="calc-label">Mensualite estimee</span>
+                    <span class="calc-value" id="calcMensualite">--</span>
+                </div>
+                <div class="calc-details">
+                    <div><span>Montant emprunte</span><span id="calcMontant">--</span></div>
+                    <div><span>Cout total du credit</span><span id="calcTotal">--</span></div>
+                    <div><span>Cout des interets</span><span id="calcInterets">--</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="section testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Ils nous font confiance</span>
+            <h2 class="section-title">Temoignages clients</h2>
+        </div>
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote>"Un accompagnement exceptionnel du debut a la fin. L'equipe a su comprendre nos attentes et nous trouver la maison parfaite en un temps record."</blockquote>
+                <div class="testimonial-author">
+                    <strong>Famille Moreau</strong>
+                    <span>Acquereurs - Aix-en-Provence</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote>"Nous avons vendu notre appartement en seulement 3 semaines grace a leur strategie de mise en valeur. Le prix obtenu a depasse nos attentes."</blockquote>
+                <div class="testimonial-author">
+                    <strong>Laurent et Claire Petit</strong>
+                    <span>Vendeurs - Paris 8e</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9956b" stroke="#c9956b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote>"Service de gestion locative impeccable. Depuis 3 ans, je n'ai eu aucun souci. Transparence totale et rentabilite optimisee."</blockquote>
+                <div class="testimonial-author">
+                    <strong>Philippe Rousseau</strong>
+                    <span>Investisseur - Lyon</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== BLOG / CONSEILS ========== -->
+<section class="section blog">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Actualites</span>
+            <h2 class="section-title">Conseils et tendances</h2>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card reveal">
+                <div class="blog-image blog-gradient-1">
+                    <span class="blog-cat">Guide</span>
+                </div>
+                <div class="blog-body">
+                    <time>15 janvier 2024</time>
+                    <h3>Guide d'achat 2024 : les etapes cles</h3>
+                    <p>Tout ce que vous devez savoir pour reussir votre projet d'achat immobilier cette annee.</p>
+                    <a href="#" class="blog-link">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+            </article>
+            <article class="blog-card reveal">
+                <div class="blog-image blog-gradient-2">
+                    <span class="blog-cat">Marche</span>
+                </div>
+                <div class="blog-body">
+                    <time>28 decembre 2023</time>
+                    <h3>Tendances du marche immobilier en France</h3>
+                    <p>Analyse des prix, des volumes et des perspectives pour les mois a venir.</p>
+                    <a href="#" class="blog-link">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+            </article>
+            <article class="blog-card reveal">
+                <div class="blog-image blog-gradient-3">
+                    <span class="blog-cat">Investissement</span>
+                </div>
+                <div class="blog-body">
+                    <time>10 decembre 2023</time>
+                    <h3>Investir en LMNP : avantages et strategie</h3>
+                    <p>Le statut LMNP reste un levier puissant pour optimiser vos revenus locatifs.</p>
+                    <a href="#" class="blog-link">Lire l'article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CTA SECTION ========== -->
+<section class="cta-section" id="contact">
+    <div class="container cta-content">
+        <h2 class="reveal">Vous vendez ? Estimation gratuite et confidentielle</h2>
+        <p class="reveal">Nos experts evaluent votre bien sans engagement. Resultat sous 24 heures.</p>
+        <div class="cta-contacts reveal">
+            <a href="tel:+33145678900" class="cta-contact-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                01 45 67 89 00
+            </a>
+            <a href="mailto:contact@prestige-immobilier.fr" class="cta-contact-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                contact@prestige-immobilier.fr
+            </a>
+        </div>
+        <a href="#estimation" class="btn btn-primary btn-lg reveal">Estimer mon bien</a>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Nos services</h4>
+                <ul>
+                    <li><a href="#">Achat immobilier</a></li>
+                    <li><a href="#">Vente de bien</a></li>
+                    <li><a href="#">Gestion locative</a></li>
+                    <li><a href="#">Estimation gratuite</a></li>
+                    <li><a href="#">Conseil en investissement</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nos agences</h4>
+                <ul>
+                    <li><a href="#">Paris - Champs-Elysees</a></li>
+                    <li><a href="#">Lyon - Presqu'ile</a></li>
+                    <li><a href="#">Marseille - Vieux Port</a></li>
+                    <li><a href="#">Bordeaux - Centre</a></li>
+                    <li><a href="#">Nice - Promenade</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Carrieres</a></li>
+                    <li><a href="#">Presse</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>12 Avenue des Champs-Elysees</li>
+                    <li>75008 Paris, France</li>
+                    <li><a href="tel:+33145678900">01 45 67 89 00</a></li>
+                    <li><a href="mailto:contact@prestige-immobilier.fr">contact@prestige-immobilier.fr</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 Prestige Immobilier. Tous droits reserves. | <a href="#">Mentions legales</a> | <a href="#">Politique de confidentialite</a> | <a href="#">CGU</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+    </svg>
+</button>
+
+<!-- ========== INLINE JAVASCRIPT ========== -->
+<script>
+(function(){
+    /* ===== PRELOADER ===== */
+    window.addEventListener('load', function(){
+        var preloader = document.getElementById('preloader');
+        setTimeout(function(){
+            preloader.classList.add('hide');
+            setTimeout(function(){ preloader.style.display = 'none'; }, 600);
+        }, 1800);
+    });
+
+    /* ===== NAVBAR SCROLL ===== */
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 60) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+    });
+
+    /* ===== MOBILE MENU ===== */
+    var mobileToggle = document.getElementById('mobileToggle');
+    var navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', function(){
+        navLinks.classList.toggle('open');
+        mobileToggle.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+            navLinks.classList.remove('open');
+            mobileToggle.classList.remove('active');
+        });
+    });
+
+    /* ===== SMOOTH SCROLL ===== */
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+        a.addEventListener('click', function(e){
+            var target = document.querySelector(this.getAttribute('href'));
+            if(target){
+                e.preventDefault();
+                var offset = navbar.offsetHeight + 10;
+                var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        });
+    });
+
+    /* ===== RANGE SLIDER ===== */
+    var budgetSlider = document.getElementById('searchBudget');
+    var budgetValue = document.getElementById('budgetValue');
+    function formatBudget(v){
+        return parseInt(v).toLocaleString('fr-FR');
+    }
+    budgetValue.textContent = formatBudget(budgetSlider.value);
+    budgetSlider.addEventListener('input', function(){
+        budgetValue.textContent = formatBudget(this.value);
+    });
+
+    /* ===== SEARCH BAR ===== */
+    document.getElementById('btnSearch').addEventListener('click', function(e){
+        e.preventDefault();
+        var type = document.getElementById('searchType').value;
+        var bien = document.getElementById('searchBien').value;
+        var ville = document.getElementById('searchVille').value;
+        var budget = document.getElementById('searchBudget').value;
+        var surface = document.getElementById('searchSurface').value;
+        var cards = document.querySelectorAll('.property-card');
+        var count = 0;
+        cards.forEach(function(card){
+            var show = true;
+            if(bien && card.getAttribute('data-type') !== bien) show = false;
+            if(show){
+                card.style.display = '';
+                card.style.animation = 'fadeInUp 0.5s ease forwards';
+                count++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        var filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(function(b){ b.classList.remove('active'); });
+        if(bien){
+            filterBtns.forEach(function(b){ if(b.getAttribute('data-filter') === bien) b.classList.add('active'); });
+        } else {
+            filterBtns[0].classList.add('active');
+        }
+        var section = document.getElementById('biens');
+        if(section){
+            var offset = navbar.offsetHeight + 10;
+            var top = section.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+    });
+
+    /* ===== PROPERTY FILTER ===== */
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var propertyCards = document.querySelectorAll('.property-card');
+    filterBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            filterBtns.forEach(function(b){ b.classList.remove('active'); });
+            this.classList.add('active');
+            var filter = this.getAttribute('data-filter');
+            propertyCards.forEach(function(card){
+                if(filter === 'all' || card.getAttribute('data-type') === filter){
+                    card.style.display = '';
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    /* ===== WISHLIST TOGGLE ===== */
+    document.querySelectorAll('.wishlist-btn').forEach(function(btn){
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            this.classList.toggle('active');
+        });
+    });
+
+    /* ===== ANIMATED COUNTERS ===== */
+    var countersAnimated = false;
+    function animateCounters(){
+        if(countersAnimated) return;
+        var statNumbers = document.querySelectorAll('.stat-number');
+        var statsSection = document.querySelector('.stats-bar');
+        if(!statsSection) return;
+        var rect = statsSection.getBoundingClientRect();
+        if(rect.top < window.innerHeight && rect.bottom > 0){
+            countersAnimated = true;
+            statNumbers.forEach(function(el){
+                var target = parseInt(el.getAttribute('data-target'));
+                var step = Math.ceil(target / 60);
+                var current = 0;
+                var timer = setInterval(function(){
+                    current += step;
+                    if(current >= target){
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    el.textContent = current;
+                }, 30);
+            });
+        }
+    }
+    window.addEventListener('scroll', animateCounters);
+    animateCounters();
+
+    /* ===== SCROLL REVEAL ===== */
+    function revealOnScroll(){
+        var reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(function(el){
+            var rect = el.getBoundingClientRect();
+            if(rect.top < window.innerHeight - 80){
+                el.classList.add('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    /* ===== BACK TO TOP ===== */
+    var backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 500) backToTop.classList.add('show');
+        else backToTop.classList.remove('show');
+    });
+    backToTop.addEventListener('click', function(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ===== ESTIMATION WIZARD ===== */
+    var currentStep = 1;
+    var totalSteps = 3;
+    var wizardBar = document.getElementById('wizardBar');
+    var wizardPrev = document.getElementById('wizardPrev');
+    var wizardNext = document.getElementById('wizardNext');
+    var wizardDots = document.querySelectorAll('.wizard-step-dot');
+
+    function showStep(n){
+        document.querySelectorAll('.wizard-step').forEach(function(s, i){
+            s.classList.toggle('active', i === n - 1);
+        });
+        wizardDots.forEach(function(d, i){
+            d.classList.toggle('active', i < n);
+        });
+        wizardBar.style.width = (n / totalSteps * 100) + '%';
+        wizardPrev.style.visibility = n === 1 ? 'hidden' : 'visible';
+        wizardNext.textContent = n === totalSteps ? 'Envoyer' : 'Suivant';
+    }
+
+    function validateStep(n){
+        if(n === 1){
+            var radios = document.querySelectorAll('input[name="typeBien"]');
+            var checked = false;
+            radios.forEach(function(r){ if(r.checked) checked = true; });
+            if(!checked){ alert('Veuillez selectionner un type de bien.'); return false; }
+        }
+        if(n === 2){
+            var s = document.getElementById('estSurface').value;
+            var p = document.getElementById('estPieces').value;
+            var v = document.getElementById('estVille').value;
+            if(!s || !p || !v){ alert('Veuillez remplir tous les champs.'); return false; }
+        }
+        if(n === 3){
+            var nom = document.getElementById('estNom').value;
+            var email = document.getElementById('estEmail').value;
+            var tel = document.getElementById('estTel').value;
+            if(!nom || !email || !tel){ alert('Veuillez remplir tous les champs.'); return false; }
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test(email)){ alert('Veuillez entrer un email valide.'); return false; }
+        }
+        return true;
+    }
+
+    wizardNext.addEventListener('click', function(){
+        if(!validateStep(currentStep)) return;
+        if(currentStep < totalSteps){
+            currentStep++;
+            showStep(currentStep);
+        } else {
+            document.getElementById('estimationForm').style.display = 'none';
+            document.querySelector('.wizard-nav').style.display = 'none';
+            document.querySelector('.wizard-progress').style.display = 'none';
+            document.getElementById('wizardSuccess').style.display = 'flex';
+        }
+    });
+    wizardPrev.addEventListener('click', function(){
+        if(currentStep > 1){
+            currentStep--;
+            showStep(currentStep);
+        }
+    });
+
+})();
+
+/* ===== SPOTLIGHT GALLERY ===== */
+function changeSpotlight(el, label){
+    document.querySelectorAll('.spotlight-thumb').forEach(function(t){ t.classList.remove('active'); });
+    el.classList.add('active');
+    var main = document.getElementById('spotlightMain');
+    var labelEl = main.querySelector('.spotlight-main-label');
+    if(labelEl) labelEl.textContent = label;
+    main.style.opacity = '0';
+    setTimeout(function(){ main.style.opacity = '1'; }, 200);
+}
+
+/* ===== MORTGAGE CALCULATOR ===== */
+function calculateMortgage(){
+    var prix = parseFloat(document.getElementById('calcPrix').value) || 0;
+    var apport = parseFloat(document.getElementById('calcApport').value) || 0;
+    var taux = parseFloat(document.getElementById('calcTaux').value) || 0;
+    var duree = parseInt(document.getElementById('calcDuree').value) || 0;
+    var montant = prix - apport;
+    if(montant <= 0 || taux <= 0 || duree <= 0){ alert('Veuillez entrer des valeurs valides.'); return; }
+    var tauxMensuel = taux / 100 / 12;
+    var nbMensualites = duree * 12;
+    var mensualite = montant * (tauxMensuel * Math.pow(1 + tauxMensuel, nbMensualites)) / (Math.pow(1 + tauxMensuel, nbMensualites) - 1);
+    var total = mensualite * nbMensualites;
+    var interets = total - montant;
+    var fmt = function(v){ return Math.round(v).toLocaleString('fr-FR') + ' EUR'; };
+    document.getElementById('calcMensualite').textContent = fmt(mensualite);
+    document.getElementById('calcMontant').textContent = fmt(montant);
+    document.getElementById('calcTotal').textContent = fmt(total);
+    document.getElementById('calcInterets').textContent = fmt(interets);
+    document.getElementById('calcResult').classList.add('show');
+}
+</script>
+
+</body>
+</html>

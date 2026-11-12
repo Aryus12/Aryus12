@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCorp — Solutions Business Innovantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader"><div class="preloader-spinner"></div></div>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">Nova<span>Corp</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">À Propos</a></li>
+                <li><a href="#equipe" class="nav-link">Équipe</a></li>
+                <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-nav-cta">Demander un devis</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="accueil" class="hero">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content reveal">
+                    <div class="hero-badge"><span class="badge-dot"></span> Nouveau : Solutions IA disponibles</div>
+                    <h1>Propulsez votre <span>entreprise</span> vers de nouveaux sommets</h1>
+                    <p>Solutions innovantes et stratégies sur mesure pour transformer votre vision en réalité. Nous accompagnons les entreprises ambitieuses depuis plus de 15 ans.</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">
+                            <span>Découvrir nos services</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">Nous contacter</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat"><strong data-count="500">0</strong><span>Clients accompagnés</span></div>
+                        <div class="stat"><strong data-count="98" data-suffix="%">0</strong><span>Taux de satisfaction</span></div>
+                        <div class="stat"><strong data-count="15" data-suffix="+">0</strong><span>Années d'expérience</span></div>
+                    </div>
+                </div>
+                <div class="hero-visual reveal reveal-right">
+                    <div class="hero-card hero-card-main">
+                        <div class="card-header-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                        <div class="card-chart">
+                            <div class="chart-bar" style="--height:45%;" data-label="Q1"></div>
+                            <div class="chart-bar" style="--height:65%;" data-label="Q2"></div>
+                            <div class="chart-bar" style="--height:50%;" data-label="Q3"></div>
+                            <div class="chart-bar active" style="--height:85%;" data-label="Q4"></div>
+                        </div>
+                        <div class="card-stat-row">
+                            <div class="mini-stat"><span class="stat-up">+32%</span>Croissance</div>
+                            <div class="mini-stat"><span class="stat-up">+18%</span>Revenus</div>
+                        </div>
+                    </div>
+                    <div class="hero-card hero-card-float">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        <div><strong>+200%</strong><span>ROI moyen</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator"><span>Défiler</span><div class="scroll-line"></div></div>
+    </section>
+
+    <!-- Clients logos -->
+    <section class="clients-strip">
+        <div class="container">
+            <p class="clients-label">Ils nous font confiance</p>
+            <div class="clients-track" id="clientsTrack">
+                <div class="client-logo">AIRBUS</div>
+                <div class="client-logo">L'ORÉAL</div>
+                <div class="client-logo">RENAULT</div>
+                <div class="client-logo">ORANGE</div>
+                <div class="client-logo">DANONE</div>
+                <div class="client-logo">SNCF</div>
+                <div class="client-logo">AIRBUS</div>
+                <div class="client-logo">L'ORÉAL</div>
+                <div class="client-logo">RENAULT</div>
+                <div class="client-logo">ORANGE</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="tag">Ce que nous faisons</span>
+                <h2>Des solutions taillées pour votre croissance</h2>
+                <p>Une approche complète et sur mesure pour répondre à tous vos enjeux business et technologiques</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 21H4a1 1 0 01-1-1V3"/><path d="M7 14l4-4 4 4 5-5"/></svg></div>
+                    <h3>Conseil Stratégique</h3>
+                    <p>Analyses approfondies et recommandations personnalisées pour optimiser votre croissance et votre rentabilité.</p>
+                    <a href="#" class="service-link">En savoir plus <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+                <div class="service-card featured reveal">
+                    <div class="service-badge">Populaire</div>
+                    <div class="service-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                    <h3>Transformation Digitale</h3>
+                    <p>Modernisez vos processus avec les dernières technologies pour rester compétitif sur le marché actuel.</p>
+                    <a href="#" class="service-link">En savoir plus <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+                    <h3>Marketing Digital</h3>
+                    <p>Stratégies marketing innovantes pour augmenter votre visibilité et générer des leads qualifiés.</p>
+                    <a href="#" class="service-link">En savoir plus <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+                    <h3>Cybersécurité</h3>
+                    <p>Protégez vos données et votre infrastructure avec nos solutions de sécurité avancées et certifiées.</p>
+                    <a href="#" class="service-link">En savoir plus <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+                    <h3>Formation & Coaching</h3>
+                    <p>Développez les compétences de vos équipes avec nos programmes de formation certifiants sur mesure.</p>
+                    <a href="#" class="service-link">En savoir plus <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+                    <h3>Automatisation</h3>
+                    <p>Optimisez vos workflows et réduisez les tâches répétitives grâce à l'automatisation intelligente.</p>
+                    <a href="#" class="service-link">En savoir plus <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <div class="image-placeholder">
+                        <div class="placeholder-inner">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            <span>Image de l'entreprise</span>
+                        </div>
+                    </div>
+                    <div class="experience-badge"><strong data-count="15">0</strong><span>Années<br>d'expérience</span></div>
+                </div>
+                <div class="about-content reveal reveal-right">
+                    <span class="tag">Qui sommes-nous</span>
+                    <h2>Une équipe d'experts passionnés à votre service</h2>
+                    <p class="about-text">Depuis 2010, NovaCorp accompagne les entreprises dans leur transformation digitale et leur croissance. Notre approche unique combine expertise technique pointue et compréhension approfondie des enjeux business.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div><h4>Expertise Reconnue</h4><p>Plus de 500 projets réalisés avec succès dans 12 secteurs</p></div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div><h4>Innovation Continue</h4><p>Technologies de pointe, IA et méthodologies agiles certifiées</p></div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div><h4>Support Premium 24/7</h4><p>Assistance technique et conseil disponibles en permanence</p></div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary"><span>Discutons de votre projet</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chiffres -->
+    <section class="numbers">
+        <div class="container">
+            <div class="numbers-grid">
+                <div class="number-item reveal"><strong data-count="500" data-suffix="+">0</strong><span>Projets livrés</span></div>
+                <div class="number-item reveal"><strong data-count="50">0</strong><span>Experts dédiés</span></div>
+                <div class="number-item reveal"><strong data-count="12">0</strong><span>Pays couverts</span></div>
+                <div class="number-item reveal"><strong data-count="98" data-suffix="%">0</strong><span>Clients satisfaits</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe -->
+    <section id="equipe" class="team">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="tag">Notre Force</span>
+                <h2>Rencontrez l'équipe dirigeante</h2>
+                <p>Des experts passionnés avec une vision commune du succès</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="team-photo">
+                        <div class="photo-placeholder"><span class="initials">JD</span></div>
+                        <div class="team-overlay">
+                            <a href="#" class="social-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                            <a href="#" class="social-btn" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        </div>
+                    </div>
+                    <h3>Jean Dupont</h3><span class="role">CEO & Fondateur</span>
+                    <p>15 ans d'expérience en stratégie d'entreprise et transformation digitale.</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-photo">
+                        <div class="photo-placeholder"><span class="initials">ML</span></div>
+                        <div class="team-overlay">
+                            <a href="#" class="social-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                            <a href="#" class="social-btn" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        </div>
+                    </div>
+                    <h3>Marie Laurent</h3><span class="role">Directrice Technique</span>
+                    <p>Architecte logiciel spécialisée en solutions cloud et intelligence artificielle.</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-photo">
+                        <div class="photo-placeholder"><span class="initials">PM</span></div>
+                        <div class="team-overlay">
+                            <a href="#" class="social-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                            <a href="#" class="social-btn" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        </div>
+                    </div>
+                    <h3>Pierre Martin</h3><span class="role">Directeur Créatif</span>
+                    <p>Designer primé avec une passion pour les interfaces innovantes et l'UX.</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-photo">
+                        <div class="photo-placeholder"><span class="initials">SB</span></div>
+                        <div class="team-overlay">
+                            <a href="#" class="social-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                            <a href="#" class="social-btn" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        </div>
+                    </div>
+                    <h3>Sophie Bernard</h3><span class="role">Directrice Marketing</span>
+                    <p>Experte en growth hacking et stratégies d'acquisition digitale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="temoignages" class="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="tag light">Ils nous font confiance</span>
+                <h2>Ce que disent nos clients</h2>
+            </div>
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="rgba(37,99,235,0.3)"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+                        <div class="stars-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                        <p>« NovaCorp a transformé notre approche digitale. Résultats exceptionnels en 6 mois avec une augmentation de 200% de notre chiffre d'affaires en ligne. Un partenaire indispensable. »</p>
+                        <div class="testimonial-author"><div class="author-avatar">AM</div><div><strong>Antoine Moreau</strong><span>CEO, TechStart</span></div></div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="rgba(37,99,235,0.3)"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+                        <div class="stars-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                        <p>« Un accompagnement personnalisé et une expertise technique remarquable. L'équipe est toujours à l'écoute et force de proposition. Je recommande vivement leurs services. »</p>
+                        <div class="testimonial-author"><div class="author-avatar">CP</div><div><strong>Claire Petit</strong><span>DG, InnovaGroup</span></div></div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="rgba(37,99,235,0.3)"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+                        <div class="stars-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                        <p>« Professionnalisme et réactivité sont les maîtres mots. Notre productivité a augmenté de 40% grâce à leurs solutions d'automatisation. Investissement rentabilisé en 3 mois. »</p>
+                        <div class="testimonial-author"><div class="author-avatar">LR</div><div><strong>Lucas Roux</strong><span>CTO, DataFlow</span></div></div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn" aria-label="Précédent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn" id="nextBtn" aria-label="Suivant"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="tag">Parlons de votre projet</span>
+                    <h2>Contactez-nous</h2>
+                    <p>Prêt à propulser votre entreprise ? Remplissez le formulaire et notre équipe vous recontactera dans les 24h.</p>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                            <div><strong>Adresse</strong><p>42 Avenue des Champs-Élysées, 75008 Paris</p></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                            <div><strong>Email</strong><p>contact@novacorp.fr</p></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+                            <div><strong>Téléphone</strong><p>+33 1 23 45 67 89</p></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                            <div><strong>Horaires</strong><p>Lun — Ven : 9h00 — 18h00</p></div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal reveal-right" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group"><label for="nom">Nom <span class="required">*</span></label><input type="text" id="nom" name="nom" placeholder="Votre nom" required><span class="error-msg" id="nomError"></span></div>
+                        <div class="form-group"><label for="prenom">Prénom <span class="required">*</span></label><input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required><span class="error-msg" id="prenomError"></span></div>
+                    </div>
+                    <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="email" placeholder="votre@email.com" required><span class="error-msg" id="emailError"></span></div>
+                    <div class="form-group"><label for="sujet">Sujet</label><select id="sujet" name="sujet"><option value="">Sélectionnez un sujet</option><option value="conseil">Conseil Stratégique</option><option value="digital">Transformation Digitale</option><option value="marketing">Marketing Digital</option><option value="securite">Cybersécurité</option><option value="autre">Autre</option></select></div>
+                    <div class="form-group"><label for="message">Message <span class="required">*</span></label><textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea><span class="error-msg" id="messageError"></span></div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <span class="btn-text">Envoyer le message</span>
+                        <span class="btn-loading" style="display:none;"><svg width="20" height="20" viewBox="0 0 24 24" class="spinner"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="30 70"/></svg> Envoi en cours...</span>
+                    </button>
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Message envoyé avec succès ! Nous vous recontacterons sous 24h.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">Nova<span>Corp</span></a>
+                    <p>Solutions innovantes pour entreprises ambitieuses. Votre succès est notre mission depuis 2010.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col"><h4>Services</h4><ul><li><a href="#">Conseil Stratégique</a></li><li><a href="#">Transformation Digitale</a></li><li><a href="#">Marketing Digital</a></li><li><a href="#">Cybersécurité</a></li><li><a href="#">Automatisation</a></li></ul></div>
+                <div class="footer-col"><h4>Entreprise</h4><ul><li><a href="#">À Propos</a></li><li><a href="#">Équipe</a></li><li><a href="#">Carrières</a></li><li><a href="#">Blog</a></li><li><a href="#">Presse</a></li></ul></div>
+                <div class="footer-col"><h4>Newsletter</h4><p>Recevez nos dernières actualités et conseils experts.</p><form class="newsletter-form" id="newsletterForm"><input type="email" placeholder="Votre email professionnel" required><button type="submit" class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></form></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 NovaCorp. Tous droits réservés. <a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a></p></div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // ===== PRELOADER =====
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('loaded');
+            setTimeout(() => preloader.remove(), 600);
+            initCounters();
+        });
+
+        // ===== NAVBAR =====
+        const navbar = document.getElementById('navbar');
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navItems = document.querySelectorAll('.nav-link');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            navbar.classList.toggle('scrolled', y > 60);
+            if (y > 400) navbar.classList.toggle('nav-hidden', y > lastScroll);
+            else navbar.classList.remove('nav-hidden');
+            lastScroll = y;
+            document.getElementById('backToTop').classList.toggle('visible', y > 500);
+            updateActiveNav();
+        });
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = navbar.offsetHeight + 20;
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+                }
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        function updateActiveNav() {
+            let current = '';
+            document.querySelectorAll('section[id]').forEach(s => {
+                if (window.scrollY >= s.offsetTop - 150) current = s.id;
+            });
+            navItems.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+        }
+
+        document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // ===== SCROLL REVEAL =====
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('revealed'); revealObserver.unobserve(entry.target); }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ===== ANIMATED COUNTERS =====
+        function initCounters() {
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { animateCounter(entry.target); counterObserver.unobserve(entry.target); }
+                });
+            }, { threshold: 0.5 });
+            document.querySelectorAll('[data-count]').forEach(c => counterObserver.observe(c));
+        }
+
+        function animateCounter(el) {
+            const target = parseInt(el.dataset.count), suffix = el.dataset.suffix || '', duration = 2000, step = target / (duration / 16);
+            let current = 0;
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) { current = target; clearInterval(timer); }
+                el.textContent = Math.floor(current) + suffix;
+            }, 16);
+        }
+
+        // ===== CHART BARS =====
+        const chartEl = document.querySelector('.card-chart');
+        if (chartEl) {
+            new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.chart-bar').forEach((bar, i) => setTimeout(() => bar.classList.add('animate'), i * 150));
+                    }
+                });
+            }, { threshold: 0.3 }).observe(chartEl);
+        }
+
+        // ===== TESTIMONIALS CAROUSEL =====
+        const track = document.getElementById('testimonialsTrack');
+        const cards = track ? track.querySelectorAll('.testimonial-card') : [];
+        const dotsContainer = document.getElementById('carouselDots');
+        let currentSlide = 0, cardsPerView = 3, autoInterval;
+
+        function updateCarousel() {
+            const w = window.innerWidth;
+            cardsPerView = w < 768 ? 1 : w < 1024 ? 2 : 3;
+            const maxSlide = Math.max(0, cards.length - cardsPerView);
+            if (currentSlide > maxSlide) currentSlide = maxSlide;
+            const gap = 30;
+            const cardWidth = (track.parentElement.offsetWidth - gap * (cardsPerView - 1)) / cardsPerView;
+            cards.forEach(c => c.style.minWidth = cardWidth + 'px');
+            track.style.transform = 'translateX(-' + currentSlide * (cardWidth + gap) + 'px)';
+            updateDots(maxSlide + 1);
+        }
+
+        function updateDots(total) {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < total; i++) {
+                const d = document.createElement('button');
+                d.className = 'dot' + (i === currentSlide ? ' active' : '');
+                d.addEventListener('click', () => { currentSlide = i; updateCarousel(); resetAuto(); });
+                dotsContainer.appendChild(d);
+            }
+        }
+
+        function nextSlide() { const max = Math.max(0, cards.length - cardsPerView); currentSlide = currentSlide >= max ? 0 : currentSlide + 1; updateCarousel(); }
+        function prevSlide() { const max = Math.max(0, cards.length - cardsPerView); currentSlide = currentSlide <= 0 ? max : currentSlide - 1; updateCarousel(); }
+        function resetAuto() { clearInterval(autoInterval); autoInterval = setInterval(nextSlide, 5000); }
+
+        if (track && cards.length) {
+            document.getElementById('nextBtn').addEventListener('click', () => { nextSlide(); resetAuto(); });
+            document.getElementById('prevBtn').addEventListener('click', () => { prevSlide(); resetAuto(); });
+            updateCarousel(); resetAuto();
+            window.addEventListener('resize', updateCarousel);
+        }
+
+        // ===== FORM VALIDATION =====
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            const fields = {
+                nom: { el: document.getElementById('nom'), error: document.getElementById('nomError'), msg: 'Veuillez saisir votre nom' },
+                prenom: { el: document.getElementById('prenom'), error: document.getElementById('prenomError'), msg: 'Veuillez saisir votre prénom' },
+                email: { el: document.getElementById('email'), error: document.getElementById('emailError'), msg: 'Veuillez saisir un email valide' },
+                message: { el: document.getElementById('message'), error: document.getElementById('messageError'), msg: 'Veuillez saisir un message (min. 10 caractères)' }
+            };
+
+            Object.keys(fields).forEach(key => {
+                fields[key].el.addEventListener('blur', () => validateField(key));
+                fields[key].el.addEventListener('input', () => { if (fields[key].el.classList.contains('invalid')) validateField(key); });
+            });
+
+            function validateField(key) {
+                const f = fields[key]; let valid = true;
+                if (key === 'email') valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.el.value);
+                else if (key === 'message') valid = f.el.value.trim().length >= 10;
+                else valid = f.el.value.trim().length > 0;
+                f.el.classList.toggle('invalid', !valid);
+                f.el.classList.toggle('valid', valid);
+                f.error.textContent = valid ? '' : f.msg;
+                return valid;
+            }
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let valid = true;
+                Object.keys(fields).forEach(k => { if (!validateField(k)) valid = false; });
+                if (!valid) return;
+
+                const btn = document.getElementById('submitBtn'), btnText = btn.querySelector('.btn-text'), btnLoad = btn.querySelector('.btn-loading');
+                btnText.style.display = 'none'; btnLoad.style.display = 'inline-flex'; btn.disabled = true;
+
+                setTimeout(() => {
+                    btnText.style.display = ''; btnLoad.style.display = 'none'; btn.disabled = false;
+                    contactForm.reset();
+                    Object.keys(fields).forEach(k => { fields[k].el.classList.remove('valid','invalid'); fields[k].error.textContent = ''; });
+                    document.getElementById('formSuccess').style.display = 'flex';
+                    setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 5000);
+                }, 1500);
+            });
+        }
+
+        // ===== NEWSLETTER =====
+        const nlForm = document.getElementById('newsletterForm');
+        if (nlForm) {
+            nlForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const input = this.querySelector('input');
+                if (input.value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+                    input.value = ''; input.placeholder = 'Merci ! Vous êtes inscrit.';
+                    setTimeout(() => input.placeholder = 'Votre email professionnel', 3000);
+                }
+            });
+        }
+
+        // ===== CLIENTS INFINITE SCROLL =====
+        const clientsTrack = document.getElementById('clientsTrack');
+        if (clientsTrack) clientsTrack.innerHTML += clientsTrack.innerHTML;
+
+    })();
+    </script>
+</body>
+</html>

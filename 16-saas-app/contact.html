@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CloudFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                Cloud<span>Flow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Fonctionnalités</a></li>
+                <li><a href="index.html#pricing">Tarifs</a></li>
+                <li><a href="integrations.html">Intégrations</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-ghost">Se connecter</a>
+                <a href="signup.html" class="btn btn-primary">Essai gratuit</a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <span class="section-badge">Contact</span>
+                <h1>Besoin d'aide ?</h1>
+                <p>Notre équipe est là pour vous répondre à toutes vos questions</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>support@cloudflow.io</p>
+                        <p>Réponse sous 24h</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Téléphone</h3>
+                        <p>+33 1 23 45 67 89</p>
+                        <p>Lun-Ven 9h-18h</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-slack"></i>
+                        </div>
+                        <h3>Slack</h3>
+                        <p>cloudflow.slack.com</p>
+                        <p>Communauté active</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Chat en direct</h3>
+                        <p>Disponible 24/7</p>
+                        <p>Support instantané</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-card">
+                        <h2>Envoyez-nous un message</h2>
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nom *</label>
+                                    <input type="text" id="name" placeholder="Votre nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" placeholder="vous@exemple.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet *</label>
+                                <select id="subject" required>
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="support">Support technique</option>
+                                    <option value="billing">Facturation</option>
+                                    <option value="sales">Ventes</option>
+                                    <option value="partnership">Partenariat</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" rows="5" placeholder="Décrivez votre demande..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="priority">Priorité</label>
+                                <select id="priority">
+                                    <option value="low">Basse</option>
+                                    <option value="medium" selected>Moyenne</option>
+                                    <option value="high">Haute</option>
+                                    <option value="urgent">Urgente</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" required>
+                                    <span>J'accepte que mes données soient traitées conformément à la politique de confidentialité</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="section-header">
+                    <h2>Questions fréquentes</h2>
+                    <p>Trouvez rapidement les réponses à vos questions</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment fonctionne l'essai gratuit ?</h3>
+                            <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>L'essai gratuit dure 14 jours et vous donne accès à toutes les fonctionnalités du plan Pro. Aucune carte bancaire n'est requise pour commencer. À la fin de l'essai, vous pouvez choisir de continuer avec un plan payant ou passer au plan Free.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Puis-je changer de plan à tout moment ?</h3>
+                            <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, vous pouvez changer de plan à tout moment. Si vous passez à un plan supérieur, vous serez facturé au prorata. Si vous passez à un plan inférieur, vous bénéficierez d'un crédit pour votre prochain cycle de facturation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Mes données sont-elles sécurisées ?</h3>
+                            <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolument. Nous utilisons un chiffrement de niveau bancaire (AES-256) pour toutes vos données. Nos serveurs sont hébergés dans des centres de données certifiés ISO 27001 et nous sommes conformes au RGPD.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment puis-je annuler mon abonnement ?</h3>
+                            <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Vous pouvez annuler votre abonnement à tout moment depuis la page Facturation. L'annulation prendra effet à la fin de votre cycle de facturation en cours. Vos données resteront accessibles pendant 30 jours après l'annulation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Offrez-vous un support dédié ?</h3>
+                            <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Les plans Pro et Enterprise incluent un support prioritaire. Le plan Enterprise offre un support dédié 24/7 avec un gestionnaire de compte personnel. Le plan Free bénéficie d'un support communautaire via notre forum et Slack.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Puis-je exporter mes données ?</h3>
+                            <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, vous pouvez exporter toutes vos données à tout moment depuis la page Paramètres. L'export est disponible en plusieurs formats (JSON, CSV, PDF) et inclut tous vos projets, tâches et fichiers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand">
+                    <a href="/" class="footer-logo">
+                        <div class="logo-mark small">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        Cloud<span>Flow</span>
+                    </a>
+                    <p>La plateforme de gestion de projet nouvelle génération, alimentée par l'IA.</p>
+                    <div class="footer-social"
+                        <a href="https://twitter.com/cloudflow"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/cloudflow"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/company/cloudflow"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/cloudflow"><i class="fab fa-youtube"></i></a>
+                        <a href="https://discord.gg/cloudflow"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <ul>
+                        <li><a href="/#features">Fonctionnalités</a></li>
+                        <li><a href="/integrations">Intégrations</a></li>
+                        <li><a href="/#pricing">Tarifs</a></li>
+                        <li><a href="/changelog">Changelog</a></li>
+                        <li><a href="/roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="/docs">Documentation</a></li>
+                        <li><a href="/docs/api">API Reference</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/guides">Guides</a></li>
+                        <li><a href="/status">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="/about">À propos</a></li>
+                        <li><a href="/careers">Carrières <span class="hiring-badge">On recrute!</span></a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/security">Sécurité</a></li>
+                        <li><a href="/legal">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CloudFlow Inc. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Confidentialité</a>
+                    <a href="/terms">CGU</a>
+                    <a href="/cookies">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        html, body {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 12px 0;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #09090b;
+            text-decoration: none;
+        }
+
+        .logo span { color: #6366f1; }
+
+        .logo-mark {
+            width: 28px;
+            height: 28px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            flex-shrink: 0;
+        }
+
+        .logo-mark span {
+            border-radius: 3px;
+            background: #6366f1;
+        }
+
+        .logo-mark span:nth-child(2) { background: #06b6d4; opacity: 0.7; }
+        .logo-mark span:nth-child(3) { background: #818cf8; opacity: 0.5; }
+        .logo-mark span:nth-child(4) { background: #6366f1; opacity: 0.8; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            padding: 8px 14px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #64748b;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #09090b;
+            background: #f4f4f5;
+        }
+
+        .nav-links a.active {
+            color: #6366f1;
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .nav-actions { display: flex; gap: 8px; align-items: center; }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #09090b;
+        }
+
+        .btn-ghost:hover {
+            background: #f4f4f5;
+        }
+
+        .btn-primary {
+            background: #6366f1;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #4f46e5;
+            transform: translateY(-1px);
+        }
+
+        .btn-full {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid #e2e8f0;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: #09090b;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: #6366f1;
+            color: #ffffff;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .contact-header p {
+            font-size: 1.25rem;
+            color: #64748b;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 1.5rem;
+            color: #6366f1;
+        }
+
+        .contact-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .form-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-card h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #09090b;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .checkbox-label input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: #64748b;
+        }
+
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+
+        .faq-question h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .faq-toggle {
+            width: 36px;
+            height: 36px;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 8px;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            background: #6366f1;
+            color: #ffffff;
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-answer p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: #09090b;
+            color: #ffffff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo span { color: #6366f1; }
+
+        .footer-col p {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: #18181b;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a1a1aa;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: #27272a;
+            color: #ffffff;
+        }
+
+        .footer-col h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: #ffffff;
+        }
+
+        .hiring-badge {
+            background: #10b981;
+            color: #ffffff;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 30px;
+            border-top: 1px solid #27272a;
+        }
+
+        .footer-bottom p {
+            color: #71717a;
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: #71717a;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card {
+                padding: 24px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

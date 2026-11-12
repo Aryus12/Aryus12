@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marc Lef&egrave;vre &mdash; Ing&eacute;nieur Full-Stack Senior</title>
+  <meta name="description" content="CV en ligne de Marc Lef&egrave;vre, Ing&eacute;nieur Full-Stack Senior bas&eacute; &agrave; Lyon.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button id="theme-toggle" aria-label="Basculer le mode sombre">
+      <svg id="icon-sun" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="print-btn" aria-label="Imprimer">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    </button>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar__initials">ML</div>
+      <h1 class="sidebar__name">Marc Lef&egrave;vre</h1>
+      <div class="sidebar__title" id="typed-title"></div>
+    </div>
+
+    <!-- Contact -->
+    <div class="sidebar__contact">
+      <div class="sidebar__contact-item" data-copy="marc@lefevre.dev">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>marc@lefevre.dev</span>
+        <span class="copy-tooltip">Copi&eacute;</span>
+      </div>
+      <div class="sidebar__contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+33 6 98 76 54 32</span>
+      </div>
+      <div class="sidebar__contact-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Lyon, France</span>
+      </div>
+      <div class="sidebar__contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10A15.3 15.3 0 0 1 8 12 15.3 15.3 0 0 1 12 2z"/></svg>
+        <a href="https://marclefevre.dev" target="_blank" rel="noopener">marclefevre.dev</a>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="sidebar__social">
+      <a href="https://linkedin.com/in/marclefevre" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/marclefevre" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      </a>
+    </div>
+
+    <!-- Languages -->
+    <div class="sidebar__languages">
+      <h3>Langues</h3>
+      <div class="lang-item">
+        <span>Fran&ccedil;ais</span>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+        </div>
+      </div>
+      <div class="lang-item">
+        <span>English</span>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot"></span>
+        </div>
+      </div>
+      <div class="lang-item">
+        <span>Espa&ntilde;ol</span>
+        <div class="lang-dots">
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot filled"></span>
+          <span class="lang-dot"></span>
+          <span class="lang-dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Nav -->
+    <nav class="sidebar__nav">
+      <a href="#profil">Profil</a>
+      <a href="#experience">Exp&eacute;rience</a>
+      <a href="#competences">Comp&eacute;tences</a>
+      <a href="#formation">Formation</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projets">Projets</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Profil -->
+    <section class="section" id="profil">
+      <h2 class="section__label">Profil</h2>
+      <p class="profil-text">
+        Ing&eacute;nieur Full-Stack avec plus de 10 ans d'exp&eacute;rience dans la conception et le d&eacute;veloppement d'applications web performantes.
+        Sp&eacute;cialis&eacute; dans les architectures microservices, les API RESTful et les interfaces utilisateur r&eacute;actives.
+        Passionn&eacute; par le code propre, les pratiques DevOps et l'am&eacute;lioration continue.
+        Actuellement Lead Full-Stack chez CloudTech Solutions, encadrant une &eacute;quipe de 8 d&eacute;veloppeurs.
+      </p>
+    </section>
+
+    <!-- Exp&eacute;rience -->
+    <section class="section" id="experience">
+      <h2 class="section__label">Exp&eacute;rience</h2>
+      <div class="timeline">
+
+        <div class="timeline-entry">
+          <div class="timeline-entry__header">
+            <span class="timeline-entry__role">Lead Full-Stack</span>
+            <span class="timeline-entry__company">@ CloudTech Solutions</span>
+            <span class="timeline-entry__period">2021 &mdash; Pr&eacute;sent</span>
+          </div>
+          <p class="timeline-entry__desc">
+            Direction technique d'une &eacute;quipe de 8 d&eacute;veloppeurs. Conception d'une plateforme SaaS multi-tenant traitant 2M+ requ&ecirc;tes/jour. Mise en place de pipelines CI/CD et migration vers une architecture microservices.
+          </p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-entry__header">
+            <span class="timeline-entry__role">Senior Developer</span>
+            <span class="timeline-entry__company">@ InnoSoft</span>
+            <span class="timeline-entry__period">2018 &mdash; 2021</span>
+          </div>
+          <p class="timeline-entry__desc">
+            D&eacute;veloppement d'applications m&eacute;tier en React et Vue.js. Optimisation des performances backend r&eacute;duisant les temps de r&eacute;ponse API de 40%. Int&eacute;gration de syst&egrave;mes de paiement et d'authentification OAuth2.
+          </p>
+          <div class="tags">
+            <span class="tag">Vue.js</span>
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Redis</span>
+            <span class="tag">GraphQL</span>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-entry__header">
+            <span class="timeline-entry__role">Full-Stack Developer</span>
+            <span class="timeline-entry__company">@ WebFactory</span>
+            <span class="timeline-entry__period">2015 &mdash; 2018</span>
+          </div>
+          <p class="timeline-entry__desc">
+            Cr&eacute;ation de sites e-commerce et d'applications web sur mesure. D&eacute;veloppement d'API RESTful et int&eacute;gration de CMS headless. Collaboration &eacute;troite avec les &eacute;quipes design et produit.
+          </p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Express</span>
+            <span class="tag">SASS</span>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-entry__header">
+            <span class="timeline-entry__role">D&eacute;veloppeur Junior</span>
+            <span class="timeline-entry__company">@ DigitalFirst</span>
+            <span class="timeline-entry__period">2013 &mdash; 2015</span>
+          </div>
+          <p class="timeline-entry__desc">
+            Premi&egrave;re exp&eacute;rience professionnelle en d&eacute;veloppement web. Maintenance et &eacute;volution de sites WordPress et Drupal. Initiation aux m&eacute;thodologies Agile et aux outils de versioning Git.
+          </p>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">WordPress</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">jQuery</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Comp&eacute;tences -->
+    <section class="section" id="competences">
+      <h2 class="section__label">Comp&eacute;tences</h2>
+
+      <div class="skills-category">
+        <h3 class="skills-category__title">Frontend</h3>
+        <div class="skill-row">
+          <span class="skill-row__name">React</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="92"></div></div>
+          <span class="skill-row__pct">92%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">Vue.js</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="88"></div></div>
+          <span class="skill-row__pct">88%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">TypeScript</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="90"></div></div>
+          <span class="skill-row__pct">90%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">Next.js</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="85"></div></div>
+          <span class="skill-row__pct">85%</span>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3 class="skills-category__title">Backend</h3>
+        <div class="skill-row">
+          <span class="skill-row__name">Node.js</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="90"></div></div>
+          <span class="skill-row__pct">90%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">Python</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="85"></div></div>
+          <span class="skill-row__pct">85%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">Go</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="78"></div></div>
+          <span class="skill-row__pct">78%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">PostgreSQL</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="88"></div></div>
+          <span class="skill-row__pct">88%</span>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3 class="skills-category__title">DevOps</h3>
+        <div class="skill-row">
+          <span class="skill-row__name">Docker</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="85"></div></div>
+          <span class="skill-row__pct">85%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">AWS</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="82"></div></div>
+          <span class="skill-row__pct">82%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">CI/CD</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="88"></div></div>
+          <span class="skill-row__pct">88%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row__name">Kubernetes</span>
+          <div class="skill-row__bar"><div class="skill-row__fill" data-level="75"></div></div>
+          <span class="skill-row__pct">75%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formation -->
+    <section class="section" id="formation">
+      <h2 class="section__label">Formation</h2>
+      <div class="formation-entry">
+        <div class="formation-entry__degree">Master Informatique &mdash; Sp&eacute;cialit&eacute; G&eacute;nie Logiciel</div>
+        <div class="formation-entry__school">Universit&eacute; Claude Bernard Lyon 1</div>
+        <div class="formation-entry__year">2011 &mdash; 2013</div>
+      </div>
+      <div class="formation-entry">
+        <div class="formation-entry__degree">Licence Informatique</div>
+        <div class="formation-entry__school">Universit&eacute; Jean Moulin Lyon 3</div>
+        <div class="formation-entry__year">2008 &mdash; 2011</div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section" id="certifications">
+      <h2 class="section__label">Certifications</h2>
+      <div class="certifications-list">
+        <div class="cert-item">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span class="cert-item__name">AWS Solutions Architect Associate</span>
+          <span class="cert-item__detail">&mdash; 2022</span>
+        </div>
+        <div class="cert-item">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span class="cert-item__name">Google Cloud Professional Developer</span>
+          <span class="cert-item__detail">&mdash; 2021</span>
+        </div>
+        <div class="cert-item">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span class="cert-item__name">MongoDB Certified Developer Associate</span>
+          <span class="cert-item__detail">&mdash; 2020</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets Personnels -->
+    <section class="section" id="projets">
+      <h2 class="section__label">Projets Personnels</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__name">DevFlow</span>
+            <a href="https://github.com/marclefevre/devflow" target="_blank" rel="noopener" class="project-card__link" aria-label="Voir sur GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+          </div>
+          <p class="project-card__desc">CLI open-source pour automatiser les workflows de d&eacute;veloppement. Gestion de branches Git, linting et d&eacute;ploiement en une commande.</p>
+          <div class="tags">
+            <span class="tag">Go</span>
+            <span class="tag">CLI</span>
+            <span class="tag">Open Source</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__name">APIForge</span>
+            <a href="https://github.com/marclefevre/apiforge" target="_blank" rel="noopener" class="project-card__link" aria-label="Voir sur GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+          </div>
+          <p class="project-card__desc">G&eacute;n&eacute;rateur d'API REST &agrave; partir de sch&eacute;mas YAML. G&eacute;n&egrave;re automatiquement les routes, la validation et la documentation Swagger.</p>
+          <div class="tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">OpenAPI</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__name">MetricsPulse</span>
+            <a href="https://github.com/marclefevre/metricspulse" target="_blank" rel="noopener" class="project-card__link" aria-label="Voir sur GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+          </div>
+          <p class="project-card__desc">Dashboard temps r&eacute;el de monitoring applicatif. Visualisation de m&eacute;triques, alertes et int&eacute;gration avec Prometheus et Grafana.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Python</span>
+            <span class="tag">WebSocket</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>Derni&egrave;re mise &agrave; jour : Janvier 2024</span>
+    <button class="footer__download" onclick="window.print()">
+      <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      T&eacute;l&eacute;charger PDF
+    </button>
+  </footer>
+
+  <!-- All JavaScript — Inline -->
+  <script>
+  (function () {
+    "use strict";
+
+    /* ---------- Page fade-in ---------- */
+    window.addEventListener("load", function () {
+      document.body.classList.add("loaded");
+    });
+
+    /* ---------- Dark mode ---------- */
+    var themeBtn = document.getElementById("theme-toggle");
+    var iconSun = document.getElementById("icon-sun");
+    var iconMoon = document.getElementById("icon-moon");
+    var root = document.documentElement;
+
+    function applyTheme(t) {
+      root.setAttribute("data-theme", t);
+      if (t === "dark") {
+        iconSun.style.display = "block";
+        iconMoon.style.display = "none";
+      } else {
+        iconSun.style.display = "none";
+        iconMoon.style.display = "block";
+      }
+    }
+
+    var saved = localStorage.getItem("cv-theme");
+    if (saved) {
+      applyTheme(saved);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      applyTheme("dark");
+    }
+
+    themeBtn.addEventListener("click", function () {
+      var current = root.getAttribute("data-theme");
+      var next = current === "dark" ? "light" : "dark";
+      applyTheme(next);
+      localStorage.setItem("cv-theme", next);
+    });
+
+    /* ---------- Print ---------- */
+    document.getElementById("print-btn").addEventListener("click", function () {
+      window.print();
+    });
+
+    /* ---------- Typing effect for title ---------- */
+    var titleEl = document.getElementById("typed-title");
+    var titleText = "Ing\u00e9nieur Full-Stack Senior";
+    var charIndex = 0;
+
+    function typeChar() {
+      if (charIndex < titleText.length) {
+        titleEl.textContent += titleText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeChar, 45);
+      }
+    }
+    setTimeout(typeChar, 600);
+
+    /* ---------- Section reveal on scroll ---------- */
+    var sections = document.querySelectorAll(".section");
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(function (s) {
+      revealObserver.observe(s);
+    });
+
+    /* ---------- Skill bars animation ---------- */
+    var skillFills = document.querySelectorAll(".skill-row__fill");
+    var skillObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var level = entry.target.getAttribute("data-level");
+          entry.target.style.width = level + "%";
+          entry.target.classList.add("animated");
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    skillFills.forEach(function (bar) {
+      skillObserver.observe(bar);
+    });
+
+    /* ---------- Scroll spy ---------- */
+    var navLinks = document.querySelectorAll(".sidebar__nav a");
+    var sectionEls = [];
+
+    navLinks.forEach(function (link) {
+      var id = link.getAttribute("href").substring(1);
+      var el = document.getElementById(id);
+      if (el) sectionEls.push({ id: id, el: el });
+    });
+
+    function updateScrollSpy() {
+      var scrollPos = window.scrollY + 120;
+      var activeId = "";
+      sectionEls.forEach(function (item) {
+        if (item.el.offsetTop <= scrollPos) {
+          activeId = item.id;
+        }
+      });
+      navLinks.forEach(function (link) {
+        var id = link.getAttribute("href").substring(1);
+        if (id === activeId) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", updateScrollSpy, { passive: true });
+    updateScrollSpy();
+
+    /* ---------- Copy email to clipboard ---------- */
+    var copyItems = document.querySelectorAll("[data-copy]");
+    copyItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        var text = item.getAttribute("data-copy");
+        var tooltip = item.querySelector(".copy-tooltip");
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () {
+            showTooltip(tooltip);
+          });
+        } else {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          showTooltip(tooltip);
+        }
+      });
+    });
+
+    function showTooltip(el) {
+      if (!el) return;
+      el.classList.add("visible");
+      setTimeout(function () {
+        el.classList.remove("visible");
+      }, 1500);
+    }
+
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Table d'Or — Gastronomie Fran&#231;aise d'Exception</title>
+    <meta name="description" content="La Table d'Or, restaurant gastronomique francais etoile. Une experience culinaire unique depuis 1987.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">La Table d'Or</div>
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#accueil" class="nav-logo">La Table d'Or</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#accueil">Accueil</a>
+                <a href="#carte">Notre Carte</a>
+                <a href="#chef">Le Chef</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#reservation">Reservation</a>
+                <a href="#contact">Contact</a>
+                <a href="#reservation" class="nav-cta">Reserver</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">Depuis 1987</p>
+            <h1>L'Art de la Gastronomie Fran&#231;aise</h1>
+            <p class="hero-subtitle">Une experience culinaire unique depuis 1987</p>
+            <a href="#carte" class="hero-cta">Decouvrir notre carte</a>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- INTRO / PHILOSOPHY -->
+    <section class="intro section-padding" id="philosophie">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Notre Philosophie</h2>
+                <div class="ornament"><span class="ornament-diamond"></span></div>
+            </div>
+            <p class="intro-text reveal">
+                Depuis pres de quatre decennies, La Table d'Or perpetue la tradition de la haute gastronomie francaise.
+                Chaque plat est une oeuvre, chaque service une ceremonie. Nous selectionnons les meilleurs produits
+                de nos terroirs pour vous offrir une experience sensorielle inoubliable.
+            </p>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 4C24 4 8 18 8 28a16 16 0 0 0 32 0C40 18 24 4 24 4z"/>
+                            <path d="M24 44V20"/>
+                            <path d="M18 26c0-4 6-10 6-10s6 6 6 10"/>
+                        </svg>
+                    </div>
+                    <h3>Produits Frais</h3>
+                    <p>Des ingredients soigneusement selectionnes chaque matin aupres de nos producteurs locaux et maraichers de confiance.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 6v36"/>
+                            <path d="M14 6c0 8 10 8 10 16"/>
+                            <path d="M34 6v36"/>
+                            <path d="M34 6c0 6-6 6-6 12s6 6 6 12"/>
+                            <path d="M8 42h32"/>
+                        </svg>
+                    </div>
+                    <h3>Fait Maison</h3>
+                    <p>Toutes nos preparations sont realisees dans nos cuisines, du pain artisanal aux desserts, avec passion et savoir-faire.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 44V20"/>
+                            <ellipse cx="24" cy="14" rx="10" ry="10"/>
+                            <path d="M18 8c0 6 6 6 6 12"/>
+                            <path d="M30 8c0 6-6 6-6 12"/>
+                            <path d="M20 44h8"/>
+                        </svg>
+                    </div>
+                    <h3>Cave d'Exception</h3>
+                    <p>Plus de 800 references selectionnees par notre sommelier pour accompagner chaque plat avec justesse et elegance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section section-padding" id="carte">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Notre Carte</h2>
+                <div class="ornament"><span class="ornament-diamond"></span></div>
+                <p>Une carte qui evolue au fil des saisons et de l'inspiration du Chef</p>
+            </div>
+            <div class="menu-tabs reveal">
+                <button class="menu-tab active" data-tab="entrees">Entrees</button>
+                <button class="menu-tab" data-tab="plats">Plats</button>
+                <button class="menu-tab" data-tab="desserts">Desserts</button>
+                <button class="menu-tab" data-tab="vins">Vins</button>
+            </div>
+
+            <!-- Entrees -->
+            <div class="menu-tab-content active" id="tab-entrees">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Foie Gras de Canard Mi-Cuit</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">28 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Chutney de figues, pain d'epices toaste et fleur de sel de Guerande</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Tartare de Saint-Jacques</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">26 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Agrumes, avocat, huile de noisette et zeste de combava</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Veloute de Cèpes</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">22 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Mousse de parmesan, huile de truffe noire et chips de topinambour</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Langoustines Roties</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">32 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Bisque reduite au cognac, emulsion de coriandre fraiche</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plats -->
+            <div class="menu-tab-content" id="tab-plats">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Filet de Boeuf Rossini</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">48 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Escalope de foie gras poele, sauce Perigueux, pommes dauphines</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Bar de Ligne en Croute de Sel</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">42 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Legumes de saison, beurre blanc au champagne et estragon</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Canard Challandais</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">44 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Laque au miel de lavande, navets confits, jus au cassis</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Pigeonneau en Deux Cuissons</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">46 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Cuisses confites, supreme roti, betterave et cerise noire</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-tab-content" id="tab-desserts">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Souffle au Grand Marnier</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">18 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Glace vanille de Madagascar, tuile dentelle</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Tarte Fine aux Pommes</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">16 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Caramel au beurre sale, boule de glace au calvados</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Sphere Chocolat Noir</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">19 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Coeur coulant praline, eclats de feuillantine et or alimentaire</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Assiette de Fromages Affines</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">17 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Selection de cinq fromages, confiture de cerises noires, noix</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vins -->
+            <div class="menu-tab-content" id="tab-vins">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Chablis Premier Cru, 2019</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">65 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Domaine William Fevre, mineralite et fraicheur</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Pommard Les Rugiens, 2018</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">95 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Domaine de Courcel, puissance et elegance bourguignonne</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Chateau Margaux, 2015</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">280 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Grand Cru Classe, velours et complexite remarquable</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Champagne Krug Grande Cuvee</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">190 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Assemblage d'excellence, bulles fines et persistantes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHEF -->
+    <section class="chef-section section-padding" id="chef">
+        <div class="container">
+            <div class="chef-grid">
+                <div class="chef-image reveal">
+                    <span class="chef-image-placeholder">Photo du Chef</span>
+                </div>
+                <div class="chef-info reveal">
+                    <h2>Chef Michel Renaud</h2>
+                    <p class="chef-title">Chef Etoile</p>
+                    <p class="chef-bio">
+                        Forme aupres des plus grands maitres de la cuisine francaise, le Chef Michel Renaud 
+                        dirige les cuisines de La Table d'Or depuis 1987. Sa philosophie : sublimer les produits 
+                        d'exception par une technique irreprochable et une creativite sans cesse renouvelee. 
+                        Chaque assiette raconte une histoire, celle de nos terroirs et de notre patrimoine culinaire.
+                    </p>
+                    <p class="chef-bio">
+                        Son approche respectueuse du produit et son exigence absolue lui ont valu les plus hautes 
+                        distinctions de la gastronomie francaise.
+                    </p>
+                    <div class="chef-awards">
+                        <h3>Distinctions</h3>
+                        <div class="award-item">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <span>1 etoile au Guide Michelin depuis 2005</span>
+                        </div>
+                        <div class="award-item">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <span>Meilleur Ouvrier de France 2010</span>
+                        </div>
+                        <div class="award-item">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <span>4 Toques au Gault &amp; Millau</span>
+                        </div>
+                        <div class="award-item">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <span>Prix de l'Innovation Culinaire 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section section-padding" id="galerie">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Galerie</h2>
+                <div class="ornament"><span class="ornament-diamond"></span></div>
+                <p>Un apercu de notre univers culinaire et de notre cadre d'exception</p>
+            </div>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item" data-index="0">
+                    <span class="gallery-placeholder">Interieur du restaurant</span>
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <span class="gallery-placeholder">Plat signature</span>
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <span class="gallery-placeholder">Art de la table</span>
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <span class="gallery-placeholder">La cave a vins</span>
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <span class="gallery-placeholder">Dessert du Chef</span>
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="5">
+                    <span class="gallery-placeholder">Terrasse privee</span>
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Precedent">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="lightbox-content" id="lightboxContent">
+            <span>Image plein ecran</span>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Suivant">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="lightbox-counter" id="lightboxCounter">1 / 6</div>
+    </div>
+
+    <!-- SPECIALS -->
+    <section class="specials-section section-padding">
+        <div class="container">
+            <div class="specials-card reveal">
+                <h2>Menu Degustation</h2>
+                <p class="specials-subtitle">L'experience complete</p>
+                <div class="specials-list">
+                    <div class="specials-course">
+                        <p class="specials-course-label">Amuse-bouche</p>
+                        <p class="specials-course-name">Mise en bouche du Chef selon l'inspiration du jour</p>
+                    </div>
+                    <div class="specials-course">
+                        <p class="specials-course-label">Entree</p>
+                        <p class="specials-course-name">Langoustines roties, emulsion de coriandre et bisque reduite</p>
+                    </div>
+                    <div class="specials-course">
+                        <p class="specials-course-label">Poisson</p>
+                        <p class="specials-course-name">Bar de ligne, beurre blanc au champagne, legumes croquants</p>
+                    </div>
+                    <div class="specials-course">
+                        <p class="specials-course-label">Viande</p>
+                        <p class="specials-course-name">Pigeonneau en deux cuissons, betterave et cerise noire</p>
+                    </div>
+                    <div class="specials-course">
+                        <p class="specials-course-label">Dessert</p>
+                        <p class="specials-course-name">Souffle au Grand Marnier, glace vanille de Madagascar</p>
+                    </div>
+                </div>
+                <p class="specials-price">89&euro;</p>
+                <p class="specials-price-note">par personne, hors boissons</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Ce que disent nos Hotes</h2>
+                <div class="ornament"><span class="ornament-diamond"></span></div>
+            </div>
+            <div class="testimonials-carousel reveal">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">
+                        Une experience gastronomique absolument remarquable. Chaque plat etait une oeuvre d'art, 
+                        le service impeccable et l'ambiance d'un raffinement rare. Un moment suspendu dans le temps.
+                    </p>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-author">Jean-Pierre Moreau</p>
+                    <p class="testimonial-role">Critique gastronomique</p>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">
+                        Nous avons celebre notre anniversaire a La Table d'Or et ce fut un moment d'exception.
+                        Le menu degustation est un voyage sensoriel extraordinaire. Le sommelier nous a guides 
+                        avec une precision et une passion admirables.
+                    </p>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-author">Catherine Delacroix</p>
+                    <p class="testimonial-role">Fidele cliente</p>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">
+                        Le Chef Renaud possede ce don rare de transformer les meilleurs produits en emotions pures.
+                        Le filet de boeuf Rossini est tout simplement le meilleur que j'aie goute en trente ans 
+                        de critique culinaire. Incontournable.
+                    </p>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-author">Marc-Antoine Dubois</p>
+                    <p class="testimonial-role">Journaliste gastronomique</p>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="carouselPrev" aria-label="Precedent">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <button class="carousel-btn" id="carouselNext" aria-label="Suivant">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
+                <div class="carousel-dots" id="carouselDots">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Avis 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Avis 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Avis 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section class="reservation-section section-padding" id="reservation">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Reservation</h2>
+                <div class="ornament"><span class="ornament-diamond"></span></div>
+                <p>Reservez votre table pour une experience gastronomique inoubliable</p>
+            </div>
+            <form class="reservation-form reveal" id="reservationForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resDate">Date</label>
+                        <input type="date" id="resDate" name="date" required>
+                        <p class="form-error">Veuillez selectionner une date valide</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="resTime">Heure</label>
+                        <select id="resTime" name="time" required>
+                            <option value="">Choisir un creneau</option>
+                            <option value="12:00">12h00</option>
+                            <option value="12:30">12h30</option>
+                            <option value="13:00">13h00</option>
+                            <option value="13:30">13h30</option>
+                            <option value="19:00">19h00</option>
+                            <option value="19:30">19h30</option>
+                            <option value="20:00">20h00</option>
+                            <option value="20:30">20h30</option>
+                            <option value="21:00">21h00</option>
+                            <option value="21:30">21h30</option>
+                        </select>
+                        <p class="form-error">Veuillez selectionner un horaire</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resGuests">Nombre de convives</label>
+                        <select id="resGuests" name="guests" required>
+                            <option value="">Nombre de personnes</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="5">5 personnes</option>
+                            <option value="6">6 personnes</option>
+                            <option value="7">7 personnes</option>
+                            <option value="8">8 personnes</option>
+                            <option value="8+">Plus de 8 personnes</option>
+                        </select>
+                        <p class="form-error">Veuillez indiquer le nombre de convives</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="resName">Nom complet</label>
+                        <input type="text" id="resName" name="name" placeholder="Votre nom" required>
+                        <p class="form-error">Veuillez saisir votre nom</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resPhone">Telephone</label>
+                        <input type="tel" id="resPhone" name="phone" placeholder="+33 1 23 45 67 89" required>
+                        <p class="form-error">Veuillez saisir un numero de telephone valide</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="resEmail">Email</label>
+                        <input type="email" id="resEmail" name="email" placeholder="votre@email.fr" required>
+                        <p class="form-error">Veuillez saisir une adresse email valide</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="resMessage">Demandes particulieres</label>
+                        <textarea id="resMessage" name="message" placeholder="Allergies, occasion speciale, preferences..."></textarea>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">Confirmer la reservation</button>
+                </div>
+            </form>
+            <div class="form-success" id="formSuccess">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <h3>Reservation confirmee</h3>
+                <p>Merci pour votre reservation. Vous recevrez un email de confirmation sous peu. Au plaisir de vous accueillir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOURS & LOCATION -->
+    <section class="info-section section-padding" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Nous Trouver</h2>
+                <div class="ornament"><span class="ornament-diamond"></span></div>
+            </div>
+            <div class="info-grid reveal">
+                <div class="info-hours">
+                    <h3>Horaires d'ouverture</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Lundi</td>
+                            <td class="closed">Ferme</td>
+                        </tr>
+                        <tr>
+                            <td>Mardi</td>
+                            <td>12h - 14h / 19h - 22h30</td>
+                        </tr>
+                        <tr>
+                            <td>Mercredi</td>
+                            <td>12h - 14h / 19h - 22h30</td>
+                        </tr>
+                        <tr>
+                            <td>Jeudi</td>
+                            <td>12h - 14h / 19h - 22h30</td>
+                        </tr>
+                        <tr>
+                            <td>Vendredi</td>
+                            <td>12h - 14h / 19h - 22h30</td>
+                        </tr>
+                        <tr>
+                            <td>Samedi</td>
+                            <td>12h - 14h / 19h - 22h30</td>
+                        </tr>
+                        <tr>
+                            <td>Dimanche</td>
+                            <td>12h - 15h</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="info-location">
+                    <h3>Adresse</h3>
+                    <div class="map-placeholder">Carte interactive</div>
+                    <div class="info-address">
+                        <strong>La Table d'Or</strong>
+                        12 Rue du Faubourg Saint-Honore<br>
+                        75008 Paris, France<br>
+                        Tel : +33 1 42 65 87 14<br>
+                        contact@latabledot.fr
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">La Table d'Or</div>
+                <div class="footer-badge">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <span>1 etoile Michelin</span>
+                </div>
+                <div class="footer-social">
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="0"/><path d="M2 6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6zm10 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-9.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"/></svg>
+                    </a>
+                    <!-- TripAdvisor -->
+                    <a href="#" aria-label="TripAdvisor">
+                        <svg viewBox="0 0 24 24"><circle cx="8.5" cy="14" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="15.5" cy="14" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 4C8 4 4.5 6 3 8h2a5.5 5.5 0 0 1 9.5 4.5M12 4c4 0 7.5 2 9 4h-2a5.5 5.5 0 0 0-9.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 18l-1.5-2M12 18l1.5-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </a>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Recevez nos actualites et invitations exclusives</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Votre adresse email" aria-label="Email newsletter">
+                        <button type="submit">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>La Table d'Or &mdash; Gastronomie Francaise d'Exception. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <!-- ============================================= -->
+    <!-- ALL JAVASCRIPT — INLINE -->
+    <!-- ============================================= -->
+    <script>
+    (function() {
+        'use strict';
+
+        /* ---------- PRELOADER ---------- */
+        window.addEventListener('load', function() {
+            var preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.classList.add('hidden');
+            }, 800);
+        });
+
+        /* ---------- NAVBAR SCROLL ---------- */
+        var navbar = document.getElementById('navbar');
+        var hero = document.querySelector('.hero');
+
+        function handleNavScroll() {
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+        window.addEventListener('scroll', handleNavScroll);
+        handleNavScroll();
+
+        /* ---------- MOBILE MENU ---------- */
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+
+        // Close mobile menu when clicking a link
+        var navAnchors = navLinks.querySelectorAll('a');
+        for (var i = 0; i < navAnchors.length; i++) {
+            navAnchors[i].addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        }
+
+        /* ---------- SMOOTH SCROLL ---------- */
+        var smoothLinks = document.querySelectorAll('a[href^="#"]');
+        for (var i = 0; i < smoothLinks.length; i++) {
+            smoothLinks[i].addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                var target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    var offset = navbar.offsetHeight;
+                    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        }
+
+        /* ---------- PARALLAX HERO ---------- */
+        function parallaxHero() {
+            if (hero && window.innerWidth > 768) {
+                var scrolled = window.scrollY;
+                hero.style.backgroundPositionY = (scrolled * 0.4) + 'px';
+            }
+        }
+        window.addEventListener('scroll', parallaxHero);
+
+        /* ---------- MENU TABS ---------- */
+        var menuTabs = document.querySelectorAll('.menu-tab');
+        var menuContents = document.querySelectorAll('.menu-tab-content');
+
+        for (var i = 0; i < menuTabs.length; i++) {
+            menuTabs[i].addEventListener('click', function() {
+                var tabId = this.getAttribute('data-tab');
+
+                for (var j = 0; j < menuTabs.length; j++) {
+                    menuTabs[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                for (var j = 0; j < menuContents.length; j++) {
+                    menuContents[j].classList.remove('active');
+                }
+                document.getElementById('tab-' + tabId).classList.add('active');
+            });
+        }
+
+        /* ---------- GALLERY LIGHTBOX ---------- */
+        var galleryItems = document.querySelectorAll('.gallery-item');
+        var lightbox = document.getElementById('lightbox');
+        var lightboxContent = document.getElementById('lightboxContent');
+        var lightboxClose = document.getElementById('lightboxClose');
+        var lightboxPrev = document.getElementById('lightboxPrev');
+        var lightboxNext = document.getElementById('lightboxNext');
+        var lightboxCounter = document.getElementById('lightboxCounter');
+        var currentSlideIndex = 0;
+        var galleryLabels = [];
+
+        for (var i = 0; i < galleryItems.length; i++) {
+            var label = galleryItems[i].querySelector('.gallery-placeholder');
+            galleryLabels.push(label ? label.textContent : 'Image ' + (i + 1));
+        }
+
+        function openLightbox(index) {
+            currentSlideIndex = index;
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateLightbox() {
+            lightboxContent.textContent = galleryLabels[currentSlideIndex];
+            lightboxCounter.textContent = (currentSlideIndex + 1) + ' / ' + galleryLabels.length;
+        }
+
+        function nextLightbox() {
+            currentSlideIndex = (currentSlideIndex + 1) % galleryLabels.length;
+            updateLightbox();
+        }
+
+        function prevLightbox() {
+            currentSlideIndex = (currentSlideIndex - 1 + galleryLabels.length) % galleryLabels.length;
+            updateLightbox();
+        }
+
+        for (var i = 0; i < galleryItems.length; i++) {
+            (function(idx) {
+                galleryItems[idx].addEventListener('click', function() {
+                    openLightbox(idx);
+                });
+            })(i);
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxNext.addEventListener('click', nextLightbox);
+        lightboxPrev.addEventListener('click', prevLightbox);
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextLightbox();
+            if (e.key === 'ArrowLeft') prevLightbox();
+        });
+
+        /* ---------- TESTIMONIALS CAROUSEL ---------- */
+        var slides = document.querySelectorAll('.testimonial-slide');
+        var dots = document.querySelectorAll('.carousel-dot');
+        var carouselPrev = document.getElementById('carouselPrev');
+        var carouselNext = document.getElementById('carouselNext');
+        var carouselIndex = 0;
+        var carouselTimer;
+
+        function showSlide(index) {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+                dots[i].classList.remove('active');
+            }
+            carouselIndex = (index + slides.length) % slides.length;
+            slides[carouselIndex].classList.add('active');
+            dots[carouselIndex].classList.add('active');
+        }
+
+        function startCarousel() {
+            carouselTimer = setInterval(function() {
+                showSlide(carouselIndex + 1);
+            }, 6000);
+        }
+
+        function resetCarousel() {
+            clearInterval(carouselTimer);
+            startCarousel();
+        }
+
+        carouselPrev.addEventListener('click', function() {
+            showSlide(carouselIndex - 1);
+            resetCarousel();
+        });
+
+        carouselNext.addEventListener('click', function() {
+            showSlide(carouselIndex + 1);
+            resetCarousel();
+        });
+
+        for (var i = 0; i < dots.length; i++) {
+            (function(idx) {
+                dots[idx].addEventListener('click', function() {
+                    showSlide(idx);
+                    resetCarousel();
+                });
+            })(i);
+        }
+
+        startCarousel();
+
+        /* ---------- RESERVATION FORM VALIDATION ---------- */
+        var form = document.getElementById('reservationForm');
+        var formSuccess = document.getElementById('formSuccess');
+
+        function validateField(field) {
+            var group = field.closest('.form-group');
+            if (!group) return true;
+            var isValid = true;
+
+            if (field.hasAttribute('required') && !field.value.trim()) {
+                isValid = false;
+            }
+
+            if (field.type === 'email' && field.value.trim()) {
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(field.value.trim())) {
+                    isValid = false;
+                }
+            }
+
+            if (field.type === 'tel' && field.value.trim()) {
+                var phonePattern = /^[\d\s\+\-\(\)]{8,}$/;
+                if (!phonePattern.test(field.value.trim())) {
+                    isValid = false;
+                }
+            }
+
+            if (field.type === 'date' && field.value) {
+                var selected = new Date(field.value);
+                var today = new Date();
+                today.setHours(0, 0, 0, 0);
+                if (selected < today) {
+                    isValid = false;
+                }
+            }
+
+            if (isValid) {
+                group.classList.remove('error');
+            } else {
+                group.classList.add('error');
+            }
+
+            return isValid;
+        }
+
+        // Real-time validation
+        var formInputs = form.querySelectorAll('input, select, textarea');
+        for (var i = 0; i < formInputs.length; i++) {
+            formInputs[i].addEventListener('blur', function() {
+                validateField(this);
+            });
+            formInputs[i].addEventListener('input', function() {
+                var group = this.closest('.form-group');
+                if (group && group.classList.contains('error')) {
+                    validateField(this);
+                }
+            });
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var allValid = true;
+            var fields = form.querySelectorAll('input[required], select[required]');
+
+            for (var i = 0; i < fields.length; i++) {
+                if (!validateField(fields[i])) {
+                    allValid = false;
+                }
+            }
+
+            if (allValid) {
+                form.style.display = 'none';
+                formSuccess.classList.add('show');
+            }
+        });
+
+        /* ---------- SCROLL REVEAL ---------- */
+        var reveals = document.querySelectorAll('.reveal');
+
+        function handleReveal() {
+            var windowHeight = window.innerHeight;
+            for (var i = 0; i < reveals.length; i++) {
+                var top = reveals[i].getBoundingClientRect().top;
+                if (top < windowHeight - 80) {
+                    reveals[i].classList.add('revealed');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleReveal);
+        window.addEventListener('load', handleReveal);
+        handleReveal();
+
+        /* ---------- BACK TO TOP ---------- */
+        var backToTop = document.getElementById('backToTop');
+
+        function handleBackToTop() {
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', handleBackToTop);
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        /* ---------- IMAGE LAZY LOADING ---------- */
+        if ('IntersectionObserver' in window) {
+            var lazyImages = document.querySelectorAll('img[data-src]');
+            var imageObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var img = entry.target;
+                        img.src = img.getAttribute('data-src');
+                        img.removeAttribute('data-src');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            }, { rootMargin: '100px' });
+
+            lazyImages.forEach(function(img) {
+                imageObserver.observe(img);
+            });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>

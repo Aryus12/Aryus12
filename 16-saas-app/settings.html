@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres - CloudFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/navigation.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="/dashboard" class="logo">
+                    <div class="logo-mark small">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    Cloud<span>Flow</span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="/dashboard">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/projects">
+                            <i class="fas fa-folder"></i>
+                            <span>Projets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tasks">
+                            <i class="fas fa-tasks"></i>
+                            <span>Tâches</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/calendar">
+                            <i class="fas fa-calendar"></i>
+                            <span>Calendrier</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/team">
+                            <i class="fas fa-users"></i>
+                            <span>Équipe</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/reports">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Rapports</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">Workspace</span>
+                    <ul>
+                        <li>
+                            <a href="/settings" class="active">
+                                <i class="fas fa-cog"></i>
+                                <span>Paramètres</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/billing">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Facturation</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/integrations">
+                                <i class="fas fa-plug"></i>
+                                <span>Intégrations</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-upgrade">
+                    <div class="upgrade-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="upgrade-content">
+                        <span>Passez à Pro</span>
+                        <small>Débloquez toutes les fonctionnalités</small>
+                    </div>
+                    <a href="/billing" class="upgrade-btn">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1>Paramètres</h1>
+                    <p class="header-subtitle">Configurez votre workspace</p>
+                </div>
+                <div class="header-right">
+                    <div class="header-actions">
+                        <button class="header-action">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    <div class="header-profile">
+                        <div class="profile-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">JD</div>
+                        <div class="profile-info">
+                            <span class="profile-name">Jean Dupont</span>
+                            <span class="profile-role">Admin</span>
+                        </div>
+                        <button class="profile-dropdown">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <div class="settings-content">
+                <div class="settings-grid">
+                    <!-- Settings Sidebar -->
+                    <div class="settings-sidebar">
+                        <button class="settings-menu-item active" data-tab="general">
+                            <i class="fas fa-sliders-h"></i>
+                            <span>Général</span>
+                        </button>
+                        <button class="settings-menu-item" data-tab="workspace">
+                            <i class="fas fa-building"></i>
+                            <span>Workspace</span>
+                        </button>
+                        <button class="settings-menu-item" data-tab="team">
+                            <i class="fas fa-users"></i>
+                            <span>Équipe</span>
+                        </button>
+                        <button class="settings-menu-item" data-tab="roles">
+                            <i class="fas fa-user-tag"></i>
+                            <span>Rôles & Permissions</span>
+                        </button>
+                        <button class="settings-menu-item" data-tab="security">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Sécurité</span>
+                        </button>
+                        <button class="settings-menu-item" data-tab="api">
+                            <i class="fas fa-code"></i>
+                            <span>API Keys</span>
+                        </button>
+                        <button class="settings-menu-item" data-tab="danger">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Zone de danger</span>
+                        </button>
+                    </div>
+
+                    <!-- Settings Main -->
+                    <div class="settings-main">
+                        <!-- General Tab -->
+                        <div class="tab-content active" id="general">
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Paramètres généraux</h2>
+                                    <p>Configurez les paramètres de base de votre workspace</p>
+                                </div>
+                                
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="workspaceName">Nom du workspace *</label>
+                                        <input type="text" id="workspaceName" value="CloudFlow Team" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="workspaceSlug">URL du workspace</label>
+                                        <div class="input-group">
+                                            <span class="input-prefix">cloudflow.io/</span>
+                                            <input type="text" id="workspaceSlug" value="cloudflow-team">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="workspaceLogo">Logo du workspace</label>
+                                        <div class="logo-upload">
+                                            <div class="logo-preview">
+                                                <div class="logo-placeholder">
+                                                    <i class="fas fa-image"></i>
+                                                    <span>Ajouter un logo</span>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-ghost">Changer</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="defaultLanguage">Langue par défaut</label>
+                                        <select id="defaultLanguage">
+                                            <option value="fr" selected>Français</option>
+                                            <option value="en">English</option>
+                                            <option value="es">Español</option>
+                                            <option value="de">Deutsch</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="defaultTimezone">Fuseau horaire par défaut</label>
+                                        <select id="defaultTimezone">
+                                            <option value="Europe/Paris" selected>Europe/Paris (UTC+1)</option>
+                                            <option value="Europe/London">Europe/London (UTC+0)</option>
+                                            <option value="America/New_York">America/New_York (UTC-5)</option>
+                                            <option value="America/Los_Angeles">America/Los_Angeles (UTC-8)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dateFormat">Format de date</label>
+                                        <select id="dateFormat">
+                                            <option value="DD/MM/YYYY" selected>DD/MM/YYYY</option>
+                                            <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                                            <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-ghost">Annuler</button>
+                                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Workspace Tab -->
+                        <div class="tab-content" id="workspace">
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Informations du workspace</h2>
+                                    <p>Détails et description de votre organisation</p>
+                                </div>
+                                
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="companyName">Nom de l'entreprise</label>
+                                        <input type="text" id="companyName" value="CloudFlow Inc.">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="companyWebsite">Site web</label>
+                                        <input type="url" id="companyWebsite" value="https://cloudflow.io">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="companySize">Taille de l'entreprise</label>
+                                        <select id="companySize">
+                                            <option value="1-10">1-10 employés</option>
+                                            <option value="11-50">11-50 employés</option>
+                                            <option value="51-200" selected>51-200 employés</option>
+                                            <option value="201-500">201-500 employés</option>
+                                            <option value="500+">500+ employés</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="industry">Secteur d'activité</label>
+                                        <select id="industry">
+                                            <option value="tech" selected>Technologie</option>
+                                            <option value="finance">Finance</option>
+                                            <option value="healthcare">Santé</option>
+                                            <option value="education">Éducation</option>
+                                            <option value="retail">Commerce de détail</option>
+                                            <option value="other">Autre</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea id="description" rows="4" placeholder="Décrivez votre entreprise...">Plateforme de gestion de projet nouvelle génération alimentée par l'intelligence artificielle.</textarea>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-ghost">Annuler</button>
+                                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Team Tab -->
+                        <div class="tab-content" id="team">
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Gestion de l'équipe</h2>
+                                    <p>Ajoutez et gérez les membres de votre équipe</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-plus"></i>
+                                        Inviter un membre
+                                    </button>
+                                </div>
+                                
+                                <div class="team-list">
+                                    <div class="team-item">
+                                        <div class="team-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">JD</div>
+                                        <div class="team-info">
+                                            <h4>Jean Dupont</h4>
+                                            <p>jean.dupont@email.com</p>
+                                        </div>
+                                        <div class="team-role">
+                                            <span class="role-badge admin">Admin</span>
+                                        </div>
+                                        <div class="team-actions">
+                                            <button class="action-btn"><i class="fas fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="team-item">
+                                        <div class="team-avatar" style="background: #10b981;">M</div>
+                                        <div class="team-info">
+                                            <h4>Marie Martin</h4>
+                                            <p>marie.martin@email.com</p>
+                                        </div>
+                                        <div class="team-role">
+                                            <span class="role-badge member">Membre</span>
+                                        </div>
+                                        <div class="team-actions">
+                                            <button class="action-btn"><i class="fas fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="team-item">
+                                        <div class="team-avatar" style="background: #f59e0b;">S</div>
+                                        <div class="team-info">
+                                            <h4>Sophie Bernard</h4>
+                                            <p>sophie.bernard@email.com</p>
+                                        </div>
+                                        <div class="team-role">
+                                            <span class="role-badge member">Membre</span>
+                                        </div>
+                                        <div class="team-actions">
+                                            <button class="action-btn"><i class="fas fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="team-item">
+                                        <div class="team-avatar" style="background: #ef4444;">A</div>
+                                        <div class="team-info">
+                                            <h4>Alex Petit</h4>
+                                            <p>alex.petit@email.com</p>
+                                        </div>
+                                        <div class="team-role">
+                                            <span class="role-badge member">Membre</span>
+                                        </div>
+                                        <div class="team-actions">
+                                            <button class="action-btn"><i class="fas fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="team-item pending">
+                                        <div class="team-avatar" style="background: #94a3b8;">P</div>
+                                        <div class="team-info">
+                                            <h4>Pierre Leroy</h4>
+                                            <p>pierre.leroy@email.com</p>
+                                        </div>
+                                        <div class="team-role">
+                                            <span class="role-badge pending">En attente</span>
+                                        </div>
+                                        <div class="team-actions">
+                                            <button class="action-btn"><i class="fas fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Roles Tab -->
+                        <div class="tab-content" id="roles">
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Rôles & Permissions</h2>
+                                    <p>Configurez les rôles et permissions de votre équipe</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-plus"></i>
+                                        Nouveau rôle
+                                    </button>
+                                </div>
+                                
+                                <div class="roles-list">
+                                    <div class="role-card">
+                                        <div class="role-header">
+                                            <div class="role-icon admin">
+                                                <i class="fas fa-crown"></i>
+                                            </div>
+                                            <div class="role-info">
+                                                <h4>Admin</h4>
+                                                <p>Accès complet à toutes les fonctionnalités</p>
+                                            </div>
+                                            <span class="member-count">2 membres</span>
+                                        </div>
+                                        <div class="role-permissions">
+                                            <span class="permission">Projets</span>
+                                            <span class="permission">Tâches</span>
+                                            <span class="permission">Équipe</span>
+                                            <span class="permission">Facturation</span>
+                                            <span class="permission">Paramètres</span>
+                                        </div>
+                                    </div>
+                                    <div class="role-card">
+                                        <div class="role-header">
+                                            <div class="role-icon member">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="role-info">
+                                                <h4>Membre</h4>
+                                                <p>Accès standard aux projets et tâches</p>
+                                            </div>
+                                            <span class="member-count">4 membres</span>
+                                        </div>
+                                        <div class="role-permissions">
+                                            <span class="permission">Projets</span>
+                                            <span class="permission">Tâches</span>
+                                            <span class="permission">Équipe</span>
+                                        </div>
+                                    </div>
+                                    <div class="role-card">
+                                        <div class="role-header">
+                                            <div class="role-icon viewer">
+                                                <i class="fas fa-eye"></i>
+                                            </div>
+                                            <div class="role-info">
+                                                <h4>Observateur</h4>
+                                                <p>Lecture seule sur les projets</p>
+                                            </div>
+                                            <span class="member-count">1 membre</span>
+                                        </div>
+                                        <div class="role-permissions">
+                                            <span class="permission">Projets (lecture)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Tab -->
+                        <div class="tab-content" id="security">
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Sécurité du workspace</h2>
+                                    <p>Configurez les paramètres de sécurité de votre organisation</p>
+                                </div>
+                                
+                                <div class="security-section">
+                                    <div class="section-title">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <h3>Authentification</h3>
+                                    </div>
+                                    <div class="security-option">
+                                        <div class="security-info">
+                                            <h4>Authentification à deux facteurs obligatoire</h4>
+                                            <p>Exiger la 2FA pour tous les membres de l'équipe</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="security-option">
+                                        <div class="security-info">
+                                            <h4>Connexion SSO</h4>
+                                            <p>Permettre la connexion via SSO entreprise</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="security-section">
+                                    <div class="section-title">
+                                        <i class="fas fa-lock"></i>
+                                        <h3>Politique de mots de passe</h3>
+                                    </div>
+                                    <div class="security-option">
+                                        <div class="security-info">
+                                            <h4>Longueur minimale</h4>
+                                            <p>Nombre minimum de caractères requis</p>
+                                        </div>
+                                        <select class="security-select">
+                                            <option value="8">8 caractères</option>
+                                            <option value="10">10 caractères</option>
+                                            <option value="12" selected>12 caractères</option>
+                                        </select>
+                                    </div>
+                                    <div class="security-option">
+                                        <div class="security-info">
+                                            <h4>Exiger des caractères spéciaux</h4>
+                                            <p>Mot de passe doit contenir des caractères spéciaux</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="security-option">
+                                        <div class="security-info">
+                                            <h4>Expiration du mot de passe</h4>
+                                            <p>Demander de changer le mot de passe tous les 90 jours</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="security-section">
+                                    <div class="section-title">
+                                        <i class="fas fa-history"></i>
+                                        <h3>Historique des activités</h3>
+                                    </div>
+                                    <div class="activity-log">
+                                        <div class="log-item">
+                                            <div class="log-icon">
+                                                <i class="fas fa-user-plus"></i>
+                                            </div>
+                                            <div class="log-info">
+                                                <h4>Invitation envoyée</h4>
+                                                <p>Jean Dupont a invité Pierre Leroy</p>
+                                                <span class="log-time">Il y a 2 heures</span>
+                                            </div>
+                                        </div>
+                                        <div class="log-item">
+                                            <div class="log-icon">
+                                                <i class="fas fa-cog"></i>
+                                            </div>
+                                            <div class="log-info">
+                                                <h4>Paramètres modifiés</h4>
+                                                <p>Marie Martin a modifié les paramètres de sécurité</p>
+                                                <span class="log-time">Il y a 1 jour</span>
+                                            </div>
+                                        </div>
+                                        <div class="log-item">
+                                            <div class="log-icon">
+                                                <i class="fas fa-user-shield"></i>
+                                            </div>
+                                            <div class="log-info">
+                                                <h4>Rôle modifié</h4>
+                                                <p>Sophie Bernard est passée de Membre à Admin</p>
+                                                <span class="log-time">Il y a 3 jours</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- API Keys Tab -->
+                        <div class="tab-content" id="api">
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Clés API</h2>
+                                    <p>Gérez vos clés d'API pour l'intégration externe</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-plus"></i>
+                                        Générer une clé
+                                    </button>
+                                </div>
+                                
+                                <div class="api-keys-list">
+                                    <div class="api-key-item">
+                                        <div class="api-key-header">
+                                            <div class="api-key-icon">
+                                                <i class="fas fa-key"></i>
+                                            </div>
+                                            <div class="api-key-info">
+                                                <h4>Production Key</h4>
+                                                <p>Clé pour l'environnement de production</p>
+                                            </div>
+                                            <span class="api-key-status active">Active</span>
+                                        </div>
+                                        <div class="api-key-value">
+                                            <code>sk_live_************************</code>
+                                            <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                                        </div>
+                                        <div class="api-key-meta">
+                                            <span class="api-key-date">Créée le 1 Jan 2026</span>
+                                            <span class="api-key-last-used">Dernière utilisation: Il y a 2h</span>
+                                        </div>
+                                        <div class="api-key-actions">
+                                            <button class="btn btn-ghost btn-sm">Révoquer</button>
+                                        </div>
+                                    </div>
+                                    <div class="api-key-item">
+                                        <div class="api-key-header">
+                                            <div class="api-key-icon">
+                                                <i class="fas fa-key"></i>
+                                            </div>
+                                            <div class="api-key-info">
+                                                <h4>Test Key</h4>
+                                                <p>Clé pour l'environnement de test</p>
+                                            </div>
+                                            <span class="api-key-status active">Active</span>
+                                        </div>
+                                        <div class="api-key-value">
+                                            <code>sk_test_************************</code>
+                                            <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                                        </div>
+                                        <div class="api-key-meta">
+                                            <span class="api-key-date">Créée le 15 Jan 2026</span>
+                                            <span class="api-key-last-used">Dernière utilisation: Il y a 1j</span>
+                                        </div>
+                                        <div class="api-key-actions">
+                                            <button class="btn btn-ghost btn-sm">Révoquer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Danger Zone Tab -->
+                        <div class="tab-content" id="danger">
+                            <div class="content-card danger-card">
+                                <div class="card-header">
+                                    <h2>Zone de danger</h2>
+                                    <p>Actions irréversibles sur votre workspace</p>
+                                </div>
+                                
+                                <div class="danger-section">
+                                    <div class="danger-item">
+                                        <div class="danger-info">
+                                            <h4>Exporter les données</h4>
+                                            <p>Téléchargez toutes les données de votre workspace</p>
+                                        </div>
+                                        <button class="btn btn-ghost">Exporter</button>
+                                    </div>
+                                    <div class="danger-item">
+                                        <div class="danger-info">
+                                            <h4>Transférer la propriété</h4>
+                                            <p>Transférez la propriété du workspace à un autre membre</p>
+                                        </div>
+                                        <button class="btn btn-ghost">Transférer</button>
+                                    </div>
+                                    <div class="danger-item warning">
+                                        <div class="danger-info">
+                                            <h4>Archiver le workspace</h4>
+                                            <p>Archivez le workspace et toutes ses données</p>
+                                        </div>
+                                        <button class="btn btn-warning">Archiver</button>
+                                    </div>
+                                    <div class="danger-item danger">
+                                        <div class="danger-info">
+                                            <h4>Supprimer le workspace</h4>
+                                            <p>Suppression permanente de toutes les données</p>
+                                        </div>
+                                        <button class="btn btn-danger">Supprimer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        :root {
+            --sidebar-width: 260px;
+            --header-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #09090b;
+        }
+
+        .dashboard-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: #ffffff;
+            border-right: 1px solid #e2e8f0;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 24px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .sidebar-header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #09090b;
+            text-decoration: none;
+        }
+
+        .sidebar-header .logo span {
+            color: #6366f1;
+        }
+
+        .logo-mark {
+            width: 28px;
+            height: 28px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            flex-shrink: 0;
+        }
+
+        .logo-mark.small { width: 22px; height: 22px; gap: 2px; }
+
+        .logo-mark span {
+            border-radius: 3px;
+            background: #6366f1;
+        }
+
+        .logo-mark span:nth-child(2) { background: #06b6d4; opacity: 0.7; }
+        .logo-mark span:nth-child(3) { background: #818cf8; opacity: 0.5; }
+        .logo-mark span:nth-child(4) { background: #6366f1; opacity: 0.8; }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 24px 0;
+            overflow-y: auto;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0 16px;
+            margin-bottom: 24px;
+        }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: #64748b;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .sidebar-nav a:hover {
+            background: #f1f5f9;
+            color: #09090b;
+        }
+
+        .sidebar-nav a.active {
+            background: #6366f1;
+            color: #ffffff;
+        }
+
+        .sidebar-nav a i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-section {
+            padding: 0 16px;
+        }
+
+        .sidebar-section-title {
+            display: block;
+            padding: 8px 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-footer {
+            padding: 24px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .sidebar-upgrade {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            padding: 16px;
+            border-radius: 12px;
+            color: #ffffff;
+        }
+
+        .upgrade-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .upgrade-content {
+            flex: 1;
+        }
+
+        .upgrade-content span {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .upgrade-content small {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+
+        .upgrade-btn {
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .upgrade-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Main Content */
+        .dashboard-main {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dashboard-header {
+            height: var(--header-height);
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .header-left h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .header-subtitle {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .header-action {
+            width: 40px;
+            height: 40px;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 10px;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .header-action:hover {
+            background: #e2e8f0;
+            color: #09090b;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: #ef4444;
+            color: #ffffff;
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #6366f1;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #4f46e5;
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #09090b;
+        }
+
+        .btn-ghost:hover {
+            background: #f1f5f9;
+        }
+
+        .btn-warning {
+            background: #f59e0b;
+            color: #ffffff;
+        }
+
+        .btn-warning:hover {
+            background: #d97706;
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: #ffffff;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+
+        .header-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 16px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .header-profile:hover {
+            background: #e2e8f0;
+        }
+
+        .profile-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .profile-role {
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .profile-dropdown {
+            background: none;
+            border: none;
+            color: #64748b;
+            cursor: pointer;
+        }
+
+        /* Settings Content */
+        .settings-content {
+            padding: 32px;
+        }
+
+        .settings-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 32px;
+        }
+
+        .settings-sidebar {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            height: fit-content;
+        }
+
+        .settings-menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: none;
+            border: none;
+            border-radius: 10px;
+            color: #64748b;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+
+        .settings-menu-item:hover {
+            background: #f1f5f9;
+            color: #09090b;
+        }
+
+        .settings-menu-item.active {
+            background: #6366f1;
+            color: #ffffff;
+        }
+
+        .settings-main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .content-card.danger-card {
+            border-color: #fecaca;
+            background: #fef2f2;
+        }
+
+        .card-header {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .card-header p {
+            color: #64748b;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .settings-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #09090b;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-prefix {
+            padding: 12px 16px;
+            background: #f1f5f9;
+            border: 2px solid #e2e8f0;
+            border-right: none;
+            border-radius: 12px 0 0 12px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .input-group input {
+            border-radius: 0 12px 12px 0;
+        }
+
+        .logo-upload {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-preview {
+            width: 80px;
+            height: 80px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-placeholder {
+            text-align: center;
+            color: #64748b;
+        }
+
+        .logo-placeholder i {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+
+        .logo-placeholder span {
+            font-size: 0.75rem;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        /* Team List */
+        .team-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .team-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: #f1f5f9;
+            border-radius: 12px;
+        }
+
+        .team-item.pending {
+            opacity: 0.7;
+        }
+
+        .team-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .team-info {
+            flex: 1;
+        }
+
+        .team-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .team-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .role-badge.admin {
+            background: #dbeafe;
+            color: #3b82f6;
+        }
+
+        .role-badge.member {
+            background: #d1fae5;
+            color: #10b981;
+        }
+
+        .role-badge.pending {
+            background: #fef3c7;
+            color: #f59e0b;
+        }
+
+        .team-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            width: 36px;
+            height: 36px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .action-btn:hover {
+            background: #e2e8f0;
+            color: #09090b;
+        }
+
+        /* Roles List */
+        .roles-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .role-card {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .role-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .role-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .role-icon.admin {
+            background: #dbeafe;
+            color: #3b82f6;
+        }
+
+        .role-icon.member {
+            background: #d1fae5;
+            color: #10b981;
+        }
+
+        .role-icon.viewer {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+
+        .role-info {
+            flex: 1;
+        }
+
+        .role-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .role-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .member-count {
+            font-size: 0.85rem;
+            color: #64748b;
+            background: #ffffff;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .role-permissions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .permission {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 4px 10px;
+            background: #ffffff;
+            color: #64748b;
+            border-radius: 6px;
+        }
+
+        /* Security Section */
+        .security-section {
+            padding: 24px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .security-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .section-title i {
+            font-size: 1.25rem;
+            color: #6366f1;
+        }
+
+        .section-title h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .security-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .security-option:last-child {
+            margin-bottom: 0;
+        }
+
+        .security-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .security-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .security-select {
+            padding: 8px 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: #ffffff;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 48px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e1;
+            transition: 0.3s;
+            border-radius: 24px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+
+        .toggle-switch input:checked + .toggle-slider {
+            background-color: #6366f1;
+        }
+
+        .toggle-switch input:checked + .toggle-slider:before {
+            transform: translateX(24px);
+        }
+
+        /* Activity Log */
+        .activity-log {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .log-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: #f1f5f9;
+            border-radius: 12px;
+        }
+
+        .log-icon {
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6366f1;
+        }
+
+        .log-info {
+            flex: 1;
+        }
+
+        .log-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .log-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+
+        .log-time {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* API Keys */
+        .api-keys-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .api-key-item {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .api-key-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .api-key-icon {
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6366f1;
+        }
+
+        .api-key-info {
+            flex: 1;
+        }
+
+        .api-key-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .api-key-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .api-key-status {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .api-key-status.active {
+            background: #d1fae5;
+            color: #10b981;
+        }
+
+        .api-key-value {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .api-key-value code {
+            flex: 1;
+            padding: 8px 12px;
+            background: #ffffff;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .copy-btn {
+            width: 32px;
+            height: 32px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: #e2e8f0;
+        }
+
+        .api-key-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        .api-key-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* Danger Zone */
+        .danger-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .danger-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+        }
+
+        .danger-item.warning {
+            border-color: #fcd34d;
+            background: #fffbeb;
+        }
+
+        .danger-item.danger {
+            border-color: #fca5a5;
+            background: #fef2f2;
+        }
+
+        .danger-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .danger-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .dashboard-main {
+                margin-left: 0;
+            }
+
+            .settings-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .settings-sidebar {
+                order: 2;
+            }
+
+            .settings-main {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .dashboard-header {
+                padding: 0 16px;
+            }
+
+            .settings-content {
+                padding: 16px;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+    </style>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.settings-menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const tabId = item.dataset.tab;
+                
+                // Update menu items
+                document.querySelectorAll('.settings-menu-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                
+                // Update tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

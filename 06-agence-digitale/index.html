@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Studio -- Agence Digitale Creative</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== PRELOADER ========== -->
+<div class="preloader" id="preloader">
+    <div class="preloader-logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="14" height="14" rx="3" fill="#ff6b35"/>
+            <rect x="22" y="4" width="14" height="14" rx="3" fill="#004e89" opacity="0.7"/>
+            <rect x="4" y="22" width="14" height="14" rx="3" fill="#004e89" opacity="0.5"/>
+            <rect x="22" y="22" width="14" height="14" rx="3" fill="#ff6b35" opacity="0.8"/>
+        </svg>
+        <span>Pixel Studio</span>
+    </div>
+    <div class="preloader-bar-track">
+        <div class="preloader-bar-fill" id="preloaderFill"></div>
+    </div>
+    <div class="preloader-percent" id="preloaderPercent">0%</div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="#" class="nav-logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="14" height="14" rx="3" fill="#ff6b35"/>
+                <rect x="22" y="4" width="14" height="14" rx="3" fill="#004e89" opacity="0.7"/>
+                <rect x="4" y="22" width="14" height="14" rx="3" fill="#004e89" opacity="0.5"/>
+                <rect x="22" y="22" width="14" height="14" rx="3" fill="#ff6b35" opacity="0.8"/>
+            </svg>
+            Pixel Studio
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#accueil">Accueil</a>
+            <a href="#services">Services</a>
+            <a href="#realisations">Realisations</a>
+            <a href="#processus">Processus</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-cta">Demarrer un projet</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="accueil">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">Agence digitale creative</div>
+            <h1>Nous creons des <span class="gradient-text">experiences digitales memorables</span></h1>
+            <p class="hero-subtitle">Design, developpement et strategie digitale au service de votre croissance. Notre equipe d'experts transforme vos idees en solutions performantes.</p>
+            <div class="hero-btns">
+                <a href="#realisations" class="btn-primary">
+                    Nos realisations
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="#contact" class="btn-outline">Nous contacter</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">150+</div>
+                    <div class="hero-stat-label">Projets</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">98%</div>
+                    <div class="hero-stat-label">Satisfaction</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">12</div>
+                    <div class="hero-stat-label">Ans d'exp.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label">Nos services</div>
+            <h2 class="section-title">Des solutions sur mesure pour chaque defi</h2>
+            <p class="section-desc">Nous combinons creativite et expertise technique pour donner vie a des projets digitaux qui font la difference.</p>
+        </div>
+        <div class="services-grid">
+            <!-- Service 1: Developpement Web -->
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+                </div>
+                <h3>Developpement Web</h3>
+                <p>Sites performants, applications web sur mesure et plateformes robustes avec les technologies les plus recentes.</p>
+                <a href="#" class="service-link">
+                    En savoir plus
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+            <!-- Service 2: Design UI/UX -->
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                </div>
+                <h3>Design UI/UX</h3>
+                <p>Interfaces intuitives et experiences utilisateur soignees qui captivent vos visiteurs et maximisent les conversions.</p>
+                <a href="#" class="service-link">
+                    En savoir plus
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+            <!-- Service 3: Strategie Digitale -->
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                </div>
+                <h3>Strategie Digitale</h3>
+                <p>Plans d'action digitaux, audit de performance et feuilles de route pour atteindre vos objectifs business.</p>
+                <a href="#" class="service-link">
+                    En savoir plus
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+            <!-- Service 4: Applications Mobiles -->
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <h3>Applications Mobiles</h3>
+                <p>Applications iOS et Android performantes, ergonomiques et conques pour engager vos utilisateurs au quotidien.</p>
+                <a href="#" class="service-link">
+                    En savoir plus
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+            <!-- Service 5: SEO & Marketing -->
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="4 14 12 2 20 10"/></svg>
+                </div>
+                <h3>SEO et Marketing</h3>
+                <p>Referencement naturel, campagnes performantes et strategies de contenu pour booster votre visibilite en ligne.</p>
+                <a href="#" class="service-link">
+                    En savoir plus
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+            <!-- Service 6: Branding & Identite -->
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="M12 22s8-4 8-12c0-3.31-2.69-6-6-6a5.98 5.98 0 0 0-4 1.54A5.98 5.98 0 0 0 6 4c-3.31 0-6 2.69-6 6 0 8 8 12 8 12h4z" opacity="0"/></svg>
+                </div>
+                <h3>Branding et Identite</h3>
+                <p>Logos, chartes graphiques et identites visuelles fortes qui renforcent la reconnaissance de votre marque.</p>
+                <a href="#" class="service-link">
+                    En savoir plus
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ========== PORTFOLIO / REALISATIONS ========== -->
+<section class="section section-portfolio" id="realisations">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label">Realisations</div>
+            <h2 class="section-title">Des projets qui parlent d'eux-memes</h2>
+            <p class="section-desc">Decouvrez une selection de nos projets les plus marquants, reflets de notre expertise et de notre engagement.</p>
+        </div>
+        <div class="portfolio-filters reveal">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card reveal" data-category="web">
+                <div class="portfolio-card-bg"></div>
+                <div class="portfolio-card-overlay">
+                    <span class="portfolio-tag">Web</span>
+                    <h3>Plateforme E-commerce</h3>
+                    <a href="#" class="portfolio-view">
+                        Voir le projet
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-card reveal" data-category="branding">
+                <div class="portfolio-card-bg"></div>
+                <div class="portfolio-card-overlay">
+                    <span class="portfolio-tag">Branding</span>
+                    <h3>Identite Visuelle Luxe</h3>
+                    <a href="#" class="portfolio-view">
+                        Voir le projet
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-card reveal" data-category="mobile">
+                <div class="portfolio-card-bg"></div>
+                <div class="portfolio-card-overlay">
+                    <span class="portfolio-tag">Mobile</span>
+                    <h3>Application Fitness</h3>
+                    <a href="#" class="portfolio-view">
+                        Voir le projet
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-card reveal" data-category="web">
+                <div class="portfolio-card-bg"></div>
+                <div class="portfolio-card-overlay">
+                    <span class="portfolio-tag">Web</span>
+                    <h3>Dashboard Analytics</h3>
+                    <a href="#" class="portfolio-view">
+                        Voir le projet
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-card reveal" data-category="branding">
+                <div class="portfolio-card-bg"></div>
+                <div class="portfolio-card-overlay">
+                    <span class="portfolio-tag">Branding</span>
+                    <h3>Campagne Visuelle Tech</h3>
+                    <a href="#" class="portfolio-view">
+                        Voir le projet
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-card reveal" data-category="mobile">
+                <div class="portfolio-card-bg"></div>
+                <div class="portfolio-card-overlay">
+                    <span class="portfolio-tag">Mobile</span>
+                    <h3>App Livraison Express</h3>
+                    <a href="#" class="portfolio-view">
+                        Voir le projet
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PROCESSUS ========== -->
+<section class="section" id="processus">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label">Notre processus</div>
+            <h2 class="section-title">Une methodologie eprouvee</h2>
+            <p class="section-desc">Quatre etapes cles pour transformer votre vision en realite, avec rigueur et transparence a chaque phase.</p>
+        </div>
+        <div class="process-track reveal" id="processTrack">
+            <div class="process-line">
+                <div class="process-line-fill" id="processLineFill"></div>
+            </div>
+            <!-- Etape 1 -->
+            <div class="process-step" data-step="1">
+                <div class="process-num">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+                <h3>Decouverte</h3>
+                <p>Analyse de vos besoins</p>
+            </div>
+            <!-- Etape 2 -->
+            <div class="process-step" data-step="2">
+                <div class="process-num">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+                <h3>Conception</h3>
+                <p>Design et Prototypage</p>
+            </div>
+            <!-- Etape 3 -->
+            <div class="process-step" data-step="3">
+                <div class="process-num">
+                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h3>Developpement</h3>
+                <p>Code et Integration</p>
+            </div>
+            <!-- Etape 4 -->
+            <div class="process-step" data-step="4">
+                <div class="process-num">
+                    <svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                </div>
+                <h3>Lancement</h3>
+                <p>Mise en ligne et Suivi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== STATS / NUMBERS ========== -->
+<section class="section-stats" id="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div class="stat-number"><span class="counter" data-target="150">0</span><span>+</span></div>
+                <div class="stat-label">Projets livres</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div class="stat-number"><span class="counter" data-target="98">0</span><span>%</span></div>
+                <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="stat-number"><span class="counter" data-target="12">0</span></div>
+                <div class="stat-label">Annees d'experience</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="stat-number"><span class="counter" data-target="25">0</span></div>
+                <div class="stat-label">Experts passionnes</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== EQUIPE ========== -->
+<section class="section" id="equipe">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label">Notre equipe</div>
+            <h2 class="section-title">Les talents derriere chaque projet</h2>
+            <p class="section-desc">Une equipe pluridisciplinaire unie par la passion du digital et l'exigence de l'excellence.</p>
+        </div>
+        <div class="team-grid">
+            <!-- Membre 1 -->
+            <div class="team-card reveal">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <div class="team-avatar team-avatar-1">ML</div>
+                        <h3>Marc Lefevre</h3>
+                        <span class="team-role">Directeur Creatif</span>
+                        <div class="team-socials">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card-back">
+                        <h3>Marc Lefevre</h3>
+                        <span class="team-role">Directeur Creatif</span>
+                        <p class="team-bio">Plus de 15 ans d'experience en direction artistique. Marc pilote la vision creative de chaque projet avec passion et precision. Specialise en identite de marque et design d'interface.</p>
+                        <div class="team-socials">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Membre 2 -->
+            <div class="team-card reveal">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <div class="team-avatar team-avatar-2">SD</div>
+                        <h3>Sophie Durand</h3>
+                        <span class="team-role">Lead Developpeur</span>
+                        <div class="team-socials">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card-back">
+                        <h3>Sophie Durand</h3>
+                        <span class="team-role">Lead Developpeur</span>
+                        <p class="team-bio">Architecte logiciel certifiee avec une expertise en React, Node.js et architecture cloud. Sophie garantit la qualite technique et la scalabilite de chaque solution.</p>
+                        <div class="team-socials">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Membre 3 -->
+            <div class="team-card reveal">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <div class="team-avatar team-avatar-3">AB</div>
+                        <h3>Antoine Bernard</h3>
+                        <span class="team-role">Strategiste Digital</span>
+                        <div class="team-socials">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card-back">
+                        <h3>Antoine Bernard</h3>
+                        <span class="team-role">Strategiste Digital</span>
+                        <p class="team-bio">Expert en marketing digital et croissance. Antoine elabore des strategies data-driven pour maximiser le ROI et la presence digitale de nos clients.</p>
+                        <div class="team-socials">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Membre 4 -->
+            <div class="team-card reveal">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <div class="team-avatar team-avatar-4">CR</div>
+                        <h3>Clara Rousseau</h3>
+                        <span class="team-role">Designer UX/UI</span>
+                        <div class="team-socials">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card-back">
+                        <h3>Clara Rousseau</h3>
+                        <span class="team-role">Designer UX/UI</span>
+                        <p class="team-bio">Passionnee par le design centre utilisateur, Clara cree des interfaces elegantes et intuitives. Experte en user research, prototypage et design system.</p>
+                        <div class="team-socials">
+                            <a href="#" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="section section-testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label">Temoignages</div>
+            <h2 class="section-title">Ce que nos clients disent de nous</h2>
+            <p class="section-desc">La satisfaction de nos clients est notre meilleure recompense et notre plus grande motivation.</p>
+        </div>
+        <div class="testimonials-grid">
+            <!-- Temoignage 1 -->
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">
+                    <svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+                </div>
+                <p class="testimonial-text">Pixel Studio a transforme notre presence en ligne. Leur approche strategique et leur creativite nous ont permis de tripler notre trafic en six mois. Une equipe exceptionnelle.</p>
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar testimonial-avatar-1">JM</div>
+                    <div class="testimonial-author-info">
+                        <h4>Jean Martin</h4>
+                        <span>CEO, TechVision</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Temoignage 2 -->
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">
+                    <svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+                </div>
+                <p class="testimonial-text">L'application mobile developpee par l'equipe a depasse toutes nos attentes. Design impeccable, performances optimales et un accompagnement irre­prochable du debut a la fin.</p>
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar testimonial-avatar-2">LP</div>
+                    <div class="testimonial-author-info">
+                        <h4>Laura Petit</h4>
+                        <span>Fondatrice, FitLife App</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Temoignage 3 -->
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">
+                    <svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+                </div>
+                <p class="testimonial-text">Notre nouveau branding a completement repositionne notre marque sur le marche. Le processus etait fluide, professionnel et les resultats sont au-dela de ce que nous esperions.</p>
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar testimonial-avatar-3">PG</div>
+                    <div class="testimonial-author-info">
+                        <h4>Pierre Garcia</h4>
+                        <span>Directeur, Maison Luxe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CTA / CONTACT ========== -->
+<section class="section-cta" id="contact">
+    <div class="container">
+        <div class="cta-wrapper">
+            <div class="cta-text reveal">
+                <h2>Vous avez un projet en tete?</h2>
+                <p>Parlons-en. Decrivez-nous votre projet et nous vous recontacterons dans les 24 heures avec une proposition adaptee a vos besoins et votre budget.</p>
+            </div>
+            <form class="cta-form reveal" id="contactForm" novalidate>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Votre nom" required>
+                    <div class="form-error">Veuillez entrer votre nom</div>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <div class="form-error">Veuillez entrer un email valide</div>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Decrivez brievement votre projet..." rows="4" required></textarea>
+                    <div class="form-error">Veuillez decrire votre projet</div>
+                </div>
+                <button type="submit" class="btn-submit">
+                    Envoyer
+                    <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+                <div class="form-success" id="formSuccess">Merci ! Votre message a bien ete envoye. Nous vous recontacterons rapidement.</div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CLIENTS MARQUEE ========== -->
+<section class="section-clients">
+    <div class="clients-title">Ils nous font confiance</div>
+    <div class="marquee-wrapper">
+        <div class="marquee-track">
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                TechVision
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                StackFlow
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8"/><path d="M8 8l8 8"/></svg>
+                NexaCorp
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                StarMedia
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                CubeData
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                GearSoft
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+                InfinityLab
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                FlagShip
+            </div>
+            <!-- Dupliquer pour l'infini -->
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                TechVision
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                StackFlow
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8"/><path d="M8 8l8 8"/></svg>
+                NexaCorp
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                StarMedia
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                CubeData
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                GearSoft
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+                InfinityLab
+            </div>
+            <div class="marquee-item">
+                <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                FlagShip
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Col 1: Brand -->
+            <div>
+                <div class="footer-brand">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="4" width="14" height="14" rx="3" fill="#ff6b35"/>
+                        <rect x="22" y="4" width="14" height="14" rx="3" fill="#004e89" opacity="0.7"/>
+                        <rect x="4" y="22" width="14" height="14" rx="3" fill="#004e89" opacity="0.5"/>
+                        <rect x="22" y="22" width="14" height="14" rx="3" fill="#ff6b35" opacity="0.8"/>
+                    </svg>
+                    Pixel Studio
+                </div>
+                <p class="footer-desc">Agence digitale creative specialisee dans la conception d'experiences numeriques sur mesure. Du design au developpement, nous transformons vos idees en succes digital.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Dribbble">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Col 2: Services -->
+            <div>
+                <h4>Services</h4>
+                <div class="footer-links">
+                    <a href="#">Developpement Web</a>
+                    <a href="#">Design UI/UX</a>
+                    <a href="#">Applications Mobiles</a>
+                    <a href="#">Strategie Digitale</a>
+                    <a href="#">SEO et Marketing</a>
+                    <a href="#">Branding</a>
+                </div>
+            </div>
+            <!-- Col 3: Entreprise -->
+            <div>
+                <h4>Entreprise</h4>
+                <div class="footer-links">
+                    <a href="#">A propos</a>
+                    <a href="#">Notre equipe</a>
+                    <a href="#">Carrieres</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <!-- Col 4: Newsletter -->
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Recevez nos actualites, nos conseils et nos dernieres realisations directement dans votre boite mail.</p>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Votre email">
+                    <button type="submit">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">Pixel Studio 2026. Tous droits reserves.</div>
+            <div class="footer-links" style="display:flex;gap:24px;">
+                <a href="#">Mentions legales</a>
+                <a href="#">Confidentialite</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+(function() {
+    'use strict';
+
+    /* --- Preloader --- */
+    var preloader = document.getElementById('preloader');
+    var preloaderFill = document.getElementById('preloaderFill');
+    var preloaderPercent = document.getElementById('preloaderPercent');
+    var progress = 0;
+
+    function runPreloader() {
+        var interval = setInterval(function() {
+            progress += Math.random() * 12 + 3;
+            if (progress > 100) progress = 100;
+            preloaderFill.style.width = progress + '%';
+            preloaderPercent.textContent = Math.floor(progress) + '%';
+            if (progress >= 100) {
+                clearInterval(interval);
+                setTimeout(function() {
+                    preloader.classList.add('hidden');
+                }, 400);
+            }
+        }, 80);
+    }
+
+    window.addEventListener('load', runPreloader);
+
+    /* --- Navbar scroll & hide/show --- */
+    var navbar = document.getElementById('navbar');
+    var lastScrollY = 0;
+    var ticking = false;
+
+    function handleNavScroll() {
+        var currentScrollY = window.scrollY;
+        if (currentScrollY > 80) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        if (currentScrollY > lastScrollY && currentScrollY > 400) {
+            navbar.classList.add('hidden-up');
+        } else {
+            navbar.classList.remove('hidden-up');
+        }
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(handleNavScroll);
+            ticking = true;
+        }
+    });
+
+    /* --- Mobile menu --- */
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('active');
+        navLinks.classList.toggle('open');
+    });
+
+    var navItems = navLinks.querySelectorAll('a');
+    navItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('open');
+        });
+    });
+
+    /* --- Smooth scroll --- */
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            var target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                var offset = navbar.offsetHeight + 20;
+                var top = target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        });
+    });
+
+    /* --- Portfolio filter --- */
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var portfolioCards = document.querySelectorAll('.portfolio-card');
+
+    filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var filter = btn.getAttribute('data-filter');
+            portfolioCards.forEach(function(card) {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.classList.remove('hidden-card');
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.9)';
+                    setTimeout(function() {
+                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.9)';
+                    setTimeout(function() {
+                        card.classList.add('hidden-card');
+                    }, 350);
+                }
+            });
+        });
+    });
+
+    /* --- Process steps animation --- */
+    var processTrack = document.getElementById('processTrack');
+    var processLineFill = document.getElementById('processLineFill');
+    var processSteps = document.querySelectorAll('.process-step');
+    var processAnimated = false;
+
+    function animateProcess() {
+        if (processAnimated || !processTrack) return;
+        var rect = processTrack.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.75) {
+            processAnimated = true;
+            processSteps.forEach(function(step, i) {
+                setTimeout(function() {
+                    step.classList.add('active');
+                    var pct = ((i + 1) / processSteps.length) * 100;
+                    processLineFill.style.width = pct + '%';
+                }, i * 400);
+            });
+        }
+    }
+
+    /* --- Counter animation --- */
+    var counters = document.querySelectorAll('.counter');
+    var countersAnimated = false;
+
+    function animateCounters() {
+        if (countersAnimated) return;
+        var statsSection = document.getElementById('stats');
+        if (!statsSection) return;
+        var rect = statsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+            countersAnimated = true;
+            counters.forEach(function(counter) {
+                var target = parseInt(counter.getAttribute('data-target'), 10);
+                var duration = 2000;
+                var start = 0;
+                var startTime = null;
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var elapsed = timestamp - startTime;
+                    var pct = Math.min(elapsed / duration, 1);
+                    var eased = 1 - Math.pow(1 - pct, 3);
+                    counter.textContent = Math.floor(eased * target);
+                    if (pct < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        counter.textContent = target;
+                    }
+                }
+                requestAnimationFrame(step);
+            });
+        }
+    }
+
+    /* --- Team card flip (click for mobile) --- */
+    var teamCards = document.querySelectorAll('.team-card');
+    teamCards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            if (window.innerWidth <= 1024) {
+                card.classList.toggle('flipped');
+            }
+        });
+    });
+
+    /* --- Scroll reveal --- */
+    var reveals = document.querySelectorAll('.reveal');
+
+    function handleReveal() {
+        reveals.forEach(function(el) {
+            var rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.88) {
+                el.classList.add('revealed');
+            }
+        });
+    }
+
+    /* --- Floating shapes parallax --- */
+    var shapes = document.querySelectorAll('.shape');
+
+    function handleParallax() {
+        var scrollY = window.scrollY;
+        shapes.forEach(function(shape, i) {
+            var speed = (i + 1) * 0.02;
+            shape.style.transform = 'translateY(' + (scrollY * speed) + 'px)';
+        });
+    }
+
+    /* --- Back to top --- */
+    var backToTop = document.getElementById('backToTop');
+
+    function handleBackToTop() {
+        if (window.scrollY > 600) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }
+
+    backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* --- Combined scroll handler --- */
+    window.addEventListener('scroll', function() {
+        handleReveal();
+        animateProcess();
+        animateCounters();
+        handleBackToTop();
+        handleParallax();
+    });
+
+    /* --- Initial check --- */
+    handleReveal();
+    animateProcess();
+    animateCounters();
+
+    /* --- Form validation --- */
+    var contactForm = document.getElementById('contactForm');
+    var formSuccess = document.getElementById('formSuccess');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var valid = true;
+            var groups = contactForm.querySelectorAll('.form-group');
+
+            groups.forEach(function(group) {
+                var input = group.querySelector('input, textarea');
+                if (!input) return;
+                group.classList.remove('error');
+
+                if (input.type === 'email') {
+                    var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRe.test(input.value.trim())) {
+                        group.classList.add('error');
+                        valid = false;
+                    }
+                } else if (input.value.trim() === '') {
+                    group.classList.add('error');
+                    valid = false;
+                }
+            });
+
+            if (valid) {
+                contactForm.style.display = 'none';
+                formSuccess.classList.add('show');
+            }
+        });
+
+        /* Live validation reset */
+        contactForm.querySelectorAll('input, textarea').forEach(function(input) {
+            input.addEventListener('input', function() {
+                this.closest('.form-group').classList.remove('error');
+            });
+        });
+    }
+
+})();
+
+// lumière sur cards
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+  });
+});
+
+// cursor
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+</script>
+
+</body>
+</html>
