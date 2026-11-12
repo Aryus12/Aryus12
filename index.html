@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TemplatePro — 20 Templates HTML/CSS Premium | Collection 2026</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <meta name="description" content="Collection de 20 templates HTML/CSS professionnels. Design moderne, responsive, prêts à l'emploi. Business, Portfolio, Restaurant, SaaS et plus.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <style>
         /* ==========================================
            PAGE DE VENTE — TEMPLATES PRO
@@ -1165,97 +1167,42 @@
 
         /* =========== FOOTER =========== */
         .footer {
-            padding: 60px 0 0;
+            padding: 40px 0;
             border-top: 1px solid var(--gray-200);
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 40px;
-            padding-bottom: 40px;
-        }
-
-        .footer-logo {
-            font-size: 1.2rem;
-            font-weight: 900;
-            color: var(--dark);
+        .footer-center {
+            text-align: center;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .footer-logo .fl-icon {
-            width: 26px; height: 26px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 6px;
-            display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 0.75rem;
-        }
-
-        .footer-logo span { color: var(--primary); }
-
-        .footer-col > p {
-            color: var(--gray);
-            font-size: 0.87rem;
-            margin-bottom: 16px;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 8px;
-        }
-
-        .footer-social a {
-            width: 34px; height: 34px;
-            display: flex; align-items: center; justify-content: center;
-            border: 1px solid var(--gray-200);
-            border-radius: 8px;
-            color: var(--gray);
-            font-size: 0.85rem;
-        }
-
-        .footer-social a:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        .footer-col h4 {
-            font-size: 0.88rem;
-            font-weight: 700;
-            margin-bottom: 14px;
-        }
-
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 8px; }
-        .footer-col ul a { color: var(--gray); font-size: 0.87rem; }
-        .footer-col ul a:hover { color: var(--primary); }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-top: 1px solid var(--gray-200);
-        }
-
-        .footer-bottom p {
-            color: var(--gray-light);
-            font-size: 0.8rem;
-        }
-
-        .footer-bottom-links {
-            display: flex;
             gap: 20px;
         }
 
-        .footer-bottom-links a {
-            color: var(--gray-light);
-            font-size: 0.8rem;
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
         }
 
-        .footer-bottom-links a:hover { color: var(--dark); }
+        .whatsapp-link:hover {
+            background: #128c7e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+        }
+
+        .footer-center p {
+            color: var(--gray-light);
+            font-size: 0.85rem;
+        }
 
         /* =========== RESPONSIVE =========== */
         @media (max-width: 1024px) {
@@ -1778,6 +1725,136 @@
             gap: 12px;
         }
 
+        .overlay-btn.download {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .overlay-btn.download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+            color: white;
+        }
+
+        .overlay-btn.customize {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .overlay-btn.customize:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+            color: white;
+        }
+
+        .customization-price {
+            display: block;
+            font-size: 0.75rem;
+            color: #8b5cf6;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* =========== CUSTOMIZATION MODAL =========== */
+        .customization-modal {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: rgba(0, 0, 0, 0.7) !important;
+            z-index: 99999 !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .customization-modal.active {
+            display: flex !important;
+        }
+
+        .customization-modal .modal-box {
+            background: white;
+            border-radius: 20px;
+            width: 500px;
+            max-width: 95vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 32px;
+            position: relative;
+        }
+
+        .customization-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .customization-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #1e293b;
+        }
+
+        .customization-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #64748b;
+            padding: 8px;
+        }
+
+        .customization-close:hover {
+            color: #ef4444;
+        }
+
+        .customization-form label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #475569;
+        }
+
+        .customization-form input,
+        .customization-form textarea,
+        .customization-form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            font-family: inherit;
+        }
+
+        .customization-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .customization-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .customization-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+        }
+
         /* =========== SUCCESS MODAL =========== */
         .success-modal .modal-box {
             background: var(--white);
@@ -1880,11 +1957,6 @@
                 <li><a href="#reviews">Avis</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
-            <div class="nav-cta">
-                <a href="#bundle" class="btn btn-primary">
-                    <i class="fas fa-shopping-cart"></i> Acheter le Bundle
-                </a>
-            </div>
             <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
                 <i class="fas fa-bars"></i>
             </button>
@@ -1906,9 +1978,6 @@
             <div class="hero-cta">
                 <a href="#templates" class="btn btn-primary btn-xl">
                     <i class="fas fa-eye"></i> Voir les templates
-                </a>
-                <a href="#bundle" class="btn btn-outline btn-xl">
-                    <i class="fas fa-box-open"></i> Acheter le Bundle -60%
                 </a>
             </div>
             <p class="hero-note">
@@ -1961,7 +2030,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="01-business-corporate/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="1" data-template-name="Business Corporate"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="1" data-template-name="Business Corporate"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -1973,7 +2043,8 @@
                         <p class="card-desc">Template professionnel pour entreprises et sociétés. Design élégant et sobre.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">2€</span>
+                                <span class="current">Gratuit</span>
+                                <span class="customization-price">Personnalisation: 20€</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -1989,7 +2060,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="02-portfolio-creatif/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="2" data-template-name="Portfolio Créatif"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="2" data-template-name="Portfolio Créatif"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2001,7 +2073,8 @@
                         <p class="card-desc">Mettez en valeur vos créations avec ce portfolio moderne et dynamique.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">2€</span>
+                                <span class="current">Gratuit</span>
+                                <span class="customization-price">Personnalisation: 20€</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2017,7 +2090,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="03-cv-professionnel/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="3" data-template-name="CV Professionnel"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="3" data-template-name="CV Professionnel"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2029,7 +2103,7 @@
                         <p class="card-desc">CV en ligne interactif avec animations et design professionnel percutant.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">1€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2045,7 +2119,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="04-landing-startup/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="4" data-template-name="Landing Startup"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="4" data-template-name="Landing Startup"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2057,7 +2132,7 @@
                         <p class="card-desc">Landing page optimisée pour la conversion. Parfaite pour lancer votre startup.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2073,7 +2148,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="05-restaurant/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="5" data-template-name="Restaurant"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="5" data-template-name="Restaurant"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2085,7 +2161,8 @@
                         <p class="card-desc">Design raffiné pour restaurants haut de gamme avec menu et réservation.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">2€</span>
+                                <span class="current">Gratuit</span>
+                                <span class="customization-price">Personnalisation: 20€</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2101,7 +2178,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="06-agence-digitale/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="6" data-template-name="Agence Digitale"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="6" data-template-name="Agence Digitale"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2113,7 +2191,8 @@
                         <p class="card-desc">Site vitrine moderne pour agences web, marketing et communication.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">2€</span>
+                                <span class="current">Gratuit</span>
+                                <span class="customization-price">Personnalisation: 20€</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2129,7 +2208,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="07-blog-personnel/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="7" data-template-name="Blog Personnel"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="7" data-template-name="Blog Personnel"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2141,7 +2221,7 @@
                         <p class="card-desc">Blog minimaliste et élégant pour écrivains, journalistes et créateurs.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">1€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2157,7 +2237,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="08-photographe/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="8" data-template-name="Photographe"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="8" data-template-name="Photographe"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2169,7 +2250,8 @@
                         <p class="card-desc">Portfolio photographe avec galerie plein écran et effets visuels saisissants.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">2€</span>
+                                <span class="current">Gratuit</span>
+                                <span class="customization-price">Personnalisation: 20€</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2185,7 +2267,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="09-ecommerce/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="9" data-template-name="E-commerce"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="9" data-template-name="E-commerce"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2197,7 +2280,7 @@
                         <p class="card-desc">Boutique en ligne moderne avec catalogue produits, panier et checkout.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2210,10 +2293,11 @@
                 <!-- Template 10 -->
                 <div class="template-card" data-category="creative">
                     <div class="card-preview">
-                        <div class="card-preview-bg" style="background-color: #f5f5f5;"></div>
+                        <div class="card-preview-bg"  style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.kt8ke5byMTuWp1J9IZVZuAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="10-cv-minimaliste/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="10" data-template-name="CV Minimaliste"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="10" data-template-name="CV Minimaliste"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2225,7 +2309,7 @@
                         <p class="card-desc">CV épuré et minimaliste axé sur la lisibilité et l'impact visuel.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">1€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2241,7 +2325,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="11-immobilier/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="11" data-template-name="Immobilier"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="11" data-template-name="Immobilier"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2253,7 +2338,7 @@
                         <p class="card-desc">Agence immobilière avec recherche de biens, fiches détaillées et contact.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2269,7 +2354,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="12-cabinet-avocats/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="12" data-template-name="Cabinet d'Avocats"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="12" data-template-name="Cabinet d'Avocats"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2281,7 +2367,7 @@
                         <p class="card-desc">Design prestigieux pour cabinets d'avocats et professions juridiques.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2297,7 +2383,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="13-fitness-gym/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="13" data-template-name="Fitness & Gym"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="13" data-template-name="Fitness & Gym"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2309,7 +2396,7 @@
                         <p class="card-desc">Template énergique pour salles de sport, coachs et centres de fitness.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2325,7 +2412,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="14-agence-voyage/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="14" data-template-name="Agence de Voyage"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="14" data-template-name="Agence de Voyage"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2337,7 +2425,7 @@
                         <p class="card-desc">Agence de voyage premium avec recherche, destinations et réservation.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS/JS</span>
@@ -2353,7 +2441,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="15-education-en-ligne/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="15" data-template-name="Éducation en Ligne"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="15" data-template-name="Éducation en Ligne"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2365,7 +2454,7 @@
                         <p class="card-desc">Plateforme e-learning complète avec cours, formateurs, pricing et FAQ.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS/JS</span>
@@ -2381,7 +2470,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="16-saas-app/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="16" data-template-name="SaaS Application"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="16" data-template-name="SaaS Application"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2393,7 +2483,7 @@
                         <p class="card-desc">Landing page SaaS haut de gamme avec app preview, pricing et intégrations.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS/JS</span>
@@ -2409,7 +2499,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="17-salon-beaute/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="17" data-template-name="Salon de Beauté"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="17" data-template-name="Salon de Beauté"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2421,7 +2512,8 @@
                         <p class="card-desc">Template luxueux pour salons de beauté et barber shops avec services et réservation.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">2€</span>
+                                <span class="current">Gratuit</span>
+                                <span class="customization-price">Personnalisation: 20€</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2437,7 +2529,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="18-hotel-residence/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="18" data-template-name="Hôtel & Résidence"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="18" data-template-name="Hôtel & Résidence"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2449,7 +2542,7 @@
                         <p class="card-desc">Hôtel 5 étoiles et résidence touristique avec chambres, spa et réservation.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">3€</span>
+                                <span class="current">Gratuit</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2465,7 +2558,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="19-btp-construction/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="19" data-template-name="BTP & Construction"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="19" data-template-name="BTP & Construction"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2477,7 +2571,8 @@
                         <p class="card-desc">Entreprise de BTP avec services, projets, méthodologie et formulaire de devis.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">2€</span>
+                                <span class="current">Gratuit</span>
+                                <span class="customization-price">Personnalisation: 20€</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2493,7 +2588,8 @@
                         <div class="card-preview-bg" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay">
                             <a href="20-saas-landing/index.html" class="overlay-btn preview"><i class="fas fa-eye"></i> Prévisualiser</a>
-                            <button class="overlay-btn buy"><i class="fas fa-cart-plus"></i> Acheter</button>
+                            <button class="overlay-btn download" data-template-id="20" data-template-name="SaaS Landing Page"><i class="fas fa-download"></i> Télécharger</button>
+                            <button class="overlay-btn customize" data-template-id="20" data-template-name="SaaS Landing Page"><i class="fas fa-paint-brush"></i> Personnaliser</button>
                         </div>
                     </div>
                     <div class="card-info">
@@ -2505,7 +2601,8 @@
                         <p class="card-desc">Landing page SaaS moderne avec mockup, features, pricing et FAQ.</p>
                         <div class="card-footer">
                             <div class="card-price">
-                                <span class="current">2€</span>
+                                <span class="current">Gratuit</span>
+                                <span class="customization-price">Personnalisation: 20€</span>
                             </div>
                             <div class="card-stats-row">
                                 <span class="card-stat"><i class="fas fa-code"></i> HTML/CSS</span>
@@ -2513,41 +2610,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bundle Section -->
-    <section id="bundle" class="bundle-section">
-        <div class="container">
-            <div class="bundle-card">
-                <div class="bundle-info">
-                    <span class="bundle-tag"><i class="fas fa-fire"></i> Offre limitée</span>
-                    <h2>Bundle Complet <br><span class="gradient-text">20 Templates</span></h2>
-                    <p>Obtenez l'intégralité de la collection à un prix imbattable. Tous les templates actuels + les futures mises à jour gratuites.</p>
-                    <ul class="bundle-features">
-                        <li><i class="fas fa-check"></i> 20 templates HTML/CSS premium</li>
-                        <li><i class="fas fa-check"></i> 100% responsive (mobile, tablette, desktop)</li>
-                        <li><i class="fas fa-check"></i> Code propre, commenté et facilement modifiable</li>
-                        <li><i class="fas fa-check"></i> Licence commerciale incluse</li>
-                        <li><i class="fas fa-check"></i> Mises à jour gratuites à vie</li>
-                        <li><i class="fas fa-check"></i> Support technique par email</li>
-                        <li><i class="fas fa-check"></i> Fichiers source Figma (bonus)</li>
-                    </ul>
-                </div>
-                <div class="bundle-pricing-box">
-                    <h3>Bundle Complet</h3>
-                    <p class="bundle-subtitle">Tous les 20 templates en un seul achat</p>
-                    <div class="bundle-price-display">
-                        <span class="bundle-old-price">45€ (valeur totale)</span>
-                        <span class="bundle-new-price">29€ <small>TTC</small></span>
-                        <span class="bundle-save"><i class="fas fa-tag"></i> Économisez 16€ (-36%)</span>
-                    </div>
-                    <button class="bundle-btn">
-                        <i class="fas fa-shopping-cart"></i> Acheter le Bundle — 29€
-                    </button>
-                    <p class="bundle-guarantee"><i class="fas fa-shield-alt"></i> Garantie satisfait ou remboursé 30 jours</p>
                 </div>
             </div>
         </div>
@@ -2605,82 +2667,6 @@
                         <i class="fas fa-arrow-right"></i> Demander un Devis
                     </button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Custom Request Form Section -->
-    <section id="custom-request" class="custom-request-section" style="display: none;">
-        <div class="container">
-            <div class="custom-request-container">
-                <div class="custom-request-header">
-                    <h2>Demande de Personnalisation</h2>
-                    <p>Décrivez vos besoins et notre équipe vous contactera sous 24h</p>
-                </div>
-                <form id="customRequestForm">
-                    <div class="custom-form-row">
-                        <div class="custom-form-group">
-                            <label for="custom-name">Nom complet *</label>
-                            <input type="text" id="custom-name" name="name" required>
-                        </div>
-                        <div class="custom-form-group">
-                            <label for="custom-email">Email *</label>
-                            <input type="email" id="custom-email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="custom-form-row">
-                        <div class="custom-form-group">
-                            <label for="custom-template">Template à personnaliser *</label>
-                            <select id="custom-template" name="template" required>
-                                <option value="">Sélectionner un template</option>
-                                <option value="01">01 — Business Corporate</option>
-                                <option value="02">02 — Portfolio Créatif</option>
-                                <option value="03">03 — CV Professionnel</option>
-                                <option value="04">04 — Landing Startup</option>
-                                <option value="05">05 — Restaurant</option>
-                                <option value="06">06 — Agence Digitale</option>
-                                <option value="07">07 — Blog Personnel</option>
-                                <option value="08">08 — Photographe</option>
-                                <option value="09">09 — E-commerce</option>
-                                <option value="10">10 — CV Minimaliste</option>
-                                <option value="11">11 — Immobilier</option>
-                                <option value="12">12 — Cabinet d'Avocats</option>
-                                <option value="13">13 — Fitness & Gym</option>
-                                <option value="14">14 — Agence de Voyage</option>
-                                <option value="15">15 — Éducation en Ligne</option>
-                                <option value="16">16 — SaaS Application</option>
-                                <option value="17">17 — Salon de Beauté</option>
-                                <option value="18">18 — Hôtel & Résidence</option>
-                                <option value="19">19 — BTP & Construction</option>
-                                <option value="20">20 — SaaS Landing Page</option>
-                            </select>
-                        </div>
-                        <div class="custom-form-group">
-                            <label for="custom-budget">Budget estimé</label>
-                            <select id="custom-budget" name="budget">
-                                <option value="">Sélectionner</option>
-                                <option value="50-100">50€ - 100€</option>
-                                <option value="100-200">100€ - 200€</option>
-                                <option value="200-500">200€ - 500€</option>
-                                <option value="500+">Plus de 500€</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="custom-form-group">
-                        <label for="custom-requirements">Vos besoins de personnalisation *</label>
-                        <textarea id="custom-requirements" name="requirements" placeholder="Décrivez les modifications souhaitées : couleurs, images, textes, sections à ajouter/supprimer, fonctionnalités spécifiques..." required></textarea>
-                    </div>
-                    <div class="custom-form-group">
-                        <label for="custom-deadline">Date limite souhaitée</label>
-                        <input type="date" id="custom-deadline" name="deadline">
-                    </div>
-                    <button type="submit" class="custom-submit-btn">
-                        <i class="fas fa-paper-plane"></i> Envoyer ma demande
-                    </button>
-                    <p style="text-align: center; font-size: 0.85rem; color: var(--gray-light); margin-top: 16px;">
-                        <i class="fas fa-lock"></i> Vos informations sont sécurisées et ne seront partagées qu'avec notre équipe.
-                    </p>
-                </form>
             </div>
         </div>
     </section>
@@ -2814,70 +2800,67 @@
                 <h2>Prêt à Créer des Sites <span class="gradient-text">Exceptionnels</span> ?</h2>
                 <p>Rejoignez 500+ développeurs et designers qui utilisent nos templates pour livrer des projets professionnels en un temps record.</p>
                 <div class="cta-actions">
-                    <a href="#bundle" class="btn btn-primary btn-xl">
-                        <i class="fas fa-shopping-cart"></i> Acheter le Bundle — 129€
-                    </a>
-                    <a href="#templates" class="btn btn-outline btn-xl" style="border-color: rgba(255,255,255,0.2); color: white;">
+                    <a href="#templates" class="btn btn-primary btn-xl" style="border-color: rgba(255,255,255,0.2); color: white;">
                         <i class="fas fa-eye"></i> Voir les templates
                     </a>
                 </div>
-                <p class="cta-note"><i class="fas fa-shield-alt"></i> Paiement sécurisé • Téléchargement immédiat • Garantie 30 jours</p>
+                <p class="cta-note"><i class="fas fa-download"></i> Téléchargement gratuit • Personnalisation sur demande</p>
             </div>
         </div>
     </section>
 
+    <!-- Customization Modal (WhatsApp) -->
+    <div class="modal-overlay customization-modal" id="customizationModal">
+        <div class="modal-box">
+            <div class="customization-header">
+                <h3><i class="fab fa-whatsapp" style="color: #25d366; margin-right: 10px;"></i> Personnalisation</h3>
+                <button class="customization-close" id="customizationCloseBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="customization-body">
+                <form class="customization-form" id="customizationForm">
+                    <input type="hidden" id="customTemplateId" name="templateId">
+                    <input type="hidden" id="customTemplateName" name="templateName">
+                    
+                    <label for="customName">Nom complet</label>
+                    <input type="text" id="customName" name="name" placeholder="Votre nom" required>
+                    
+                    <label for="customEmail">Adresse email</label>
+                    <input type="email" id="customEmail" name="email" placeholder="votre@email.com" required>
+                    
+                    <label for="customPhone">Numéro de téléphone</label>
+                    <input type="tel" id="customPhone" name="phone" placeholder="+225 07 00 00 00 00" required>
+                    
+                    <label for="customType">Type de personnalisation</label>
+                    <select id="customType" name="customType" required>
+                        <option value="colors">Modification des couleurs</option>
+                        <option value="layout">Modification du layout</option>
+                        <option value="content">Ajout de sections</option>
+                        <option value="full">Personnalisation complète</option>
+                    </select>
+                    
+                    <label for="customDetails">Détails de votre demande</label>
+                    <textarea id="customDetails" name="details" placeholder="Décrivez les modifications que vous souhaitez apporter au template..." required></textarea>
+                    
+                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 16px;">
+                        <i class="fas fa-info-circle"></i> Prix de la personnalisation: 20€
+                    </p>
+                    
+                    <button type="submit" class="customization-submit">
+                        <i class="fab fa-whatsapp"></i> Envoyer via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="#" class="footer-logo">
-                        <div class="fl-icon"><i class="fas fa-layer-group"></i></div>
-                        Template<span>Pro</span>
-                    </a>
-                    <p>Collection de templates HTML/CSS premium pour développeurs et designers exigeants.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Produit</h4>
-                    <ul>
-                        <li><a href="#templates">Templates</a></li>
-                        <li><a href="#bundle">Bundle</a></li>
-                        <li><a href="#">Licence</a></li>
-                        <li><a href="#">Changelog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Ressources</h4>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Tutoriels</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Légal</h4>
-                    <ul>
-                        <li><a href="#">CGV</a></li>
-                        <li><a href="#">Confidentialité</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
+            <div class="footer-center">
+                <a href="https://wa.me/2250140068605" target="_blank" class="whatsapp-link">
+                    <i class="fab fa-whatsapp"></i> Contactez-nous sur WhatsApp
+                </a>
                 <p>&copy; 2026 TemplatePro. Tous droits réservés.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Confidentialité</a>
-                    <a href="#">CGV</a>
-                    <a href="#">Cookies</a>
-                </div>
             </div>
         </div>
     </footer>
@@ -2984,7 +2967,7 @@
             <a id="downloadLink" href="#" target="_blank" class="download-btn">
                 <i class="fas fa-download"></i> Télécharger le template
             </a>
-            <button class="success-close-link" id="successCloseBtn">Continuer les achats</button>
+            
         </div>
     </div>
 
@@ -3088,7 +3071,7 @@
                 '<button class="btn-demo"><i class="fas fa-eye"></i> Démo live</button>' +
                 (isPurchased
                     ? '<a class="btn-download-card" href="' + demoUrl + '" target="_blank"><i class="fas fa-download"></i> Télécharger</a>'
-                    : '<button class="btn-buy-card"><i class="fas fa-shopping-cart"></i> Acheter</button>'
+                    : ''
                 );
             card.querySelector('.card-info').appendChild(actions);
 
@@ -3096,9 +3079,7 @@
             actions.querySelector('.btn-demo').addEventListener('click', () => openDemo(demoUrl, name, price, folder));
 
             // Buy button
-            const buyBtn = actions.querySelector('.btn-buy-card');
-            if (buyBtn) buyBtn.addEventListener('click', () => openCheckout(name, price, folder));
-
+            
             // Overlay "Prévisualiser" → open iframe demo instead of navigating away
             link.addEventListener('click', e => { e.preventDefault(); openDemo(demoUrl, name, price, folder); });
 
@@ -3133,7 +3114,7 @@
                 btn.innerHTML = '<i class="fas fa-download"></i> Télécharger';
                 btn.onclick = () => window.open(url, '_blank');
             } else {
-                btn.innerHTML = '<i class="fas fa-shopping-cart"></i> Acheter ' + price;
+                btn.innerHTML = '<i class="fas fa-shopping-cart"></i>  ' + price;
                 btn.onclick = () => { closeDemo(); setTimeout(() => openCheckout(name, price, folder), 300); };
             }
 
@@ -3201,65 +3182,208 @@
             });
         });
 
-        // Form submit — GeniusPay integration
-        document.getElementById('checkoutForm').addEventListener('submit', async function(e) {
+
+        // Card number formatting
+        document.getElementById('ckCard').addEventListener('input', function() {
+            let v = this.value.replace(/\D/g, '').substring(0, 16);
+            this.value = v.replace(/(.{4})/g, '$1 ').trim();
+        });
+
+        // Expiration date formatting
+        document.getElementById('ckExp').addEventListener('input', function() {
+            let v = this.value.replace(/\D/g, '').substring(0, 4);
+            if (v.length > 2) v = v.substring(0, 2) + ' / ' + v.substring(2);
+            this.value = v;
+        });
+
+        // CVC formatting
+        document.getElementById('ckCvc').addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').substring(0, 4);
+        });
+
+        // Free download buttons - Client-side ZIP generation
+        document.querySelectorAll('.overlay-btn.download').forEach(btn => {
+            btn.addEventListener('click', async function() {
+                const templateId = this.getAttribute('data-template-id');
+                const templateName = this.getAttribute('data-template-name');
+                const formattedId = templateId.toString().padStart(2, '0');
+                const slug = templateName
+                    .toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '')
+                    .replace(/\s+/g, '-');
+                const templateFolder = `${formattedId}-${slug}`;
+                const basePath = `templates/${templateFolder}/`;
+                const originalText = this.innerHTML;
+
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Téléchargement...';
+                this.disabled = true;
+
+                try {
+                    const zip = new JSZip();
+                    const response = await fetch(basePath + 'files.json');
+                    if (!response.ok) throw new Error('Manifeste files.json introuvable.');
+
+                    const files = await response.json();
+                    if (!Array.isArray(files) || files.length === 0) {
+                        throw new Error('Aucun fichier déclaré pour ce template.');
+                    }
+
+                    for (const file of files) {
+                        const filePath = file.replace(/^\/+/, '');
+                        if (filePath.includes('..')) throw new Error('Chemin de fichier invalide.');
+
+                        const fileResponse = await fetch(basePath + filePath);
+                        if (!fileResponse.ok) throw new Error(`Impossible de récupérer : ${filePath}`);
+                        zip.file(filePath, await fileResponse.blob());
+                    }
+
+                    const readmeContent = `# ${templateName}\n\nTemplate téléchargé depuis TemplatePro.\n\nPour personnaliser ce template, contactez-nous sur WhatsApp :\n+229 0140068605\n`;
+                    zip.file('README.md', readmeContent);
+
+                    const content = await zip.generateAsync({
+                        type: 'blob',
+                        compression: 'DEFLATE',
+                        compressionOptions: { level: 6 }
+                    });
+
+                    const url = URL.createObjectURL(content);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = `${templateFolder}.zip`;
+                    document.body.appendChild(link);
+                    link.click();
+                    link.remove();
+                    setTimeout(() => URL.revokeObjectURL(url), 1000);
+                } catch (error) {
+                    console.error('Erreur téléchargement :', error);
+                    alert(error.message || 'Erreur lors du téléchargement. Veuillez réessayer.');
+                } finally {
+                    this.innerHTML = originalText;
+                    this.disabled = false;
+                }
+            });
+        });
+
+        // Customize buttons (open WhatsApp form)
+        document.querySelectorAll('.overlay-btn.customize').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const templateId = this.getAttribute('data-template-id');
+                const templateName = this.getAttribute('data-template-name');
+                
+                // Ouvrir le modal de personnalisation WhatsApp
+                openCustomizationModal(templateName, templateId);
+            });
+        });
+
+        // Open customization modal
+        function openCustomizationModal(templateName, templateId) {
+            document.getElementById('customTemplateId').value = templateId;
+            document.getElementById('customTemplateName').value = templateName;
+            document.getElementById('customizationModal').classList.add('active');
+        }
+
+        // Close customization modal
+        document.getElementById('customizationCloseBtn').addEventListener('click', function() {
+            document.getElementById('customizationModal').classList.remove('active');
+        });
+
+        // Close modal on outside click
+        document.getElementById('customizationModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
+        });
+
+        // Customization form submit - WhatsApp
+        document.getElementById('customizationForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const btn = document.getElementById('checkoutSubmit');
-            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
-            const clientName = document.getElementById('ckName').value;
-            const clientEmail = document.getElementById('ckEmail').value;
-            const clientPhone = document.getElementById('ckPhone').value;
-            const mobileMoneyProvider = document.getElementById('ckProvider').value;
+            const templateId = document.getElementById('customTemplateId').value;
+            const templateName = document.getElementById('customTemplateName').value;
+            const name = document.getElementById('customName').value;
+            const email = document.getElementById('customEmail').value;
+            const phone = document.getElementById('customPhone').value;
+            const customType = document.getElementById('customType').value;
+            const details = document.getElementById('customDetails').value;
             
-            // Validation pour Mobile Money
-            if (paymentMethod === 'mobile_money' && !clientPhone) {
-                alert('Le numéro de téléphone est requis pour Mobile Money');
+            // Type de personnalisation en français
+            const typeMap = {
+                'colors': 'Modification des couleurs',
+                'layout': 'Modification du layout',
+                'content': 'Ajout de sections',
+                'full': 'Personnalisation complète'
+            };
+            
+            // Construire le message WhatsApp
+            const message = '🎨 *Demande de Personnalisation*\n\n📋 *Template:* ' + templateName + ' (ID: ' + templateId + ')\n👤 *Nom:* ' + name + '\n📧 *Email:* ' + email + '\n📱 *Téléphone:* ' + phone + '\n\n🔧 *Type de personnalisation:* ' + typeMap[customType] + '\n\n📝 *Détails:*\n' + details + '\n\n💰 *Prix:* 20€';
+            
+            // Numéro WhatsApp (format international sans +)
+            const whatsappNumber = '2250140068605';
+            
+            // Encoder le message pour l'URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Ouvrir WhatsApp
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Fermer le modal
+            document.getElementById('customizationModal').classList.remove('active');
+            
+            // Réinitialiser le formulaire
+            this.reset();
+        });
+
+
+        // Checkout form submit - création du paiement sécurisé
+        document.getElementById('checkoutForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('checkoutSubmit');
+            const clientName = document.getElementById('ckName').value.trim();
+            const clientEmail = document.getElementById('ckEmail').value.trim();
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked')?.value || 'card';
+            const clientPhone = paymentMethod === 'mobile_money' ? document.getElementById('ckPhone').value.trim() : '';
+            const mobileMoneyProvider = paymentMethod === 'mobile_money' ? document.getElementById('ckProvider').value : null;
+
+            if (!currentCk.name || !currentCk.price || !currentCk.folder) {
+                alert('Aucun template sélectionné. Veuillez recommencer.');
                 return;
             }
 
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Traitement en cours…';
             btn.disabled = true;
 
-            // Get template ID from folder name
-            const templateId = parseInt(currentCk.folder) || 1;
-            const priceValue = parseInt(currentCk.price.replace('€', '')) || 1;
-
+            const folderMatch = currentCk.folder.match(/^(\d+)/);
+            const templateId = folderMatch ? parseInt(folderMatch[1], 10) : 1;
+            const priceValue = parseFloat(currentCk.price.replace(/[^0-9,.-]/g, '').replace(',', '.')) || 1;
             const paymentData = {
                 amount: priceValue,
                 description: `Achat template: ${currentCk.name}`,
-                clientEmail: clientEmail,
-                clientName: clientName,
-                clientPhone: clientPhone,
-                templateId: templateId,
+                clientEmail,
+                clientName,
+                clientPhone,
+                templateId,
                 templateName: currentCk.name,
-                paymentMethod: paymentMethod,
-                mobileMoneyProvider: mobileMoneyProvider
+                paymentMethod,
+                mobileMoneyProvider
             };
 
             try {
-                const backendUrl = '/api/payment/create';
-                const response = await fetch(backendUrl, {
+                const response = await fetch('/api/payment/create', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(paymentData),
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(paymentData)
                 });
-
                 const result = await response.json();
-
-                if (result.success && result.paymentUrl) {
-                    // Rediriger vers la page de paiement GeniusPay
-                    window.location.href = result.paymentUrl;
-                } else {
-                    alert('Erreur lors de la création du paiement: ' + (result.error || 'Erreur inconnue'));
-                    btn.innerHTML = '<i class="fas fa-lock"></i> Payer <span id="checkoutBtnPrice">' + currentCk.price + '</span>';
-                    btn.disabled = false;
+                if (!response.ok || !result.success || !result.paymentUrl) {
+                    throw new Error(result.error || 'Impossible de créer le paiement.');
                 }
+                window.location.href = result.paymentUrl;
             } catch (error) {
                 console.error('Payment error:', error);
-                alert('Erreur de connexion au serveur de paiement. Veuillez réessayer.');
+                alert(error.message || 'Erreur de connexion au serveur de paiement. Veuillez réessayer.');
                 btn.innerHTML = '<i class="fas fa-lock"></i> Payer <span id="checkoutBtnPrice">' + currentCk.price + '</span>';
                 btn.disabled = false;
             }
@@ -3300,55 +3424,17 @@
                 // Self-customization - just scroll to templates
                 document.getElementById('templates').scrollIntoView({ behavior: 'smooth' });
             } else if (option === 'pro') {
-                // Pro customization - show form
-                const formSection = document.getElementById('custom-request');
-                formSection.style.display = 'block';
-                formSection.scrollIntoView({ behavior: 'smooth' });
+                // Pro customization - scroll to templates and show WhatsApp modal
+                document.getElementById('templates').scrollIntoView({ behavior: 'smooth' });
+                // Open the first template's customization modal as example
+                setTimeout(() => {
+                    const firstCustomizeBtn = document.querySelector('.overlay-btn.customize');
+                    if (firstCustomizeBtn) {
+                        firstCustomizeBtn.click();
+                    }
+                }, 500);
             }
         }
-
-        // ===================================================
-        //  CUSTOM REQUEST FORM SUBMIT
-        // ===================================================
-        document.getElementById('customRequestForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const btn = this.querySelector('.custom-submit-btn');
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours…';
-            btn.disabled = true;
-
-            // Collect form data
-            const formData = {
-                name: document.getElementById('custom-name').value,
-                email: document.getElementById('custom-email').value,
-                template: document.getElementById('custom-template').value,
-                budget: document.getElementById('custom-budget').value,
-                requirements: document.getElementById('custom-requirements').value,
-                deadline: document.getElementById('custom-deadline').value,
-                timestamp: new Date().toISOString(),
-                status: 'pending'
-            };
-
-            // Store in localStorage (simulating sending to admin dashboard)
-            const requests = JSON.parse(localStorage.getItem('tp_custom_requests') || '[]');
-            requests.push(formData);
-            localStorage.setItem('tp_custom_requests', JSON.stringify(requests));
-
-            // Simulate API call delay
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-check"></i> Demande envoyée !';
-                btn.style.background = 'var(--success)';
-                
-                setTimeout(() => {
-                    alert('Votre demande de personnalisation a été envoyée avec succès !\n\nNotre équipe vous contactera sous 24h.\n\nRéférence: ' + Date.now());
-                    this.reset();
-                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer ma demande';
-                    btn.style.background = '';
-                    btn.disabled = false;
-                    document.getElementById('custom-request').style.display = 'none';
-                }, 1000);
-            }, 1500);
-        });
     </script>
 </body>
 </html>
